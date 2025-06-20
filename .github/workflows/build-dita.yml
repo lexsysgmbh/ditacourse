@@ -1,0 +1,82 @@
+name: build-dita
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install DITA-OT
+        run: |
+          curl -L -o dita-ot.zip https://github.com/dita-ot/dita-ot/releases/download/4.2.1/dita-ot-4.2.1.zip
+          unzip dita-ot.zip
+          echo "$GITHUB_WORKSPACE/dita-ot-4.2.1/bin" >> $GITHUB_PATH
+
+      - name: Ensure customization folders exist
+        run: |
+          mkdir -p dita-ot-4.2.1/plugins/org.dita.base/customization/xsl/html5
+          mkdir -p dita-ot-4.2.1/plugins/org.dita.html5/xsl/html5/template/head
+
+      - name: Copy custom files into DITA-OT
+        run: |
+          cp customization/xsl/html5/custom.xsl dita-ot-4.2.1/plugins/org.dita.base/customization/xsl/html5/
+
+      - name: 🔧 Build full map with navigation buttons
+        run: |
+          dita -i topics/course_map.ditamap -f html5 -o out \
+            -Dargs.css=mytheme.css \
+            -Dargs.cssroot=customization/css \
+            -Dargs.copycss=yes \
+            -Dargs.rellinks=next-prev \
+            -Dargs.xhtml.classattr=yes \
+            -Dnav-toc=full \
+            -Dhtml5.xsl=customization/xsl/html5/custom.xsl
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Inject Hypothes.is into HTML pages
+        run: |
+          node .github/scripts/inject-hypothesis.js
+
+      - name: Inject Prism.js into HTML pages
+        run: |
+          node .github/scripts/inject-head-snippets.js
+
+      - name: 💡 Inject next-lesson buttons
+        run: |
+          node .github/scripts/inject-next-lesson-footer.js
+
+      - name: 📦 Copy homepage to index.html
+        run: |
+          cp out/dita_structured_authoring.html out/index.html
+
+      - name: 🧐 Inspect HTML output for next-lesson buttons
+        run: |
+          echo "🔍 Checking output HTML files for injected next-lesson buttons:"
+          grep -r 'class="next-lesson"' out/ || echo "❌ No next-lesson buttons found"
+
+      - name: Overwrite default CSS (commonltr.css)
+        run: |
+          cp -f customization/css/mytheme.css out/commonltr.css
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
