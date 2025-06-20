@@ -1,0 +1,114 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Explore DITA attributes for conditional processing and content reuse through conref and copy-to mechanisms."><title>Attributes for Content Reuse</title><link rel="stylesheet" type="text/css" href="commonltr.css"><script async src="https://hypothes.is/embed.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-xml.min.js"></script>
+
+</head><body id="attributes_for_content_reuse"><header role="banner"><div class="breadcrumb"></div></header><nav class="toc" role="navigation"><ul><li><a href="dita_structured_authoring.html">DITA Structured Authoring</a><ul><li><a href="part1_introduction_to_dita.html">Part I: Introduction to DITA</a><ul><li><a href="why_structured_authoring_matters.html">Why Structured Authoring Matters</a></li><li><a href="key_benefits_structured_authoring.html">Key Benefits of Structured Authoring</a></li><li><a href="what_is_dita.html">What is DITA?</a></li><li><a href="advantages_of_using_dita.html">Advantages of Using DITA</a></li><li><a href="dita_vs_other_standards.html">DITA vs. Other XML-Based Standards and Lightweight Markup</a></li><li><a href="summary_part1_key_takeaways.html">Summary of Part I: Key Takeaways</a></li><li><a href="quiz_introduction_to_dita.html">Quiz: Introduction to DITA</a></li></ul></li><li><a href="part2_dita_maps.html">Part II: DITA Maps</a><ul><li><a href="what_are_dita_maps.html">What Are DITA Maps?</a></li><li><a href="organization_with_dita_maps.html">Organization</a></li><li><a href="relationship_tables_reltables.html">Relationship Tables (RelTables)</a></li><li><a href="navigation_with_dita_maps.html">Navigation</a></li><li><a href="summary_part2_key_takeaways.html">Summary of Part II: Key Takeaways</a></li><li><a href="quiz_dita_maps.html">Quiz: DITA Maps</a></li></ul></li><li><a href="part3_topic_types.html">Part III: Topic Types</a><ul><li><a href="concept_topics.html">Concept Topics</a></li><li><a href="task_topics.html">Task Topics</a></li><li><a href="reference_topics.html">Reference Topics</a></li><li><a href="glossary_entries.html">Glossary Entries</a></li><li><a href="troubleshooting_topics.html">Troubleshooting Topics</a></li><li><a href="summary_part3_key_takeaways.html">Summary of Part III: Key Takeaways</a></li><li><a href="quiz_topic_types.html">Quiz: Topic Types</a></li></ul></li><li><a href="part4_short_descriptions.html">Part IV: Short Descriptions</a><ul><li><a href="definition_and_purpose_shortdesc.html">Definition and Purpose</a></li><li><a href="structure_and_guidelines_shortdesc.html">Structure and Guidelines</a></li><li><a href="examples_effective_ineffective_shortdesc.html">Examples of Effective and Ineffective Short Descriptions</a></li><li><a href="summary_part4_key_takeaways.html">Summary of Part IV: Key Takeaways</a></li><li><a href="quiz_short_descriptions.html">Quiz: Short Descriptions</a></li></ul></li><li><a href="part5_content_reuse.html">Part V: Content Reuse</a><ul><li><a href="why_content_reuse_is_important.html">Why Content Reuse Is Important</a></li><li class="active"><a href="attributes_for_content_reuse.html">Attributes for Content Reuse</a></li><li><a href="examples_content_reuse.html">Examples of Content Reuse</a></li><li><a href="summary_part5_key_takeaways.html">Summary of Part V: Key Takeaways</a></li><li><a href="quiz_content_reuse.html">Quiz: Content Reuse</a></li></ul></li><li><a href="publishing_dita_content.html">Part VI: Publishing DITA Content</a><ul><li><a href="dita_outputs.html">Outputs of DITA Documentation</a></li><li><a href="language_translation_customization.html">Language Translation with DITA</a></li><li><a href="summary_part_vi.html">Summary of Part VI: Key Takeaways</a></li><li><a href="quiz_publishing_dita_content.html">Quiz: Publishing DITA Content</a></li></ul></li><li><a href="conclusion.html">Part VII: Conclusion</a><ul><li><a href="next-steps.html">Next Steps</a></li></ul></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Attributes for Content Reuse</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">Explore DITA attributes for conditional processing and content reuse through conref and copy-to mechanisms.</p>
+    <p class="p">DITA provides sophisticated attribute systems that enable precise control over when and how content appears in different publications. These attributes act as filters during the publishing process, allowing single-source content to serve multiple audiences and scenarios.</p>
+
+<section class="section"><h2 class="title sectiontitle">Conditional Processing Attributes</h2>
+  
+  <p class="p">These attributes allow you to include or exclude content based on specific conditions, supporting sophisticated conditional publishing.</p>
+  <ul class="ul">
+    <li class="li">
+      <strong class="ph b">audience:</strong> Targets user groups (e.g., admin, enduser).<span class="undefined_element"></span>
+      Example:
+      <pre class="pre codeblock language-xml"><code>
+&lt;p audience="admin"&gt;Use the command line interface...&lt;/p&gt;
+      </code></pre>
+    </li>
+    <li class="li">
+      <strong class="ph b">platform:</strong> Targets operating systems (e.g., windows, mac).<span class="undefined_element"></span>
+      Example:
+      <pre class="pre codeblock language-xml"><code>
+&lt;p platform="windows"&gt;Double-click the installer...&lt;/p&gt;
+      </code></pre>
+    </li>
+    <li class="li">
+      <strong class="ph b">product:</strong> Targets specific product versions.<span class="undefined_element"></span>
+      Example:
+      <pre class="pre codeblock language-xml"><code>
+&lt;p product="professional"&gt;Configure single sign-on...&lt;/p&gt;
+      </code></pre>
+    </li>
+    <li class="li">
+      <strong class="ph b">otherprops:</strong> Custom filtering for specific needs.<span class="undefined_element"></span>
+      Example:
+      <pre class="pre codeblock language-xml"><code>
+&lt;note otherprops="gdpr"&gt;European customers must consent...&lt;/note&gt;
+      </code></pre>
+    </li>
+  </ul>
+  <p class="p">DITA processors support complex filtering using Boolean logic and multiple attributes.</p>
+</section>
+
+<section class="section"><h2 class="title sectiontitle">conref Attribute</h2>
+  
+  <p class="p">The <code class="ph codeph">conref</code> attribute enables direct reuse of content elements from other topics. Referenced content stays synchronized across uses.</p>
+  <p class="p">Sample Usage:</p>
+  <pre class="pre codeblock language-xml"><code>
+&lt;task id="userlogin"&gt;
+  &lt;title&gt;Log In&lt;/title&gt;
+  &lt;shortdesc&gt;This task guides users through logging in.&lt;/shortdesc&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step conref="snippets.dita#snippets/loginstep"/&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;
+  </code></pre>
+  <p class="p"><strong class="ph b">Best Practices:</strong> Organize reusable content, use meaningful IDs, maintain appropriate granularity, and manage changes carefully.</p>
+</section>
+
+<section class="section"><h2 class="title sectiontitle">copy-to Attribute</h2>
+  
+  <p class="p">The <code class="ph codeph">copy-to</code> attribute creates topic copies with different contexts or metadata while maintaining original content integrity.</p>
+  <p class="p"><strong class="ph b">When to Use:</strong> When content needs to appear in multiple locations with distinct navigational or URL contexts.</p>
+
+  <p class="p"><strong class="ph b">conref vs. copy-to Comparison:</strong></p>
+<table class="table"><caption></caption><colgroup><col style="width:40%"><col style="width:30%"><col style="width:30%"></colgroup><thead class="thead">
+      <tr class="row">
+        <th class="entry colsep-1 rowsep-1" id="attributes_for_content_reuse__entry__1">Feature</th>
+        <th class="entry colsep-1 rowsep-1" id="attributes_for_content_reuse__entry__2"><code class="ph codeph">conref</code></th>
+        <th class="entry rowsep-1" id="attributes_for_content_reuse__entry__3"><code class="ph codeph">copy-to</code></th>
+      </tr>
+    </thead><tbody class="tbody">
+      <tr class="row">
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__1">Granularity</td>
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__2">Element-level reuse</td>
+        <td class="entry rowsep-1" headers="attributes_for_content_reuse__entry__3">Topic-level reuse</td>
+      </tr>
+      <tr class="row">
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__1">Synchronization</td>
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__2">Automatic</td>
+        <td class="entry rowsep-1" headers="attributes_for_content_reuse__entry__3">Manual</td>
+      </tr>
+      <tr class="row">
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__1">File Proliferation</td>
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__2">No</td>
+        <td class="entry rowsep-1" headers="attributes_for_content_reuse__entry__3">Yes</td>
+      </tr>
+      <tr class="row">
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__1">Context/URL</td>
+        <td class="entry colsep-1 rowsep-1" headers="attributes_for_content_reuse__entry__2">Same context</td>
+        <td class="entry rowsep-1" headers="attributes_for_content_reuse__entry__3">New navigation</td>
+      </tr>
+      <tr class="row">
+        <td class="entry colsep-1" headers="attributes_for_content_reuse__entry__1">Complexity</td>
+        <td class="entry colsep-1" headers="attributes_for_content_reuse__entry__2">Simpler</td>
+        <td class="entry" headers="attributes_for_content_reuse__entry__3">More complex</td>
+      </tr>
+    </tbody></table>
+
+  <p class="p"><strong class="ph b">Decision Framework:</strong> Use <code class="ph codeph">conref</code> for embedded reuse with synchronization, and <code class="ph codeph">copy-to</code> for multiple locations with different contexts or URLs.</p>
+</section>
+  </div>
+<nav role="navigation" class="related-links"></nav></article><div class="lesson-nav"><a href="why_content_reuse_is_important.html" class="nav-button prev">Previous page</a><a href="examples_content_reuse.html" class="nav-button next">Next page</a></div>
+</main></body></html>

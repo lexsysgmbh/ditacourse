@@ -1,0 +1,80 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Reference topics provide structured, factual data used to support task and concept topics."><title>Reference Topics</title><link rel="stylesheet" type="text/css" href="commonltr.css"><script async src="https://hypothes.is/embed.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-xml.min.js"></script>
+
+</head><body id="reference_topics"><header role="banner"><div class="breadcrumb"></div></header><nav class="toc" role="navigation"><ul><li><a href="dita_structured_authoring.html">DITA Structured Authoring</a><ul><li><a href="part1_introduction_to_dita.html">Part I: Introduction to DITA</a><ul><li><a href="why_structured_authoring_matters.html">Why Structured Authoring Matters</a></li><li><a href="key_benefits_structured_authoring.html">Key Benefits of Structured Authoring</a></li><li><a href="what_is_dita.html">What is DITA?</a></li><li><a href="advantages_of_using_dita.html">Advantages of Using DITA</a></li><li><a href="dita_vs_other_standards.html">DITA vs. Other XML-Based Standards and Lightweight Markup</a></li><li><a href="summary_part1_key_takeaways.html">Summary of Part I: Key Takeaways</a></li><li><a href="quiz_introduction_to_dita.html">Quiz: Introduction to DITA</a></li></ul></li><li><a href="part2_dita_maps.html">Part II: DITA Maps</a><ul><li><a href="what_are_dita_maps.html">What Are DITA Maps?</a></li><li><a href="organization_with_dita_maps.html">Organization</a></li><li><a href="relationship_tables_reltables.html">Relationship Tables (RelTables)</a></li><li><a href="navigation_with_dita_maps.html">Navigation</a></li><li><a href="summary_part2_key_takeaways.html">Summary of Part II: Key Takeaways</a></li><li><a href="quiz_dita_maps.html">Quiz: DITA Maps</a></li></ul></li><li><a href="part3_topic_types.html">Part III: Topic Types</a><ul><li><a href="concept_topics.html">Concept Topics</a></li><li><a href="task_topics.html">Task Topics</a></li><li class="active"><a href="reference_topics.html">Reference Topics</a></li><li><a href="glossary_entries.html">Glossary Entries</a></li><li><a href="troubleshooting_topics.html">Troubleshooting Topics</a></li><li><a href="summary_part3_key_takeaways.html">Summary of Part III: Key Takeaways</a></li><li><a href="quiz_topic_types.html">Quiz: Topic Types</a></li></ul></li><li><a href="part4_short_descriptions.html">Part IV: Short Descriptions</a><ul><li><a href="definition_and_purpose_shortdesc.html">Definition and Purpose</a></li><li><a href="structure_and_guidelines_shortdesc.html">Structure and Guidelines</a></li><li><a href="examples_effective_ineffective_shortdesc.html">Examples of Effective and Ineffective Short Descriptions</a></li><li><a href="summary_part4_key_takeaways.html">Summary of Part IV: Key Takeaways</a></li><li><a href="quiz_short_descriptions.html">Quiz: Short Descriptions</a></li></ul></li><li><a href="part5_content_reuse.html">Part V: Content Reuse</a><ul><li><a href="why_content_reuse_is_important.html">Why Content Reuse Is Important</a></li><li><a href="attributes_for_content_reuse.html">Attributes for Content Reuse</a></li><li><a href="examples_content_reuse.html">Examples of Content Reuse</a></li><li><a href="summary_part5_key_takeaways.html">Summary of Part V: Key Takeaways</a></li><li><a href="quiz_content_reuse.html">Quiz: Content Reuse</a></li></ul></li><li><a href="publishing_dita_content.html">Part VI: Publishing DITA Content</a><ul><li><a href="dita_outputs.html">Outputs of DITA Documentation</a></li><li><a href="language_translation_customization.html">Language Translation with DITA</a></li><li><a href="summary_part_vi.html">Summary of Part VI: Key Takeaways</a></li><li><a href="quiz_publishing_dita_content.html">Quiz: Publishing DITA Content</a></li></ul></li><li><a href="conclusion.html">Part VII: Conclusion</a><ul><li><a href="next-steps.html">Next Steps</a></li></ul></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Reference Topics</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">Reference topics provide structured, factual data used to support task and concept topics.</p>
+    <section class="section"><h2 class="title sectiontitle">Use</h2>
+      
+      <p class="p">Reference topics are used to provide structured, factual data. They are ideal for configuration tables, field definitions, API specifications, system requirements, error codes, and feature comparison tables. They support concept or task topics by providing detailed data users might need during or after a task. Reference content should be concise, easy to scan, and non-narrative.</p>
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">User Intent</h2>
+      
+      <p class="p">"I need to find specific information quickly."</p>
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Common Tags</h2>
+      
+      <ul class="ul">
+        <li class="li">&lt;reference&gt;: Root element.</li>
+        <li class="li">&lt;title&gt;: Topic title.</li>
+        <li class="li">&lt;shortdesc&gt;: Brief introduction.</li>
+        <li class="li">&lt;refbody&gt;: Container for detailed data.</li>
+        <li class="li">&lt;section&gt;, &lt;table&gt;, or &lt;properties&gt;: Structured content.</li>
+      </ul>
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Design Principles</h2>
+      
+      <ul class="ul">
+        <li class="li">Prioritize scannability over narrative flow.</li>
+        <li class="li">Use consistent formatting for similar information types.</li>
+        <li class="li">Include searchable keywords and synonyms.</li>
+        <li class="li">Organize information logically (alphabetical, by importance, by workflow).</li>
+        <li class="li">Provide cross-references to related concepts and tasks.</li>
+      </ul>
+    </section>
+
+<section class="section"><h2 class="title sectiontitle">Sample XML Code</h2>
+  
+  <pre class="pre codeblock language-xml"><code>
+&lt;reference id="systemreqs"&gt;
+  &lt;title&gt;System Requirements&lt;/title&gt;
+  &lt;shortdesc&gt;Minimum and recommended requirements for installation.&lt;/shortdesc&gt;
+  &lt;refbody&gt;
+    &lt;table&gt;
+      &lt;tgroup cols="2"&gt;
+        &lt;thead&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Component&lt;/entry&gt;
+            &lt;entry&gt;Requirement&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Operating System&lt;/entry&gt;
+            &lt;entry&gt;Windows 10 or later&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;RAM&lt;/entry&gt;
+            &lt;entry&gt;8 GB minimum&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/tbody&gt;
+      &lt;/tgroup&gt;
+    &lt;/table&gt;
+  &lt;/refbody&gt;
+&lt;/reference&gt;
+  </code></pre>
+</section>
+
+  </div>
+<nav role="navigation" class="related-links"></nav></article><div class="lesson-nav"><a href="task_topics.html" class="nav-button prev">Previous page</a><a href="glossary_entries.html" class="nav-button next">Next page</a></div>
+</main></body></html>

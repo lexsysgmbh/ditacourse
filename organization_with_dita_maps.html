@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="DITA maps offer advanced organizational capabilities including hierarchical and conditional structures and various collection types."><title>Organization</title><link rel="stylesheet" type="text/css" href="commonltr.css"><script async src="https://hypothes.is/embed.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-xml.min.js"></script>
+
+</head><body id="organization_with_dita_maps"><header role="banner"><div class="breadcrumb"></div></header><nav class="toc" role="navigation"><ul><li><a href="dita_structured_authoring.html">DITA Structured Authoring</a><ul><li><a href="part1_introduction_to_dita.html">Part I: Introduction to DITA</a><ul><li><a href="why_structured_authoring_matters.html">Why Structured Authoring Matters</a></li><li><a href="key_benefits_structured_authoring.html">Key Benefits of Structured Authoring</a></li><li><a href="what_is_dita.html">What is DITA?</a></li><li><a href="advantages_of_using_dita.html">Advantages of Using DITA</a></li><li><a href="dita_vs_other_standards.html">DITA vs. Other XML-Based Standards and Lightweight Markup</a></li><li><a href="summary_part1_key_takeaways.html">Summary of Part I: Key Takeaways</a></li><li><a href="quiz_introduction_to_dita.html">Quiz: Introduction to DITA</a></li></ul></li><li><a href="part2_dita_maps.html">Part II: DITA Maps</a><ul><li><a href="what_are_dita_maps.html">What Are DITA Maps?</a></li><li class="active"><a href="organization_with_dita_maps.html">Organization</a></li><li><a href="relationship_tables_reltables.html">Relationship Tables (RelTables)</a></li><li><a href="navigation_with_dita_maps.html">Navigation</a></li><li><a href="summary_part2_key_takeaways.html">Summary of Part II: Key Takeaways</a></li><li><a href="quiz_dita_maps.html">Quiz: DITA Maps</a></li></ul></li><li><a href="part3_topic_types.html">Part III: Topic Types</a><ul><li><a href="concept_topics.html">Concept Topics</a></li><li><a href="task_topics.html">Task Topics</a></li><li><a href="reference_topics.html">Reference Topics</a></li><li><a href="glossary_entries.html">Glossary Entries</a></li><li><a href="troubleshooting_topics.html">Troubleshooting Topics</a></li><li><a href="summary_part3_key_takeaways.html">Summary of Part III: Key Takeaways</a></li><li><a href="quiz_topic_types.html">Quiz: Topic Types</a></li></ul></li><li><a href="part4_short_descriptions.html">Part IV: Short Descriptions</a><ul><li><a href="definition_and_purpose_shortdesc.html">Definition and Purpose</a></li><li><a href="structure_and_guidelines_shortdesc.html">Structure and Guidelines</a></li><li><a href="examples_effective_ineffective_shortdesc.html">Examples of Effective and Ineffective Short Descriptions</a></li><li><a href="summary_part4_key_takeaways.html">Summary of Part IV: Key Takeaways</a></li><li><a href="quiz_short_descriptions.html">Quiz: Short Descriptions</a></li></ul></li><li><a href="part5_content_reuse.html">Part V: Content Reuse</a><ul><li><a href="why_content_reuse_is_important.html">Why Content Reuse Is Important</a></li><li><a href="attributes_for_content_reuse.html">Attributes for Content Reuse</a></li><li><a href="examples_content_reuse.html">Examples of Content Reuse</a></li><li><a href="summary_part5_key_takeaways.html">Summary of Part V: Key Takeaways</a></li><li><a href="quiz_content_reuse.html">Quiz: Content Reuse</a></li></ul></li><li><a href="publishing_dita_content.html">Part VI: Publishing DITA Content</a><ul><li><a href="dita_outputs.html">Outputs of DITA Documentation</a></li><li><a href="language_translation_customization.html">Language Translation with DITA</a></li><li><a href="summary_part_vi.html">Summary of Part VI: Key Takeaways</a></li><li><a href="quiz_publishing_dita_content.html">Quiz: Publishing DITA Content</a></li></ul></li><li><a href="conclusion.html">Part VII: Conclusion</a><ul><li><a href="next-steps.html">Next Steps</a></li></ul></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Organization</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">DITA maps offer advanced organizational capabilities including hierarchical and conditional structures and various collection types.</p>
+    <p class="p">DITA maps provide sophisticated organizational capabilities that go far beyond simple hierarchical structures.</p>
+
+    <section class="section"><h2 class="title sectiontitle">Hierarchical Organization</h2>
+      
+      <p class="p">DITA maps use nested &lt;topicref&gt; elements to create hierarchical relationships, similar to chapters and sub-chapters in a book.</p>
+      <p class="p"><strong class="ph b">Example:</strong></p>
+      <pre class="pre codeblock language-xml"><code>
+&lt;map&gt;
+  &lt;title&gt;Product User Guide&lt;/title&gt;
+  &lt;topicref href="introduction.dita"&gt;
+    &lt;topicref href="getting-started.dita"/&gt;
+    &lt;topicref href="basic-concepts.dita"/&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="advanced-features.dita"&gt;
+    &lt;topicref href="customization.dita"/&gt;
+    &lt;topicref href="integration.dita"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;
+      </code></pre>
+      <p class="p">This structure automatically generates navigation hierarchies in published output, eliminating the need for manual formatting or cross-reference maintenance. You can easily switch to a "Quick Start Guide" by using a different map that references only selected topics.</p>
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Conditional Organization</h2>
+      
+      <p class="p">DITA maps can conditionally include or exclude content based on filtering attributes like audience, product, or platform. This allows different audiences to receive tailored content from the same topic set.</p>
+      <p class="p"><strong class="ph b">Example:</strong></p>
+      <pre class="pre codeblock language-xml"><code>
+&lt;topicref href="advanced-security.dita" audience="admin"/&gt;
+&lt;topicref href="basic-security.dita" audience="enduser"/&gt;
+      </code></pre>
+      <p class="p">An enterprise software company, for example, can publish "Starter," "Professional," and "Enterprise" editions of their documentation from a single master map with conditional attributes. Each edition automatically includes only the relevant topics.</p>
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Collection Types</h2>
+      
+      <p class="p">DITA maps support different collection types that define how topics relate to each other:</p>
+      <ul class="ul">
+        <li class="li"><strong class="ph b">Family Collections:</strong> Topics that are siblings in the hierarchy link to each other. Useful for FAQ sections where each question links to related questions.</li>
+        <li class="li"><strong class="ph b">Sequence Collections:</strong> Topics follow a logical order with "next/previous" navigation. Ideal for step-by-step procedures that span multiple topics, reducing user confusion and improving task completion.</li>
+        <li class="li"><strong class="ph b">Choice Collections:</strong> Topics represent alternative approaches to the same goal. Useful for different installation methods for various operating systems.</li>
+      </ul>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"></nav></article><div class="lesson-nav"><a href="what_are_dita_maps.html" class="nav-button prev">Previous page</a><a href="relationship_tables_reltables.html" class="nav-button next">Next page</a></div>
+</main></body></html>
