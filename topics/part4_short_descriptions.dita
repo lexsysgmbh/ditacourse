@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="part4_short_descriptions" xml:lang="en-US">
+  <title>Part IV: Short Descriptions</title>
+  <shortdesc>This module explores the purpose and best practices for writing effective short descriptions in DITA topics.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Learning Objectives</title>
+      <p>Upon completing this module, you will be able to:</p>
+      <ul>
+        <li>Define a short description and explain its multi-functional purpose in DITA.</li>
+        <li>Understand the importance of short descriptions for user experience and content discoverability.</li>
+        <li>Identify the structural guidelines for writing effective short descriptions across different topic types.</li>
+        <li>Apply best practices for writing concise, user-focused short descriptions.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="part2_dita_maps" xml:lang="en-US">
+  <title>Part II: DITA Maps</title>
+  <shortdesc>This module introduces DITA maps and their role in organizing and linking topics for publication.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Learning Objectives</title>
+      <p>Upon completing this module, you will be able to:</p>
+      <ul>
+        <li>Define DITA maps and explain their primary function in organizing topics.</li>
+        <li>Describe how DITA maps enable hierarchical and conditional organization of content.</li>
+        <li>Understand the role of relationship tables in defining non-hierarchical links.</li>
+        <li>Explain how DITA maps influence navigation in various output formats.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="examples_content_reuse">
+  <title>Examples of Content Reuse</title>
+  <shortdesc>Real-world use cases demonstrating DITA content reuse strategies across different scenarios and industries.</shortdesc>
+  <conbody>
+    <section>
+      <title>Enterprise Software Documentation Example</title>
+      <p><b>Scenario:</b> A software company has three product editions sharing 70% common functionality.</p>
+      <p><b>Reuse Strategy:</b> Create a shared content library for common procedures (e.g., user account creation steps). Use conref to include these steps in product-specific task topics. Use product attributes within the shared content and in publication configurations to filter for each edition (Basic, Professional, Enterprise).</p>
+      <p><b>Business Outcome:</b> A single content source generates three distinct user guides with appropriate feature coverage for each product tier, reducing duplication and maintenance.</p>
+    </section>
+    <section>
+      <title>Multi-Platform Installation Guide Example</title>
+      <p><b>Challenge:</b> Support installation across Windows, macOS, and Linux with shared prerequisites and post-installation steps.</p>
+      <p><b>Reuse Implementation:</b> Create platform-neutral content (e.g., system requirements, backup warnings) using conref. Use platform attributes within &lt;choice&gt; elements in task steps to provide platform-specific instructions.</p>
+      <p><b>Publishing Result:</b> Platform-specific installation guides that share common content while providing appropriate platform instructions, eliminating the need for entirely separate documents.</p>
+    </section>
+    <section>
+      <title>Regulatory Compliance Example</title>
+      <p><b>Scenario:</b> Healthcare software requiring HIPAA compliance information across multiple user guides.</p>
+      <p><b>Compliance Reuse Strategy:</b> Create a dedicated compliance content library. Use conref to embed HIPAA warnings or notes in relevant task or concept topics, often combined with otherprops for compliance-specific filtering (e.g., otherprops="healthcare" or otherprops="hipaa").</p>
+      <p><b>Compliance Benefit:</b> Ensures consistent regulatory information across all documentation with single-point updates when regulations change, reducing legal risk.</p>
+    </section>
+    <section>
+      <title>Translation Efficiency Example</title>
+      <p><b>Challenge:</b> A global software company needs to translate documentation into 12 languages with significant content overlap.</p>
+      <p><b>Translation-Optimized Reuse:</b> Identify highly reusable content (error messages, navigation instructions, safety warnings, common procedural steps). Use conref for these elements. DITA also provides the translate="no" attribute to explicitly exclude specific content (e.g., brand names, code snippets, non-translatable strings) from translation, further optimizing costs.</p>
+      <p><b>Translation ROI:</b> DITA's modularity and reuse lead to significant cost reductions (up to 40%) through leveraged translation memory and elimination of duplicate translation work.</p>
+    </section>
+  </conbody>
+</concept>

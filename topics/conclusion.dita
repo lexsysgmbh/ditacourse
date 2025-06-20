@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="conclusion">
+  <title>Part VII: Conclusion</title>
+  <shortdesc>Summary of what you have learned in the DITA structured authoring course.</shortdesc>
+  <conbody>
+    <section>
+      <title>What You Have Learned</title>
+      <ul>
+        <li>The value of structured authoring and why DITA is a scalable, efficient solution for documentation.</li>
+        <li>Core topic types (concept, task, reference, glossary, troubleshooting) and their correct usage based on user intent and content purpose.</li>
+        <li>How to build and organize documentation using DITA maps, defining structure, sequence, and navigation.</li>
+        <li>The importance and mechanics of content reuse using DITA attributes (like conref, copy-to) and topic modularity.</li>
+        <li>How to publish DITA content to multiple formats like HTML, PDF, and content delivery portals.</li>
+        <li>How DITA effectively supports translation workflows and output customization.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

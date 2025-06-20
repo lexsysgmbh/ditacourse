@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="examples_effective_ineffective_shortdesc" xml:lang="en-US">
+  <title>Examples of Effective and Ineffective Short Descriptions</title>
+  <shortdesc>This topic compares good and poor short description examples across topic types and user contexts to highlight best practices.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>Here's a comparison table and examples demonstrating effective short descriptions across different topic types and scenarios:</p>
+
+<table>
+  <tgroup cols="4" colsep="1" rowsep="1">
+    <colspec colname="col1" colwidth="1*"/>
+    <colspec colname="col2" colwidth="2*"/>
+    <colspec colname="col3" colwidth="3*"/>
+    <colspec colname="col4" colwidth="3*"/>
+    <thead>
+      <row>
+        <entry>Topic Type</entry>
+        <entry>Poor Short Description</entry>
+        <entry>Good Short Description</entry>
+        <entry>Analysis</entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry>Concept</entry>
+        <entry>Info about user management.</entry>
+        <entry>Overview of user account creation, permission assignment, and access control policies for system administrators.</entry>
+        <entry>The poor example is vague. The good example is specific, defines scope, and indicates target audience.</entry>
+      </row>
+      <row>
+        <entry>Task</entry>
+        <entry>How to configure email settings.</entry>
+        <entry>Set up SMTP servers, authentication, and security options to enable reliable email delivery from applications.</entry>
+        <entry>The poor example repeats the title without adding value. The good example expands on the title, providing concrete actions and benefits.</entry>
+      </row>
+      <row>
+        <entry>Reference</entry>
+        <entry>Data for APIs.</entry>
+        <entry>Complete API reference for user management operations, including authentication, user creation, and permission assignment.</entry>
+        <entry>The poor example is too generic. The good example specifies the type of data, its scope, and what it covers.</entry>
+      </row>
+      <row>
+        <entry>Troubleshooting</entry>
+        <entry>Login issue help.</entry>
+        <entry>Diagnose and resolve login problems caused by password policies, account lockouts, or authentication service connectivity issues.</entry>
+        <entry>The poor example is unhelpful. The good example identifies the problem area and lists main cause categories, helping users determine relevance quickly.</entry>
+      </row>
+    </tbody>
+  </tgroup>
+</table>
+
+    <section>
+      <title>Industry-Specific Examples</title>
+      <ul>
+        <li><b>Software Development:</b>
+          <p><i>Title:</i> API Rate Limiting</p>
+          <p><i>Short Description:</i> Control API usage by limiting request frequency per user or application, preventing system overload while ensuring fair resource distribution.</p>
+        </li>
+        <li><b>Healthcare Context:</b>
+          <p><i>Title:</i> Patient Data Privacy Compliance</p>
+          <p><i>Short Description:</i> Ensure medical records handling meets HIPAA requirements through access controls, audit logging, and secure transmission protocols.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Short Descriptions for Different Audiences (Same Topic)</title>
+      <ul>
+        <li><b>Technical Audience Example:</b>
+          <p><i>Title:</i> Database Index Optimization</p>
+          <p><i>Short Description:</i> Improve query performance through strategic index design, covering composite indexes, query execution plans, and maintenance overhead considerations.</p>
+        </li>
+        <li><b>Business Audience Example:</b>
+          <p><i>Title:</i> Database Performance Improvement</p>
+          <p><i>Short Description:</i> Speed up application response times and reduce system costs through database optimization techniques that require minimal downtime.</p>
+        </li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

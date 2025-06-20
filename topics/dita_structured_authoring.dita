@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="dita_structured_authoring" xml:lang="en-US">
+  <title>DITA Structured Authoring</title>
+  <shortdesc>This course provides a comprehensive introduction to DITA (Darwin Information Typing Architecture) structured authoring.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>You will learn the core principles, key components, and practical applications of DITA to create consistent, reusable, and scalable technical documentation.</p>
+
+    <section>
+      <title>Course Audience</title>
+      <p>This course is designed for junior to mid-level technical writers, content creators, and content professionals who are looking to understand and apply structured authoring principles using DITA.</p>
+    </section>
+
+    <section>
+      <title>Course Structure</title>
+      <ul>
+        <li>Part I: Introduction to DITA</li>
+        <li>Part II: DITA Maps</li>
+        <li>Part III: Topic Types</li>
+        <li>Part IV: Short Descriptions</li>
+        <li>Part V: Content Reuse</li>
+        <li>Part VI: Publishing DITA Content</li>
+        <li>Part VII: Conclusion</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

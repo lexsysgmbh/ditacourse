@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="quiz_short_descriptions" xml:lang="en-US">
+  <title>Quiz: Short Descriptions</title>
+  <shortdesc>Test your understanding of the structure, purpose, and best practices of DITA short descriptions.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+
+    <p>1. What is the main goal of a short description in DITA?</p>
+    <ul>
+      <li>a) To replace the title</li>
+      <li><b>b) To summarize the topic for readers and improve navigation</b></li>
+      <li>c) To display steps</li>
+      <li>d) To show metadata</li>
+    </ul>
+
+    <p>2. What is the optimal length range for effective short descriptions?</p>
+    <ul>
+      <li>a) 10–15 words</li>
+      <li><b>b) 25–50 words</b></li>
+      <li>c) 75–100 words</li>
+      <li>d) 100–150 words</li>
+    </ul>
+
+    <p>3. Where should the <codeph>&lt;shortdesc&gt;</codeph> element appear in a topic file?</p>
+    <ul>
+      <li>a) Before the title</li>
+      <li>b) Inside the steps</li>
+      <li><b>c) Directly after the title, before the body</b></li>
+      <li>d) At the end of the topic</li>
+    </ul>
+
+    <p>4. Which short description pattern is most appropriate for task topics?</p>
+    <ul>
+      <li>a) Brief definition + why it matters</li>
+      <li><b>b) Goal statement + when to perform</b></li>
+      <li>c) Content scope + intended use</li>
+      <li>d) Problem description + resolution method</li>
+    </ul>
+
+    <p>5. What makes a short description ineffective?</p>
+    <ul>
+      <li>a) It is two sentences long</li>
+      <li><b>b) It restates the title without adding value</b></li>
+      <li>c) It provides context</li>
+      <li>d) It uses clear, concise language</li>
+    </ul>
+
+  </conbody>
+</concept>

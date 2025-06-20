@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="task_topics" xml:lang="en-US">
+  <title>Task Topics</title>
+  <shortdesc>Task topics provide clear, step-by-step instructions for completing specific procedures and reducing user errors.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Use</title>
+      <p>Task topics provide clear, step-by-step instructions for completing a procedure. They are best used when guiding users through a specific action, such as installing software, configuring settings, or submitting forms. Tasks reduce user errors by presenting actions in a consistent, predictable way, making them ideal for call centers, onboarding flows, and support documentation.</p>
+    </section>
+
+    <section>
+      <title>User Intent</title>
+      <p>"I need to get something done right now."</p>
+    </section>
+
+    <section>
+      <title>Common Tags</title>
+      <ul>
+        <li>&lt;task&gt;: Root element.</li>
+        <li>&lt;title&gt;: Action name (e.g., "Reset Your Password").</li>
+        <li>&lt;shortdesc&gt;: Quick summary.</li>
+        <li>&lt;taskbody&gt;: Container for steps and results.</li>
+        <li>&lt;steps&gt; and &lt;step&gt;: Ordered procedural instructions.</li>
+        <li>&lt;result&gt;: Outcome of the task.</li>
+        <li>&lt;prereq&gt;: Optional requirements before starting.</li>
+        <li>&lt;context&gt;: When and why to perform this task.</li>
+        <li>&lt;postreq&gt;: Recommended follow-up actions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Step Structure Best Practices</title>
+      <ul>
+        <li>One action per step.</li>
+        <li>Use imperative voice (e.g., "Click Save").</li>
+        <li>Include expected results for complex steps.</li>
+        <li>Provide specific UI element names and locations.</li>
+        <li>Use conditional steps for different scenarios.</li>
+        <li>Test task topics with actual users to identify gaps and ensure clarity.</li>
+      </ul>
+    </section>
+
+    <section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;task id="resetpassword"&gt;
+  &lt;title&gt;Reset Your Password&lt;/title&gt;
+  &lt;shortdesc&gt;This procedure resets your account password using email verification.&lt;/shortdesc&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step&gt;Go to the login page and click "Forgot Password".&lt;/step&gt;
+      &lt;step&gt;Enter your registered email address.&lt;/step&gt;
+      &lt;step&gt;Follow the link sent to your email to set a new password.&lt;/step&gt;
+    &lt;/steps&gt;
+    &lt;result&gt;Your password is now updated and you can log in.&lt;/result&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

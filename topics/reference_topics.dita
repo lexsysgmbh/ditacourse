@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reference_topics" xml:lang="en-US">
+  <title>Reference Topics</title>
+  <shortdesc>Reference topics provide structured, factual data used to support task and concept topics.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Use</title>
+      <p>Reference topics are used to provide structured, factual data. They are ideal for configuration tables, field definitions, API specifications, system requirements, error codes, and feature comparison tables. They support concept or task topics by providing detailed data users might need during or after a task. Reference content should be concise, easy to scan, and non-narrative.</p>
+    </section>
+
+    <section>
+      <title>User Intent</title>
+      <p>"I need to find specific information quickly."</p>
+    </section>
+
+    <section>
+      <title>Common Tags</title>
+      <ul>
+        <li>&lt;reference&gt;: Root element.</li>
+        <li>&lt;title&gt;: Topic title.</li>
+        <li>&lt;shortdesc&gt;: Brief introduction.</li>
+        <li>&lt;refbody&gt;: Container for detailed data.</li>
+        <li>&lt;section&gt;, &lt;table&gt;, or &lt;properties&gt;: Structured content.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Design Principles</title>
+      <ul>
+        <li>Prioritize scannability over narrative flow.</li>
+        <li>Use consistent formatting for similar information types.</li>
+        <li>Include searchable keywords and synonyms.</li>
+        <li>Organize information logically (alphabetical, by importance, by workflow).</li>
+        <li>Provide cross-references to related concepts and tasks.</li>
+      </ul>
+    </section>
+
+<section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;reference id="systemreqs"&gt;
+  &lt;title&gt;System Requirements&lt;/title&gt;
+  &lt;shortdesc&gt;Minimum and recommended requirements for installation.&lt;/shortdesc&gt;
+  &lt;refbody&gt;
+    &lt;table&gt;
+      &lt;tgroup cols="2"&gt;
+        &lt;thead&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Component&lt;/entry&gt;
+            &lt;entry&gt;Requirement&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Operating System&lt;/entry&gt;
+            &lt;entry&gt;Windows 10 or later&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;RAM&lt;/entry&gt;
+            &lt;entry&gt;8 GB minimum&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/tbody&gt;
+      &lt;/tgroup&gt;
+    &lt;/table&gt;
+  &lt;/refbody&gt;
+&lt;/reference&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

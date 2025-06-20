@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="quiz_content_reuse">
+  <title>Quiz: Content Reuse</title>
+  <shortdesc>This quiz assesses your understanding of content reuse concepts in DITA.</shortdesc>
+  <conbody>
+
+    <p>1. What is a major benefit of content reuse in DITA?</p>
+    <ul>
+      <li>a) Makes topics shorter</li>
+      <li>b) Reduces the need for XML editors</li>
+      <li><b>c) Centralizes content maintenance</b></li>
+      <li>d) Improves visual layout</li>
+    </ul>
+
+    <p>2. Which DITA attribute would be most appropriate for filtering content between "Basic" and "Professional" software editions?</p>
+    <ul>
+      <li><b>a) audience</b></li>
+      <li>b) platform</li>
+      <li>c) product</li>
+      <li>d) otherprops</li>
+    </ul>
+
+    <p>3. Which DITA feature allows reuse of specific elements like steps or notes with automatic synchronization?</p>
+    <ul>
+      <li><b>a) conref</b></li>
+      <li>b) href</li>
+      <li>c) idref</li>
+      <li>d) shortdesc</li>
+    </ul>
+
+    <p>4. When should you use the copy-to attribute instead of conref?</p>
+    <ul>
+      <li>a) When you want automatic content synchronization</li>
+      <li><b>b) When you need the same content to appear with different navigation contexts or URLs</b></li>
+      <li>c) When you want to translate content into multiple languages</li>
+      <li>d) When you need to filter content for different audiences</li>
+    </ul>
+
+    <p>5. How does reuse benefit translation workflows?</p>
+    <ul>
+      <li>a) Requires translating all content separately</li>
+      <li><b>b) Reused elements only need to be translated once</b></li>
+      <li>c) Prevents translation</li>
+      <li>d) Combines multiple languages into one topic</li>
+    </ul>
+
+  </conbody>
+</concept>

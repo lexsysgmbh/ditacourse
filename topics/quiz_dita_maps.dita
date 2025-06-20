@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="quiz_dita_maps" xml:lang="en-US">
+  <title>Quiz: DITA Maps</title>
+  <shortdesc>This quiz assesses understanding of the concepts introduced in Part II: DITA Maps.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+
+    <p>1. What is the main purpose of a DITA map?</p>
+    <ul>
+      <li>a) Store the full text of topics</li>
+      <li>b) Control the formatting of XML files</li>
+      <li><b>c) Organize and reference topics for publishing</b></li>
+      <li>d) Convert XML into PDF</li>
+    </ul>
+
+    <p>2. How do DITA maps support content reuse?</p>
+    <ul>
+      <li>a) By allowing content to be duplicated</li>
+      <li><b>b) By allowing topics to be rearranged and reused in multiple outputs</b></li>
+      <li>c) By removing the need for structured authoring</li>
+      <li>d) By copying all content into one file</li>
+    </ul>
+
+    <p>3. Which DITA map feature automatically generates cross-references between related topics that don't follow the hierarchical structure?</p>
+    <ul>
+      <li>a) Collection types</li>
+      <li>b) Navigation titles</li>
+      <li>c) Topic references</li>
+      <li><b>d) Relationship tables</b></li>
+    </ul>
+
+    <p>4. What is the main advantage of using <codeph>navtitle</codeph> attributes in DITA maps?</p>
+    <ul>
+      <li>a) They improve search engine optimization</li>
+      <li><b>b) They allow different titles for navigation versus content without changing the actual topics</b></li>
+      <li>c) They automatically translate titles into multiple languages</li>
+      <li>d) They make topics load faster in published output</li>
+    </ul>
+
+    <p>5. Which DITA feature allows for the easiest reorganization of content?</p>
+    <ul>
+      <li>a) Topic formatting</li>
+      <li><b>b) DITA maps</b></li>
+      <li>c) Content stacking</li>
+      <li>d) Metadata tagging</li>
+    </ul>
+
+  </conbody>
+</concept>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what_is_dita" xml:lang="en-US">
+  <title>What is DITA?</title>
+  <shortdesc>DITA (Darwin Information Typing Architecture) is an open XML-based standard developed by IBM, now maintained by OASIS. It is specifically designed for technical communication and supports content reuse, semantic tagging, and flexible publishing.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>A medical device manufacturer, for instance, can use DITA to create user manuals. The same safety warning topic can be reused across dozens of device manuals, ensuring consistency while significantly reducing authoring effort.</p>
+
+    <section>
+      <title>Core Principles of DITA</title>
+      <ul>
+        <li><b>Topic-based authoring:</b> Content is organized into discrete, self-contained units called "topics" (concept, task, or reference). This contrasts with traditional lengthy documents.</li>
+        <li><b>Separation of content and format:</b> Authors focus solely on the information's structure, while formatting is applied during the publishing process.</li>
+        <li><b>Specialization:</b> DITA allows organizations to extend its base structures to create specialized topic types and information models tailored to specific domain needs.</li>
+        <li><b>Conditional publishing:</b> A single source of content can be filtered and tailored for different audiences, products, or platforms based on metadata.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>DITA Architecture Components</title>
+      <ul>
+        <li><b>Topics:</b> The fundamental, self-contained units of information (e.g., concept, task, reference, glossary, troubleshooting).</li>
+        <li><b>Maps:</b> XML files (.ditamap) that organize and define the structure, sequence, and relationships of DITA topics to form publications. They act as a blueprint for assembling documents.</li>
+        <li><b>Metadata:</b> Structured information about content (e.g., audience, product) used for filtering and processing during publishing.</li>
+        <li><b>Specialization:</b> The mechanism for creating domain-specific extensions of DITA.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

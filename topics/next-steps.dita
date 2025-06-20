@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="next-steps">
+  <title>Next Steps</title>
+  <body>
+    <p>If you're a technical writer or content professional:</p>
+    <ul>
+      <li>Start practicing by building small DITA topics and experimenting with DITA-OT for local publishing.</li>
+      <li>Explore commercial tools like Oxygen XML Editor or easyDITA to gain hands-on experience with structured workflows.</li>
+    </ul>
+    <p>If you're a decision-maker:</p>
+    <ul>
+      <li>Evaluate how DITA fits into your content strategy or enterprise documentation pipeline.</li>
+      <li>Consider piloting DITA on a small documentation set to measure efficiency gains and reuse potential within your organization.</li>
+    </ul>
+    <p>Further Learning Resources:</p>
+    <ul>
+      <li><xref href="https://dita.xml.org">dita.xml.org</xref>: The official DITA website for specifications and community resources.</li>
+      <li>Tool vendor documentation: Explore resources from DITA tool vendors (e.g., Oxygen XML Editor, SDL Tridion Docs, Adobe Experience Manager) for practical implementation details.</li>
+    </ul>
+  </body>
+</topic>

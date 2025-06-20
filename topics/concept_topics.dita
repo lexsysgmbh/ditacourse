@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_topics" xml:lang="en-US">
+  <title>Concept Topics</title>
+  <shortdesc>Concept topics introduce and explain subjects, providing background knowledge before procedural or reference content.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Use</title>
+      <p>Concept topics are used to introduce and explain a subject, tool, feature, or process. They provide background knowledge that users need before performing a task or understanding a reference. They are ideal for overviews, product introductions, or clarifying abstract ideas. Concept topics are especially important early in the user journey, explaining "why" something matters before showing "how" to use it.</p>
+    </section>
+
+    <section>
+      <title>User Intent</title>
+      <p>"I need to understand this before I can do anything with it."</p>
+    </section>
+
+    <section>
+      <title>Common Tags</title>
+      <ul>
+        <li>&lt;concept&gt;: Root element for the topic.</li>
+        <li>&lt;title&gt;: Name of the concept.</li>
+        <li>&lt;shortdesc&gt;: A brief summary or abstract.</li>
+        <li>&lt;conbody&gt;: Main body content.</li>
+        <li>&lt;section&gt; or &lt;p&gt;: Structured explanation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Structural Best Practices</title>
+      <ul>
+        <li>Start with a clear definition or overview.</li>
+        <li>Explain the "why" before the "what".</li>
+        <li>Use analogies and examples for complex concepts.</li>
+        <li>Organize from general to specific.</li>
+        <li>Link to related procedural content (tasks).</li>
+        <li>Avoid embedding task steps within concept explanations; instead, link to separate task topics.</li>
+      </ul>
+    </section>
+
+<section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;concept id="twofactorauth"&gt;
+  &lt;title&gt;What is Two-Factor Authentication?&lt;/title&gt;
+  &lt;shortdesc&gt;Two-factor authentication (2FA) adds an extra layer of security.&lt;/shortdesc&gt;
+  &lt;conbody&gt;
+    &lt;p&gt;2FA requires users to provide two forms of identity verification...&lt;/p&gt;
+    &lt;section&gt;
+      &lt;title&gt;Benefits of 2FA&lt;/title&gt;
+      &lt;p&gt;It protects against phishing, stolen passwords, and more.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/conbody&gt;
+&lt;/concept&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

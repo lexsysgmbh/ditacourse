@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="troubleshooting_topics" xml:lang="en-US">
+  <title>Troubleshooting Topics</title>
+  <shortdesc>Troubleshooting topics guide users through problem identification and resolution, improving self-service and reducing support costs.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Use</title>
+      <p>Troubleshooting topics help users diagnose and resolve problems. These topics improve self-service support and reduce support costs by guiding users through problem identification, possible causes, and solutions. They are ideal for documentation concerning software, hardware, and systems where error conditions are common.</p>
+    </section>
+
+    <section>
+      <title>User Intent</title>
+      <p>"Something isn't working and I need to fix it now."</p>
+    </section>
+
+    <section>
+      <title>Common Tags</title>
+      <ul>
+        <li>&lt;troubleshooting&gt;: Root element.</li>
+        <li>&lt;title&gt;: Problem name (often starting with "Why..." or describing the symptom).</li>
+        <li>&lt;shortdesc&gt;: Brief problem summary.</li>
+        <li>&lt;troublebody&gt;: Description of symptoms, causes, and solutions.</li>
+        <li>&lt;cause&gt;: Explains what went wrong.</li>
+        <li>&lt;solution&gt;: Explains how to fix it.</li>
+        <li>&lt;prereq&gt;: Information needed for troubleshooting.</li>
+        <li>&lt;prevention&gt;: How to avoid the problem in the future.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Effective Troubleshooting Structure</title>
+      <ul>
+        <li>Lead with the most common cause and solution.</li>
+        <li>Provide diagnostic steps before complex solutions.</li>
+        <li>Include verification steps to confirm resolution.</li>
+        <li>Offer escalation paths for unresolved issues.</li>
+        <li>Test troubleshooting topics with actual problem scenarios when possible.</li>
+      </ul>
+    </section>
+
+<section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;troubleshooting id="noconnect"&gt;
+  &lt;title&gt;Cannot Connect to Server&lt;/title&gt;
+  &lt;shortdesc&gt;Connection errors can be caused by network or server issues.&lt;/shortdesc&gt;
+  &lt;troublebody&gt;
+    &lt;cause&gt;The server may be down or your internet connection is inactive.&lt;/cause&gt;
+    &lt;solution&gt;Check your internet connection and retry. If the issue persists, contact IT support.&lt;/solution&gt;
+  &lt;/troublebody&gt;
+&lt;/troubleshooting&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

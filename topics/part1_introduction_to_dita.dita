@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="part1_introduction_to_dita" xml:lang="en-US">
+  <title>Part I: Introduction to DITA</title>
+  <shortdesc>This module introduces the fundamental concepts and benefits of DITA structured authoring.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Learning Objectives</title>
+      <p>Upon completing this module, you will be able to:</p>
+      <ul>
+        <li>Understand the fundamental challenges of traditional documentation methods and how structured authoring addresses them.</li>
+        <li>Define DITA and explain its core principles and architecture.</li>
+        <li>Identify the key benefits of using DITA for technical communication.</li>
+        <li>Compare DITA to other XML-based standards and lightweight markup languages.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

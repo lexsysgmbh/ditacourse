@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="attributes_for_content_reuse" xml:lang="en-US">
+  <title>Attributes for Content Reuse</title>
+  <shortdesc>Explore DITA attributes for conditional processing and content reuse through conref and copy-to mechanisms.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>DITA provides sophisticated attribute systems that enable precise control over when and how content appears in different publications. These attributes act as filters during the publishing process, allowing single-source content to serve multiple audiences and scenarios.</p>
+
+<section>
+  <title>Conditional Processing Attributes</title>
+  <p>These attributes allow you to include or exclude content based on specific conditions, supporting sophisticated conditional publishing.</p>
+  <ul>
+    <li>
+      <b>audience:</b> Targets user groups (e.g., admin, enduser).<br/>
+      Example:
+      <codeblock outputclass="language-xml">
+&lt;p audience="admin"&gt;Use the command line interface...&lt;/p&gt;
+      </codeblock>
+    </li>
+    <li>
+      <b>platform:</b> Targets operating systems (e.g., windows, mac).<br/>
+      Example:
+      <codeblock outputclass="language-xml">
+&lt;p platform="windows"&gt;Double-click the installer...&lt;/p&gt;
+      </codeblock>
+    </li>
+    <li>
+      <b>product:</b> Targets specific product versions.<br/>
+      Example:
+      <codeblock outputclass="language-xml">
+&lt;p product="professional"&gt;Configure single sign-on...&lt;/p&gt;
+      </codeblock>
+    </li>
+    <li>
+      <b>otherprops:</b> Custom filtering for specific needs.<br/>
+      Example:
+      <codeblock outputclass="language-xml">
+&lt;note otherprops="gdpr"&gt;European customers must consent...&lt;/note&gt;
+      </codeblock>
+    </li>
+  </ul>
+  <p>DITA processors support complex filtering using Boolean logic and multiple attributes.</p>
+</section>
+
+<section>
+  <title>conref Attribute</title>
+  <p>The <codeph>conref</codeph> attribute enables direct reuse of content elements from other topics. Referenced content stays synchronized across uses.</p>
+  <p>Sample Usage:</p>
+  <codeblock outputclass="language-xml">
+&lt;task id="userlogin"&gt;
+  &lt;title&gt;Log In&lt;/title&gt;
+  &lt;shortdesc&gt;This task guides users through logging in.&lt;/shortdesc&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step conref="snippets.dita#snippets/loginstep"/&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;
+  </codeblock>
+  <p><b>Best Practices:</b> Organize reusable content, use meaningful IDs, maintain appropriate granularity, and manage changes carefully.</p>
+</section>
+
+<section>
+  <title>copy-to Attribute</title>
+  <p>The <codeph>copy-to</codeph> attribute creates topic copies with different contexts or metadata while maintaining original content integrity.</p>
+  <p><b>When to Use:</b> When content needs to appear in multiple locations with distinct navigational or URL contexts.</p>
+
+  <p><b>conref vs. copy-to Comparison:</b></p>
+<table>
+  <tgroup cols="3" colsep="1" rowsep="1">
+    <colspec colname="col1" colwidth="2*"/>
+    <colspec colname="col2" colwidth="1.5*"/>
+    <colspec colname="col3" colwidth="1.5*"/>
+    <thead>
+      <row>
+        <entry>Feature</entry>
+        <entry><codeph>conref</codeph></entry>
+        <entry><codeph>copy-to</codeph></entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry>Granularity</entry>
+        <entry>Element-level reuse</entry>
+        <entry>Topic-level reuse</entry>
+      </row>
+      <row>
+        <entry>Synchronization</entry>
+        <entry>Automatic</entry>
+        <entry>Manual</entry>
+      </row>
+      <row>
+        <entry>File Proliferation</entry>
+        <entry>No</entry>
+        <entry>Yes</entry>
+      </row>
+      <row>
+        <entry>Context/URL</entry>
+        <entry>Same context</entry>
+        <entry>New navigation</entry>
+      </row>
+      <row>
+        <entry>Complexity</entry>
+        <entry>Simpler</entry>
+        <entry>More complex</entry>
+      </row>
+    </tbody>
+  </tgroup>
+</table>
+
+  <p><b>Decision Framework:</b> Use <codeph>conref</codeph> for embedded reuse with synchronization, and <codeph>copy-to</codeph> for multiple locations with different contexts or URLs.</p>
+</section>
+  </conbody>
+</concept>

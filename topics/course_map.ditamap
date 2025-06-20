@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="DITA Structured Authoring Course" xml:lang="en-US" processing-role="normal">
+
+  <topicref href="dita_structured_authoring.dita" navtitle="DITA Structured Authoring">
+    <topicref href="part1_introduction_to_dita.dita" navtitle="Part I: Introduction to DITA">
+      <topicref href="why_structured_authoring_matters.dita" navtitle="Why Structured Authoring Matters"/>
+      <topicref href="key_benefits_structured_authoring.dita" navtitle="Key Benefits of Structured Authoring"/>
+      <topicref href="what_is_dita.dita" navtitle="What is DITA?"/>
+      <topicref href="advantages_of_using_dita.dita" navtitle="Advantages of Using DITA"/>
+      <topicref href="dita_vs_other_standards.dita" navtitle="DITA vs. Other XML-Based Standards"/>
+      <topicref href="summary_part1_key_takeaways.dita" navtitle="Summary of Part I: Key Takeaways"/>
+      <topicref href="quiz_introduction_to_dita.dita" navtitle="Quiz: Introduction to DITA"/>
+    </topicref>
+
+    <topicref href="part2_dita_maps.dita" navtitle="Part II: DITA Maps">
+      <topicref href="what_are_dita_maps.dita" navtitle="What Are DITA Maps?"/>
+      <topicref href="organization_with_dita_maps.dita" navtitle="Organization"/>
+      <topicref href="relationship_tables_reltables.dita" navtitle="Relationship Tables (RelTables)"/>
+      <topicref href="navigation_with_dita_maps.dita" navtitle="Navigation"/>
+      <topicref href="summary_part2_key_takeaways.dita" navtitle="Summary of Part II: Key Takeaways"/>
+      <topicref href="quiz_dita_maps.dita" navtitle="Quiz: DITA Maps"/>
+    </topicref>
+
+    <topicref href="part3_topic_types.dita" navtitle="Part III: Topic Types">
+      <topicref href="concept_topics.dita" navtitle="Concept Topics"/>
+      <topicref href="task_topics.dita" navtitle="Task Topics"/>
+      <topicref href="reference_topics.dita" navtitle="Reference Topics"/>
+      <topicref href="glossary_entries.dita" navtitle="Glossary Entries"/>
+      <topicref href="troubleshooting_topics.dita" navtitle="Troubleshooting Topics"/>
+      <topicref href="summary_part3_key_takeaways.dita" navtitle="Summary of Part III: Key Takeaways"/>
+      <topicref href="quiz_topic_types.dita" navtitle="Quiz: Topic Types"/>
+    </topicref>
+
+    <topicref href="part4_short_descriptions.dita" navtitle="Part IV: Short Descriptions">
+      <topicref href="definition_and_purpose_shortdesc.dita" navtitle="Definition and Purpose"/>
+      <topicref href="structure_and_guidelines_shortdesc.dita" navtitle="Structure and Guidelines"/>
+      <topicref href="examples_effective_ineffective_shortdesc.dita" navtitle="Examples of Effective and Ineffective Short Descriptions"/>
+      <topicref href="summary_part4_key_takeaways.dita" navtitle="Summary of Part IV: Key Takeaways"/>
+      <topicref href="quiz_short_descriptions.dita" navtitle="Quiz: Short Descriptions"/>
+    </topicref>
+
+    <topicref href="part5_content_reuse.dita" navtitle="Part V: Content Reuse">
+      <topicref href="why_content_reuse_is_important.dita" navtitle="Why Content Reuse Is Important"/>
+      <topicref href="attributes_for_content_reuse.dita" navtitle="Attributes for Content Reuse"/>
+      <topicref href="examples_content_reuse.dita" navtitle="Examples of Content Reuse"/>
+      <topicref href="summary_part5_key_takeaways.dita" navtitle="Summary of Part V: Key Takeaways"/>
+      <topicref href="quiz_content_reuse.dita" navtitle="Quiz: Content Reuse"/>
+    </topicref>
+
+    <topicref href="publishing_dita_content.dita" navtitle="Part VI: Publishing DITA Content">
+      <topicref href="dita_outputs.dita" navtitle="Outputs of DITA"/>
+      <topicref href="language_translation_customization.dita" navtitle="Language Translation with DITA"/>
+      <topicref href="summary_part_vi.dita" navtitle="Summary of Part VI: Key Takeaways"/>
+      <topicref href="quiz_publishing_dita_content.dita" navtitle="Quiz: Publishing DITA Content"/>
+    </topicref>
+
+    <topicref href="conclusion.dita" navtitle="Part VII: Conclusion">
+      <topicref href="next-steps.dita" navtitle="Next Steps"/>
+    </topicref>
+  </topicref>
+
+</map>

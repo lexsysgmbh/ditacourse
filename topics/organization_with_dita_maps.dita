@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="organization_with_dita_maps" xml:lang="en-US">
+  <title>Organization</title>
+  <shortdesc>DITA maps offer advanced organizational capabilities including hierarchical and conditional structures and various collection types.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>DITA maps provide sophisticated organizational capabilities that go far beyond simple hierarchical structures.</p>
+
+    <section>
+      <title>Hierarchical Organization</title>
+      <p>DITA maps use nested &lt;topicref&gt; elements to create hierarchical relationships, similar to chapters and sub-chapters in a book.</p>
+      <p><b>Example:</b></p>
+      <codeblock outputclass="language-xml">
+&lt;map&gt;
+  &lt;title&gt;Product User Guide&lt;/title&gt;
+  &lt;topicref href="introduction.dita"&gt;
+    &lt;topicref href="getting-started.dita"/&gt;
+    &lt;topicref href="basic-concepts.dita"/&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="advanced-features.dita"&gt;
+    &lt;topicref href="customization.dita"/&gt;
+    &lt;topicref href="integration.dita"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;
+      </codeblock>
+      <p>This structure automatically generates navigation hierarchies in published output, eliminating the need for manual formatting or cross-reference maintenance. You can easily switch to a "Quick Start Guide" by using a different map that references only selected topics.</p>
+    </section>
+
+    <section>
+      <title>Conditional Organization</title>
+      <p>DITA maps can conditionally include or exclude content based on filtering attributes like audience, product, or platform. This allows different audiences to receive tailored content from the same topic set.</p>
+      <p><b>Example:</b></p>
+      <codeblock outputclass="language-xml">
+&lt;topicref href="advanced-security.dita" audience="admin"/&gt;
+&lt;topicref href="basic-security.dita" audience="enduser"/&gt;
+      </codeblock>
+      <p>An enterprise software company, for example, can publish "Starter," "Professional," and "Enterprise" editions of their documentation from a single master map with conditional attributes. Each edition automatically includes only the relevant topics.</p>
+    </section>
+
+    <section>
+      <title>Collection Types</title>
+      <p>DITA maps support different collection types that define how topics relate to each other:</p>
+      <ul>
+        <li><b>Family Collections:</b> Topics that are siblings in the hierarchy link to each other. Useful for FAQ sections where each question links to related questions.</li>
+        <li><b>Sequence Collections:</b> Topics follow a logical order with "next/previous" navigation. Ideal for step-by-step procedures that span multiple topics, reducing user confusion and improving task completion.</li>
+        <li><b>Choice Collections:</b> Topics represent alternative approaches to the same goal. Useful for different installation methods for various operating systems.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="part5_content_reuse" xml:lang="en-US">
+  <title>Part V: Content Reuse</title>
+  <shortdesc>Learn about the importance, methods, and best practices for content reuse in DITA.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>Upon completing this module, you will be able to:</p>
+    <ul>
+      <li>Explain the critical importance of content reuse in DITA and its business benefits.</li>
+      <li>Identify and differentiate between key DITA attributes for conditional processing (<i>audience</i>, <i>platform</i>, <i>product</i>, <i>otherprops</i>).</li>
+      <li>Describe how <b>conref</b> enables element-level reuse and best practices for its use.</li>
+      <li>Understand when to use <b>copy-to</b> versus <b>conref</b> for content reuse.</li>
+      <li>Illustrate practical examples of content reuse in various real-world scenarios.</li>
+    </ul>
+  </conbody>
+</concept>

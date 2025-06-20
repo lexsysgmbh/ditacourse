@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="relationship_tables_reltables" xml:lang="en-US">
+  <title>Relationship Tables (RelTables)</title>
+  <shortdesc>Relationship tables in DITA maps define non-hierarchical links between topics, improving navigation in complex documentation.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>Relationship tables are an advanced feature within DITA maps that allow you to explicitly define cross-references between topics that don't necessarily follow the hierarchical structure.</p>
+
+    <section>
+      <title>Purpose</title>
+      <p>In complex technical documentation, topics often need to reference related information that exists elsewhere in the hierarchy. Manually maintaining these cross-references becomes unmanageable as content grows. Relationship tables automatically generate appropriate links based on defined relationships.</p>
+    </section>
+
+    <section>
+      <title>Real-World Use</title>
+      <p>A troubleshooting topic might need to link to:</p>
+      <ul>
+        <li>Related concept topics explaining underlying principles.</li>
+        <li>Task topics showing corrective procedures.</li>
+        <li>Reference topics with relevant specifications.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Best Practice</title>
+      <p>Start with simple hierarchical organization, then add relationship tables as cross-referencing needs become clear. Over-engineering relationships early can create maintenance overhead.</p>
+    </section>
+  </conbody>
+</concept>

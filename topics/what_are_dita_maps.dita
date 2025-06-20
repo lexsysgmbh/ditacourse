@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what_are_dita_maps" xml:lang="en-US">
+  <title>What Are DITA Maps?</title>
+  <shortdesc>DITA maps define the structure, sequence, and relationships of DITA topics, enabling flexible content organization and reuse.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>A DITA map is a file that defines the structure, sequence, and relationships of DITA topics. Think of it as the table of contents or assembly guide that pulls together your standalone topics into a coherent publication. It's like a blueprint for assembling a document.</p>
+
+    <p>DITA maps do not contain the content themselves; instead, they reference topics. This fundamental separation offers enormous flexibility in reusing and reorganizing information without modifying the original source content. The same topics can be organized differently across multiple publications.</p>
+
+    <p>Key components of DITA maps include:</p>
+    <ul>
+      <li><ph>Topic References (&lt;topicref&gt;):</ph> Pointers to individual DITA topics.</li>
+      <li><ph>Hierarchy:</ph> Nested structures defining parent-child relationships.</li>
+      <li><ph>Metadata:</ph> Publication-level information and filtering attributes.</li>
+      <li><ph>Navigation Elements:</ph> Control links, cross-references, and relationship tables.</li>
+    </ul>
+
+    <p><ph>Real-World Analogy:</ph> Consider a music playlist. The playlist (map) doesn't contain the actual songs (topics), but it defines which songs to include, their order, and how they relate to each other. The same song can appear in multiple playlists, just as the same topic can appear in multiple DITA maps.</p>
+
+    <p>DITA maps solve the business challenge of maintaining separate documents for each publication, which would lead to duplicate content and inconsistent organization. They enable true single-sourcing, where one set of topics can serve multiple publication needs. For example, a software company can create separate user guides for administrators and end-users, reusing common topics like "System Requirements" but organizing them differently for each audience.</p>
+  </conbody>
+</concept>

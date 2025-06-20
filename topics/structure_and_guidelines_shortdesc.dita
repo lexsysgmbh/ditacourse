@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="structure_and_guidelines_shortdesc" xml:lang="en-US">
+  <title>Structure and Guidelines</title>
+  <shortdesc>Short descriptions in DITA follow specific structural and writing guidelines to support usability and content reuse.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>Short descriptions appear in all DITA topic types. The &lt;shortdesc&gt; element must appear immediately after &lt;title&gt;, before the main body element.</p>
+
+    <section>
+      <title>Universal Structure Elements</title>
+      <ol>
+        <li>Purpose Statement: What the topic accomplishes.</li>
+        <li>Context Clue: When or why someone would use this information.</li>
+        <li>Scope Indicator: What's included or excluded (when helpful).</li>
+      </ol>
+    </section>
+
+    <section>
+      <title>Topic-Type Specific Patterns</title>
+      <ul>
+        <li><b>Concept Topics:</b> Focus on what and why.
+          <ul>
+            <li><i>Pattern:</i> "Brief definition + why it matters."</li>
+            <li><i>Example:</i> "A microservices architecture divides applications into small, independent services that enable faster development and improved scalability."</li>
+          </ul>
+        </li>
+        <li><b>Task Topics:</b> Focus on goal and context.
+          <ul>
+            <li><i>Pattern:</i> "Goal statement + when to perform."</li>
+            <li><i>Example:</i> "Configure two-factor authentication to enhance account security when setting up new user accounts or updating security policies."</li>
+          </ul>
+        </li>
+        <li><b>Reference Topics:</b> Focus on scope and intended use.
+          <ul>
+            <li><i>Pattern:</i> "Content scope + intended use."</li>
+            <li><i>Example:</i> "Complete API reference for user management operations, including authentication, user creation, and permission assignment."</li>
+          </ul>
+        </li>
+        <li><b>Glossary Entries:</b> Focus on definition and context.
+          <ul>
+            <li><i>Pattern:</i> "Clear definition + domain context."</li>
+            <li><i>Example:</i> "Application Programming Interface (API) - a set of protocols that enables different software applications to communicate with each other."</li>
+          </ul>
+        </li>
+        <li><b>Troubleshooting Topics:</b> Focus on problem and solution approach.
+          <ul>
+            <li><i>Pattern:</i> "Problem description + resolution method."</li>
+            <li><i>Example:</i> "Resolve email delivery failures caused by connection timeout errors through network and configuration troubleshooting."</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Length Guidelines</title>
+      <ul>
+        <li><b>Optimal Length:</b> 25-50 words (approximately 1-2 concise sentences).</li>
+        <li><b>Too Short (&lt;15 words):</b> Usually lacks sufficient context.</li>
+        <li><b>Too Long (&gt;75 words):</b> Defeats the purpose of quick scanning.</li>
+        <li><b>Mobile Consideration:</b> Short descriptions often appear in mobile interfaces; test readability on small screens.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Writing Style Guidelines</title>
+      <ul>
+        <li>Keep it to 1-2 concise sentences.</li>
+        <li>Don't repeat the title; instead, expand or clarify it.</li>
+        <li>Use active voice (e.g., "Configure settings" not "Settings can be configured").</li>
+        <li>Use present tense (e.g., "Explains how to..." not "Will explain how to...").</li>
+        <li>Use specific language (e.g., "Configure SSL certificates" not "Handle security stuff").</li>
+        <li>Be user-focused: Start with the user benefit rather than the system feature.</li>
+        <li>Avoid procedural steps or overly technical jargon that might confuse the audience.</li>
+        <li>Tailor to a human reader, not just for automation.</li>
+      </ul>
+    </section>
+
+<section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;concept id="cloudintro"&gt;
+  &lt;title&gt;Introduction to Cloud Storage&lt;/title&gt;
+  &lt;shortdesc&gt;Cloud storage allows users to access and store files via the internet.&lt;/shortdesc&gt;
+  &lt;conbody&gt;
+    &lt;p&gt;Cloud storage reduces dependency on local hardware...&lt;/p&gt;
+  &lt;/conbody&gt;
+&lt;/concept&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

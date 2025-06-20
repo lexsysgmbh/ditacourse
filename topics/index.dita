@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="course-landing-page" xml:lang="en-US">
+  <title>Welcome to the DITA Structured Authoring Course</title>
+  <shortdesc>This self-paced course will introduce you to core concepts and best practices in DITA structured authoring.</shortdesc>
+  <conbody>
+    <p>Use the links below to navigate through the main parts of the course:</p>
+    <ul>
+      <li><xref href="part1_introduction_to_dita.dita">Part I: Introduction to DITA</xref></li>
+      <li><xref href="part2_dita_maps.dita">Part II: DITA Maps</xref></li>
+      <li><xref href="part3_topic_types.dita">Part III: Topic Types</xref></li>
+      <li><xref href="part4_short_descriptions.dita">Part IV: Short Descriptions</xref></li>
+      <li><xref href="part5_content_reuse.dita">Part V: Content Reuse</xref></li>
+      <li><xref href="publishing_dita_content.dita">Part VI: Publishing DITA Content</xref></li>
+      <li><xref href="conclusion.dita">Part VII: Conclusion</xref></li>
+    </ul>
+    <p><b><xref href="part1_introduction_to_dita.dita">▶ Start Course</xref></b></p>
+  </conbody>
+</concept>

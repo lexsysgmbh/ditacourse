@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="glossary_entries" xml:lang="en-US">
+  <title>Glossary Entries</title>
+  <shortdesc>Glossary topics define specialized terms and ensure consistent usage across documentation and translations.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <section>
+      <title>Use</title>
+      <p>Glossary topics are used to define specialized terms, acronyms, or jargon. These entries help ensure consistency across teams, translations, and publications. They are particularly useful in complex domains (e.g., finance, healthcare, software development) where term usage can vary widely.</p>
+    </section>
+
+    <section>
+      <title>User Intent</title>
+      <p>"What does this term mean in this context?"</p>
+    </section>
+
+    <section>
+      <title>Common Tags</title>
+      <ul>
+        <li>&lt;glossentry&gt;: Root element.</li>
+        <li>&lt;glossterm&gt;: The term being defined.</li>
+        <li>&lt;glossdef&gt;: Definition of the term.</li>
+        <li>&lt;glossBody&gt;: Optional additional explanation or related terms.</li>
+        <li>&lt;acronym&gt;: Full form of abbreviated terms.</li>
+        <li>&lt;synonyms&gt;: Alternative terms with the same meaning.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Writing Best Practices</title>
+      <ul>
+        <li>Start definitions with the part of speech and category.</li>
+        <li>Avoid using the term within its own definition.</li>
+        <li>Keep definitions concise but complete.</li>
+        <li>Use examples to clarify abstract concepts.</li>
+        <li>Cross-reference related terms.</li>
+        <li>Build glossary entries incrementally: when you find yourself explaining the same term repeatedly, create a glossary entry and link to it instead.</li>
+      </ul>
+    </section>
+
+<section>
+  <title>Sample XML Code</title>
+  <codeblock outputclass="language-xml">
+&lt;glossentry id="api"&gt;
+  &lt;glossterm&gt;API&lt;/glossterm&gt;
+  &lt;glossdef&gt;
+    &lt;p&gt;An Application Programming Interface enables systems to communicate with each other.&lt;/p&gt;
+  &lt;/glossdef&gt;
+&lt;/glossentry&gt;
+  </codeblock>
+</section>
+
+  </conbody>
+</concept>

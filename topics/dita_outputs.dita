@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dita-outputs">
+  <title>Outputs of DITA Documentation</title>
+  <shortdesc>DITA is specifically designed for multi-channel publishing, meaning you can create content once and publish it to many formats without rewriting or reformatting the source.</shortdesc>
+  <body>
+    <p>The publishing output is decoupled from the content, so your writing remains consistent regardless of the target format.</p>
+
+    <section>
+      <title>Common Output Formats</title>
+      <ul>
+        <li><b>HTML:</b> Ideal for online help systems, knowledge bases, and intranets.</li>
+        <li><b>PDF:</b> Suitable for printed manuals, regulatory documentation, and offline usage.</li>
+        <li><b>ePub / Mobile / WebApps:</b> Used for mobile-friendly user guides and dynamic content portals.</li>
+        <li><b>Content Delivery Platforms (CDPs):</b> Dynamic portals that allow personalized, filterable content based on metadata and user roles.</li>
+      </ul>
+    </section>
+
+    <section>
+      <title>Tools for Publishing</title>
+      <ul>
+        <li><b>DITA Open Toolkit (DITA-OT):</b> The standard open-source publishing engine. It transforms DITA XML into various output formats.</li>
+        <li><b>Commercial tools:</b> Many tools integrate DITA-OT or provide their own publishing engines, such as Oxygen XML Editor, SDL Tridion Docs, Adobe Experience Manager, Fluid Topics, and Zoomin.</li>
+      </ul>
+    </section>
+  </body>
+</topic>

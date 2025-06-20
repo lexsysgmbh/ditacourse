@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="part3_topic_types" xml:lang="en-US">
+  <title>Part III: Topic Types</title>
+  <shortdesc>This module introduces core DITA topic types and their appropriate usage to improve content clarity and organization.</shortdesc>
+  <prolog>
+    <author>Course Team</author>
+    <critdates>
+      <created date="2025-06-12"/>
+    </critdates>
+  </prolog>
+  <conbody>
+    <p>DITA defines several structured topic types, each intended for a different documentation purpose. Using the correct topic type ensures content is focused, reusable, and well-organized across deliverables. Topic types are not arbitrary categories; they reflect how users actually consume technical information. By matching content structure to user intent, DITA topics become more findable, scannable, and actionable.</p>
+
+    <section>
+      <title>Learning Objectives</title>
+      <p>Upon completing this module, you will be able to:</p>
+      <ul>
+        <li>Explain the purpose and appropriate use cases for each of the core DITA topic types.</li>
+        <li>Identify the common structural elements (tags) associated with concept, task, reference, glossary, and troubleshooting topics.</li>
+        <li>Apply best practices for structuring content within each topic type to improve clarity and usability.</li>
+        <li>Understand how different topic types work together to form comprehensive documentation.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>
