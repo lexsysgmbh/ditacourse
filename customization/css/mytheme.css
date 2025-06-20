@@ -1,0 +1,221 @@
+/* Sidebar TOC for desktop screens */
+@media screen and (min-width: 992px) {
+  nav.toc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    overflow-y: auto;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  main[role="main"] {
+    margin-left: 320px;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+}
+
+/* TOC link styles */
+nav.toc a {
+  display: block;
+  padding: 0.3em 0.5em;
+  color: #0645ad;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+nav.toc a:hover {
+  background-color: #f0f0f0;
+}
+
+nav.toc li.active > a {
+  font-weight: bold;
+  background-color: #e6f3ff;
+}
+
+/* TOC list structure */
+nav.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav.toc ul ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+}
+
+nav.toc li {
+  margin-bottom: 0.2em;
+}
+
+/* Mobile fallback — show TOC above content */
+@media (max-width: 991px) {
+  nav.toc {
+    position: static;
+    width: auto;
+    margin-bottom: 1em;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  main[role="main"] {
+    margin-left: 0;
+  }
+}
+
+/* General body styles */
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content area */
+article[role="article"] {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1.title.topictitle1 {
+  font-size: 2.5em;
+  color: #333;
+  border-bottom: 2px solid #0645ad;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #444;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Lists */
+ol, ul {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* Short description */
+p.shortdesc {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #666;
+  border-left: 3px solid #0645ad;
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
+/* DITA-OT-generated next/previous links */
+nav.related-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+nav.related-links a {
+  background: #0645ad;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav.related-links a:hover {
+  background-color: #042e7d;
+}
+
+/* Links */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: slightly increase spacing around main content */
+main[role="main"] {
+  padding-bottom: 3em;
+}
+
+/* Navigation buttons after content, aligned with text */
+.lesson-nav {
+  max-width: 800px;
+  margin: 2em auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+/* Individual nav buttons */
+.nav-button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+
+/* Table grid and layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+}
+
+/* Table headers */
+table thead {
+  background-color: #f2f2f2; /* light gray header */
+}
+
+table th,
+table td,
+td.entry,
+th.entry {
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead tr > .entry {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
