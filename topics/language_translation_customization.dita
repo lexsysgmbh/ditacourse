@@ -6,22 +6,27 @@
   <body>
 <section>
   <title>How DITA Supports Translation</title>
+<p>DITA supports translation in the following ways:</p>
   <ul>
     <li><b>Clear content boundaries:</b> Topics and maps provide distinct units for translation.</li>
     <li><b>Shared reusable components:</b> Elements like warnings, steps, or standard messages only need to be translated once.</li>
     <li><b>Conditional text:</b> Content filtered by audience, platform, or product can be managed efficiently for translation.</li>
     <li><b>Language attribute support:</b> DITA supports the <codeph>xml:lang="fr"</codeph> attribute for specifying content language.</li>
+    <li>
+      <b><codeph>translate="no"</codeph> attribute:</b> DITA allows exclusion of specific content from translation, for example:
+      <ul>
+        <li>Brand names</li>
+        <li>Code snippets</li>
+        <li>Non-translatable strings or sample outputs</li>
+        <li>
+          Sample XML snippet:
+          <codeblock outputclass="language-xml">
+&lt;p translate="no"&gt;Use the command: `init -d config.yaml`&lt;/p&gt;
+          </codeblock>
+        </li>
+      </ul>
+    </li>
   </ul>
-  <p><b><codeph>translation="no"</codeph> Attribute:</b> DITA allows exclusion of specific content from translation.</p>
-  <ul>
-    <li>Brand names</li>
-    <li>Code snippets</li>
-    <li>Non-translatable strings or sample outputs</li>
-  </ul>
-  <p>Sample XML snippet:</p>
-  <codeblock outputclass="language-xml">
-&lt;p translation="no"&gt;Use the command: `init -d config.yaml`&lt;/p&gt;
-  </codeblock>
 </section>
     <section>
       <title>Customizing Output Formats</title>
