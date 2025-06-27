@@ -18,7 +18,7 @@
     <li>Code snippets</li>
     <li>Non-translatable strings or sample outputs</li>
   </ul>
-  <p>Sample XML Snippet:</p>
+  <p>Sample XML snippet:</p>
   <codeblock outputclass="language-xml">
 &lt;p translation="no"&gt;Use the command: `init -d config.yaml`&lt;/p&gt;
   </codeblock>
