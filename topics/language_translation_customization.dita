@@ -18,13 +18,11 @@
         <li>Brand names</li>
         <li>Code snippets</li>
         <li>Non-translatable strings or sample outputs</li>
-        <li>
-          Sample XML snippet:
-          <codeblock outputclass="language-xml">
-&lt;p translate="no"&gt;Use the command: `init -d config.yaml`&lt;/p&gt;
-          </codeblock>
-        </li>
       </ul>
+      Sample XML snippet:
+      <codeblock outputclass="language-xml">
+&lt;p translate="no"&gt;Use the command: `init -d config.yaml`&lt;/p&gt;
+      </codeblock>
     </li>
   </ul>
 </section>
