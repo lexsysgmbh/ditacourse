@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="task_topics" xml:lang="en-US">
   <title>Task Topics</title>
-  <shortdesc>Task topics provide clear, step-by-step instructions for completing specific procedures and reducing user errors.</shortdesc>
+  <shortdesc>Task topics provide users with step-by-step instructions for completing a procedure.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -16,30 +16,25 @@
     </section>
 
     <section>
-      <title>User Intent</title>
-      <p>"I need to get something done right now."</p>
-    </section>
-
-    <section>
-      <title>Common Tags</title>
+      <title>Task Topic Tags</title>
       <ul>
         <li>&lt;task&gt;: Root element.</li>
-        <li>&lt;title&gt;: Action name (e.g., "Reset Your Password").</li>
-        <li>&lt;shortdesc&gt;: Quick summary.</li>
+        <li>&lt;title&gt;: The name of the procedure. Task topic titles usually include a verb. For example, <i>Reset Your Password</i>. Do not include the phrasal verb "How to" in the title.</li>
+        <li>&lt;shortdesc&gt;: Quick summary. For more information, see Part IV: Short Descriptions.</li>
         <li>&lt;taskbody&gt;: Container for steps and results.</li>
-        <li>&lt;steps&gt; and &lt;step&gt;: Ordered procedural instructions.</li>
+        <li>&lt;steps&gt; and &lt;step&gt;: Sequential instructions for completing a task. Make sure you use a numbered list instead of a bullet point list.</li>
         <li>&lt;result&gt;: Outcome of the task.</li>
-        <li>&lt;prereq&gt;: Optional requirements before starting.</li>
-        <li>&lt;context&gt;: When and why to perform this task.</li>
+        <li>&lt;prereq&gt;: Conditions that must be met before the user can begin the task.</li>
+        <li>&lt;context&gt;: When and why the user performs this task.</li>
         <li>&lt;postreq&gt;: Recommended follow-up actions.</li>
       </ul>
     </section>
 
     <section>
-      <title>Step Structure Best Practices</title>
+      <title>Structural Best Practices</title>
       <ul>
         <li>One action per step.</li>
-        <li>Use imperative voice (e.g., "Click Save").</li>
+        <li>Use imperative voice (for example, "Click Save").</li>
         <li>Include expected results for complex steps.</li>
         <li>Provide specific UI element names and locations.</li>
         <li>Use conditional steps for different scenarios.</li>
