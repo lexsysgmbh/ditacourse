@@ -12,20 +12,15 @@
   <conbody>
     <section>
       <title>Use</title>
-      <p>Concept topics are used to introduce and explain a subject, tool, feature, or process. They provide background knowledge that users need before performing a task or understanding a reference. They are ideal for overviews, product introductions, or clarifying abstract ideas. Concept topics are especially important early in the user journey, explaining "why" something matters before showing "how" to use it.</p>
+      <p>Concept topics explain an idea or procedure. They often provide background information that users need to know before they can complete a procedure successfully.</p>
     </section>
 
     <section>
-      <title>User Intent</title>
-      <p>"I need to understand this before I can do anything with it."</p>
-    </section>
-
-    <section>
-      <title>Common Tags</title>
+      <title>Required Tags</title>
       <ul>
         <li>&lt;concept&gt;: Root element for the topic.</li>
-        <li>&lt;title&gt;: Name of the concept.</li>
-        <li>&lt;shortdesc&gt;: A brief summary or abstract.</li>
+        <li>&lt;title&gt;: Use noun-based titles instead of verb-based titles. For example, <i>Coffee Machine</i> would be an appropriate title for a concept topic, whereas <i>Using the Coffee Machine</i> sounds like a task.</li>
+        <li>&lt;shortdesc&gt;: A brief summary or abstract. For more information, see Part IV: Short Descriptions.</li>
         <li>&lt;conbody&gt;: Main body content.</li>
         <li>&lt;section&gt; or &lt;p&gt;: Structured explanation.</li>
       </ul>
