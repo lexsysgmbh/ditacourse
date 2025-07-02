@@ -16,13 +16,13 @@
     </section>
 
     <section>
-      <title>Required Tags</title>
+      <title>Common Tags</title>
       <ul>
-        <li>&lt;concept&gt;: Root element that identifies the document as a concept topic.</li>
-        <li>&lt;title&gt;: For concept topics, use noun-based titles instead of verb-based titles. For example, <i>Coffee Machine</i> would be an appropriate title for a concept topic, whereas <i>Using the Coffee Machine</i> sounds like a task.</li>
-        <li>&lt;shortdesc&gt;: A brief summary or abstract. Short descriptions are often very difficult to write. For more information, see Part IV: Short Descriptions.</li>
-        <li>&lt;conbody&gt;: The main body content of your topic is enclosed within the &lt;conbody&gt; tag.</li>
-        <li>&lt;section&gt; or &lt;p&gt;: If the idea explained in your topic is particularly complex, you can divide your content into smaller sections.</li>
+        <li>&lt;concept&gt;: Root element for the topic.</li>
+        <li>&lt;title&gt;: Name of the concept.</li>
+        <li>&lt;shortdesc&gt;: A brief summary or abstract. For more information, see Part IV: Short Descriptions.</li>
+        <li>&lt;conbody&gt;: Main body content.</li>
+        <li>&lt;section&gt; or &lt;p&gt;: An specific aspect of the concept.</li>
       </ul>
     </section>
 
@@ -33,7 +33,6 @@
         <li>Explain the "why" before the "what".</li>
         <li>Use analogies and examples for complex concepts.</li>
         <li>Organize from general to specific.</li>
-        <li>Link to related procedural content (tasks).</li>
         <li>Avoid embedding task steps within concept explanations. Instead, link to separate task topics.</li>
       </ul>
     </section>
