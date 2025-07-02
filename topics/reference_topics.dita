@@ -12,7 +12,10 @@
   <conbody>
     <section>
       <title>Use</title>
-      <p>Reference topics are used to provide structured, factual data. They are ideal for configuration tables, field definitions, API specifications, system requirements, error codes, and feature comparison tables. They support concept or task topics by providing detailed data users might need during or after a task. Reference content should be concise, easy to scan, and non-narrative.</p>
+      <p>Reference topics provide supplementary information that users might need to complete a task. 
+      For example, reference topics often include configuration tables, system requirements, feature comparison tables, API specifications, and error codes.</p>
+      <p>Reference topics provide important information that would be too cumbersome to include in a concept topic or a task topic. 
+      For example, your customer might need to know the system requirements for a piece of software before installing it, but this information wouldn't belong in a concept topic or a task topic.</p>
     </section>
 
     <section>
