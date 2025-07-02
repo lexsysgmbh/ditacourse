@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="definition_and_purpose_shortdesc" xml:lang="en-US">
   <title>Definition and Purpose</title>
-  <shortdesc>The short description (&lt;shortdesc&gt;) in DITA provides a brief, standalone summary that helps users quickly evaluate content relevance.</shortdesc>
+  <shortdesc>The short description (&lt;shortdesc&gt;) in DITA provides a brief, standalone summary of a topic that helps users quickly evaluate content relevance.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -10,7 +10,7 @@
     </critdates>
   </prolog>
   <conbody>
-    <p>A short description (&lt;shortdesc&gt;) in DITA is a brief, standalone summary that follows the topic title. It offers a quick overview of the content, helping readers decide whether the topic is relevant and providing preview text in search results or navigation panels.</p>
+    <p>A short description (&lt;shortdesc&gt;) in DITA is a brief, standalone summary that follows the topic title. It offers a quick overview of the content, helping readers decide whether the topic is relevant to them, and providing preview text in search results or navigation panels.</p>
     <p>They are especially critical when content is reused in many different outputs where full context may not always be obvious. Well-written short descriptions reduce user friction, improve content findability, and decrease support costs by helping users locate relevant information faster.</p>
 
     <section>
@@ -23,8 +23,8 @@
       <ul>
         <li>Provide quick context to the reader.</li>
         <li>Enhance search engine indexing and UI previews (e.g., side panels, pop-ups, tooltips).</li>
-        <li>Navigation aids in tables of contents and site maps.</li>
-        <li>Link previews when topics are referenced from other content.</li>
+        <li>Aid navigation in tables of contents and site maps.</li>
+        <li>Provide link previews when topics are referenced from other content.</li>
         <li>Serve as metadata for content management and automated processing.</li>
         <li>Act as SEO descriptions for web-published content.</li>
       </ul>
