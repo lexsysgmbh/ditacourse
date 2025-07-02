@@ -22,8 +22,7 @@
         <li>&lt;title&gt;: For concept topics, use noun-based titles instead of verb-based titles. For example, <i>Coffee Machine</i> would be an appropriate title for a concept topic, whereas <i>Using the Coffee Machine</i> sounds like a task.</li>
         <li>&lt;shortdesc&gt;: A brief summary or abstract. Short descriptions are often very difficult to write. For more information, see Part IV: Short Descriptions.</li>
         <li>&lt;conbody&gt;: The main body content of your topic is enclosed within the &lt;conbody&gt; tag.</li>
-        <li>&lt;section&gt; or &lt;p&gt;: If the idea explained in your topic is particularly complex, you can divide your content into smaller sections. 
-        The &lt;section&gt tag should only be used if the section is too short to be its own topic, or if the information in the section wouldn't make sense in its own topic.</li>
+        <li>&lt;section&gt; or &lt;p&gt;: If the idea explained in your topic is particularly complex, you can divide your content into smaller sections.</li>
       </ul>
     </section>
 
@@ -35,7 +34,7 @@
         <li>Use analogies and examples for complex concepts.</li>
         <li>Organize from general to specific.</li>
         <li>Link to related procedural content (tasks).</li>
-        <li>Avoid embedding task steps within concept explanations; instead, link to separate task topics.</li>
+        <li>Avoid embedding task steps within concept explanations. Instead, link to separate task topics.</li>
       </ul>
     </section>
 
