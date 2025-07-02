@@ -16,7 +16,7 @@
       <li>Every DITA topic should include a short description for clarity and accessibility.</li>
       <li>Structure varies by topic type but always includes purpose, context, and scope indicators appropriate to user intent.</li>
       <li>Optimal length is 25-50 words—long enough for context, short enough for quick scanning.</li>
-      <li>Clear, reader-focused descriptions that are active, specific, and avoid repeating the title reduce bounce rates and improve discoverability.</li>
+      <li>Clear, reader-focused descriptions that are concise yet informative reduce bounce rates and improve discoverability.</li>
     </ul>
   </conbody>
 </concept>
