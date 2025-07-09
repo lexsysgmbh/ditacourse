@@ -17,7 +17,7 @@
       <ul>
         <li><b>Topic-based authoring:</b> Content is organized into discrete, self-contained units called "topics" (concept, task, or reference). This contrasts with traditional lengthy documents.</li>
         <li><b>Separation of content and format:</b> Authors focus solely on the information's structure, while formatting is applied during the publishing process.</li>
-        <li><b>Specialization:</b> DITA allows organizations to extend its base structures to create specialized topic types and information models tailored to specific domain needs.</li>
+        <li><b>Specialization:</b> DITA allows organizations to extend their base structures to create specialized topic types and information models tailored to specific domain needs.</li>
         <li><b>Conditional publishing:</b> A single source of content can be filtered and tailored for different audiences, products, or platforms based on metadata.</li>
       </ul>
     </section>
@@ -25,7 +25,7 @@
     <section>
       <title>DITA Architecture Components</title>
       <ul>
-        <li><b>Topics:</b> The fundamental, self-contained units of information (e.g., concept, task, reference, glossary, troubleshooting).</li>
+        <li><b>Topics:</b> The fundamental, self-contained units of information (e.g., concept, task, reference, glossary, and troubleshooting).</li>
         <li><b>Maps:</b> XML files (.ditamap) that organize and define the structure, sequence, and relationships of DITA topics to form publications. They act as a blueprint for assembling documents.</li>
         <li><b>Metadata:</b> Structured information about content (e.g., audience, product) used for filtering and processing during publishing.</li>
         <li><b>Specialization:</b> The mechanism for creating domain-specific extensions of DITA.</li>
