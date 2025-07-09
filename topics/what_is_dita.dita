@@ -27,7 +27,7 @@
       <ul>
         <li><b>Topics:</b> The fundamental, self-contained units of information (e.g., concept, task, reference, glossary, and troubleshooting).</li>
         <li><b>Maps:</b> XML files (.ditamap) that organize and define the structure, sequence, and relationships of DITA topics to form publications. They act as a blueprint for assembling documents.</li>
-        <li><b>Metadata:</b> Structured information about content (e.g., audience, product) used for filtering and processing during publishing.</li>
+        <li><b>Metadata:</b> Structured information about content (e.g., audience and product) used for filtering and processing during publishing.</li>
         <li><b>Specialization:</b> The mechanism for creating domain-specific extensions of DITA.</li>
       </ul>
     </section>
