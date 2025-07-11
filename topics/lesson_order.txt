@@ -7,6 +7,7 @@ advantages_of_using_dita.dita
 dita_vs_other_standards.dita
 summary_part1_key_takeaways.dita
 quiz_introduction_to_dita.dita
+quiz_introduction_to_dita_interactive.dita
 part2_dita_maps.dita
 what_are_dita_maps.dita
 organization_with_dita_maps.dita
