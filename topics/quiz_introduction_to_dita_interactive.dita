@@ -2,55 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz: Introduction to DITA</title>
+  <link rel="stylesheet" href="customization/css/quiz.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      padding: 10px;
-      background-color: #f5f5f5;
+    .quiz-question {
+      margin-bottom: 30px;
     }
-    .question {
-      margin-bottom: 20px;
-      font-size: 1.2em;
-    }
-    .options li {
-      cursor: pointer;
-      padding: 8px;
-      margin: 5px 0;
-      background-color: #e0e0e0;
+    .quiz-options button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border: none;
       border-radius: 5px;
+      background-color: var(--color-light-gray);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    .options li:hover {
-      background-color: #c0c0c0;
-    }
-    .correct {
-      background-color: #4CAF50;
+    .quiz-options button.correct {
+      background-color: var(--color-teal);
       color: white;
     }
-    .incorrect {
-      background-color: #F44336;
+    .quiz-options button.incorrect {
+      background-color: #ff4d4f;
       color: white;
     }
     .feedback {
-      font-weight: bold;
       margin-top: 10px;
-    }
-    .progress {
-      font-size: 1.1em;
-      margin-top: 20px;
-    }
-    .btn {
-      background-color: #008CBA;
-      color: white;
-      padding: 10px 15px;
-      text-align: center;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .btn:hover {
-      background-color: #006F8E;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -59,110 +37,98 @@
   <h1>Quiz: Introduction to DITA</h1>
   <p>This quiz assesses understanding of the fundamental concepts introduced in Part I: Introduction to DITA.</p>
 
-  <!-- Question 1 -->
-  <div class="question" id="q1">
-    <p>1. What is the primary goal of structured authoring?</p>
-    <ul class="options">
-      <li onclick="checkAnswer('q1', 'a')">a) Add more images to documents</li>
-      <li onclick="checkAnswer('q1', 'b')"><b>b) Enable consistent, reusable, and scalable content creation</b></li>
-      <li onclick="checkAnswer('q1', 'c')">c) Use fewer tools</li>
-      <li onclick="checkAnswer('q1', 'd')">d) None of the above</li>
-    </ul>
-    <div id="q1-feedback" class="feedback"></div>
-  </div>
+  <div class="quiz">
 
-  <!-- Question 2 -->
-  <div class="question" id="q2">
-    <p>2. Which of the following is NOT a core principle of DITA?</p>
-    <ul class="options">
-      <li onclick="checkAnswer('q2', 'a')">a) Topic-based authoring</li>
-      <li onclick="checkAnswer('q2', 'b')">b) Separation of content and format</li>
-      <li onclick="checkAnswer('q2', 'c')">c) Conditional publishing</li>
-      <li onclick="checkAnswer('q2', 'd')"><b>d) Proprietary format</b></li>
-    </ul>
-    <div id="q2-feedback" class="feedback"></div>
-  </div>
+    <div class="quiz-question" data-question="1">
+      <p>1. What is the primary goal of structured authoring?</p>
+      <div class="quiz-options">
+        <button data-correct="false">a) Add more images to documents</button>
+        <button data-correct="true">b) Enable consistent, reusable, and scalable content creation</button>
+        <button data-correct="false">c) Use fewer tools</button>
+        <button data-correct="false">d) None of the above</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
 
-  <!-- Question 3 -->
-  <div class="question" id="q3">
-    <p>3. How does DITA support multi-channel publishing?</p>
-    <ul class="options">
-      <li onclick="checkAnswer('q3', 'a')">a) It restricts output to PDF only</li>
-      <li onclick="checkAnswer('q3', 'b')">b) By embedding fonts</li>
-      <li onclick="checkAnswer('q3', 'c')"><b>c) By separating content from presentation</b></li>
-      <li onclick="checkAnswer('q3', 'd')">d) By using Markdown</li>
-    </ul>
-    <div id="q3-feedback" class="feedback"></div>
-  </div>
+    <div class="quiz-question" data-question="2">
+      <p>2. Which of the following is NOT a core principle of DITA?</p>
+      <div class="quiz-options">
+        <button data-correct="false">a) Topic-based authoring</button>
+        <button data-correct="false">b) Separation of content and format</button>
+        <button data-correct="false">c) Conditional publishing</button>
+        <button data-correct="true">d) Proprietary format</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
 
-  <!-- Question 4 -->
-  <div class="question" id="q4">
-    <p>4. Which business challenge does DITA's content reuse capability primarily solve?</p>
-    <ul class="options">
-      <li onclick="checkAnswer('q4', 'a')">a) Poor search engine optimization</li>
-      <li onclick="checkAnswer('q4', 'b')"><b>b) Duplicate content maintenance across multiple documents</b></li>
-      <li onclick="checkAnswer('q4', 'c')">c) Lack of version control</li>
-      <li onclick="checkAnswer('q4', 'd')">d) Inadequate user interface design</li>
-    </ul>
-    <div id="q4-feedback" class="feedback"></div>
-  </div>
+    <div class="quiz-question" data-question="3">
+      <p>3. How does DITA support multi-channel publishing?</p>
+      <div class="quiz-options">
+        <button data-correct="false">a) It restricts output to PDF only</button>
+        <button data-correct="false">b) By embedding fonts</button>
+        <button data-correct="true">c) By separating content from presentation</button>
+        <button data-correct="false">d) By using Markdown</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
 
-  <!-- Question 5 -->
-  <div class="question" id="q5">
-    <p>5. When should an organization typically choose DITA over simpler markup formats like Markdown?</p>
-    <ul class="options">
-      <li onclick="checkAnswer('q5', 'a')">a) When they have only one publication target</li>
-      <li onclick="checkAnswer('q5', 'b')">b) When their content is primarily narrative rather than procedural</li>
-      <li onclick="checkAnswer('q5', 'c')"><b>c) When they need advanced content reuse, conditional publishing, or professional multi-format output</b></li>
-      <li onclick="checkAnswer('q5', 'd')">d) When they want to minimize their toolchain complexity</li>
-    </ul>
-    <div id="q5-feedback" class="feedback"></div>
-  </div>
+    <div class="quiz-question" data-question="4">
+      <p>4. Which business challenge does DITA's content reuse capability primarily solve?</p>
+      <div class="quiz-options">
+        <button data-correct="false">a) Poor search engine optimization</button>
+        <button data-correct="true">b) Duplicate content maintenance across multiple documents</button>
+        <button data-correct="false">c) Lack of version control</button>
+        <button data-correct="false">d) Inadequate user interface design</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
 
-  <div class="progress">
-    <p>You have answered <span id="correct-count">0</span> out of 5 questions correctly.</p>
-  </div>
+    <div class="quiz-question" data-question="5">
+      <p>5. When should an organization typically choose DITA over simpler markup formats like Markdown?</p>
+      <div class="quiz-options">
+        <button data-correct="false">a) When they have only one publication target</button>
+        <button data-correct="false">b) When their content is primarily narrative rather than procedural</button>
+        <button data-correct="true">c) When they need advanced content reuse, conditional publishing, or professional multi-format output</button>
+        <button data-correct="false">d) When they want to minimize their toolchain complexity</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
 
-  <div id="marketing-analytics"></div>
+  </div>
 
   <script>
-    let correctAnswers = 0;
-    let questionCount = 5;
+    const questions = document.querySelectorAll('.quiz-question');
 
-    function checkAnswer(questionId, selectedOption) {
-      const correctAnswer = document.querySelector(`#${questionId} .options li b`).innerText.charAt(0);
-      const feedbackElement = document.getElementById(`${questionId}-feedback`);
-      const optionElements = document.querySelectorAll(`#${questionId} .options li`);
-      
-      // Disable all options after an answer is selected
-      optionElements.forEach(option => option.style.pointerEvents = 'none');
+    questions.forEach((question) => {
+      const buttons = question.querySelectorAll('button');
+      const feedback = question.querySelector('.feedback');
 
-      if (selectedOption === correctAnswer) {
-        feedbackElement.innerText = "Correct! Great job.";
-        feedbackElement.className = "feedback correct";
-        correctAnswers++;
-      } else {
-        feedbackElement.innerText = "Incorrect. Try again.";
-        feedbackElement.className = "feedback incorrect";
-      }
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          // Prevent multiple selections
+          if (question.classList.contains('answered')) return;
 
-      document.getElementById("correct-count").innerText = correctAnswers;
+          const correct = btn.dataset.correct === 'true';
+          if (correct) {
+            btn.classList.add('correct');
+            feedback.textContent = 'Correct!';
+          } else {
+            btn.classList.add('incorrect');
+            feedback.textContent = 'Incorrect. Try reviewing the material.';
+          }
 
-      trackAnalytics(questionId, selectedOption === correctAnswer);
-    }
+          question.classList.add('answered');
 
-    function trackAnalytics(questionId, isCorrect) {
-      const analyticsElement = document.getElementById("marketing-analytics");
-      const result = isCorrect ? 'correct' : 'incorrect';
-      const analyticsData = {
-        question: questionId,
-        result: result,
-        timestamp: new Date().toISOString()
-      };
+          // Tracking for analytics
+          const questionNumber = question.dataset.question;
+          const answerText = btn.textContent;
+          const isCorrect = correct;
 
-      // Add to marketing analytics (this could send data to your backend for further analysis)
-      analyticsElement.innerHTML += `<p>${JSON.stringify(analyticsData)}</p>`;
-    }
+          // Example tracking hook (replace with real analytics as needed)
+          console.log(`Question ${questionNumber}: "${answerText}" - ${isCorrect ? 'Correct' : 'Incorrect'}`);
+        });
+      });
+    });
   </script>
 
 </body>
