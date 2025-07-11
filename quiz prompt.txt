@@ -1,8 +1,9 @@
-Ask for the text and i will copy and paste it.
-Convert these html texts into an interactive clickable quiz. 
+Ask for a text and i will copy and paste it.
+Convert the html text into an interactive clickable quiz. 
 The correct answers are provided in bold. 
 Don't rewrite any content, just change the formatting to be interactive and clickable. 
 Include feedback logic for correct and incorrect responses. 
 Include something so that we can track progress for marketing analytics. 
 for colourscheme, refer to the saved <link rel="stylesheet" href="customization/css/quiz.css">
-There may be more texts so keep asking for more inputs for this prompt until i say we are done.
+There are multiple texts so keep asking for more inputs for this prompt until i say we are done. 
+Keep the formatting consistent so that the texts look like a set.
