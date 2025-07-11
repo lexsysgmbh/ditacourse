@@ -1,0 +1,8 @@
+Ask for the text and i will copy and paste it.
+Convert these html texts into an interactive clickable quiz. 
+The correct answers are provided in bold. 
+Don't rewrite any content, just change the formatting to be interactive and clickable. 
+Include feedback logic for correct and incorrect responses. 
+Include something so that we can track progress for marketing analytics. 
+If a colourscheme is needed, take inspiration from the company branding at https://lexsys.de/en/. 
+There may be more texts so keep asking for more inputs for this prompt until i say we are done.
