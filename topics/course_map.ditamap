@@ -60,4 +60,10 @@
     </topicref>
   </topicref>
 
+  <!-- Ensure quiz-loader.js is copied into output -->
+  <topicref href="customization/js/quiz-loader.js"
+            format="html"
+            processing-role="resource-only"
+            scope="local"/>
+
 </map>
