@@ -93,7 +93,7 @@
 
 <!-- Inject quiz loader script -->
 <xsl:template name="user-footer-content">
-  <script src="/customization/js/quiz-loader.js"></script>
+  <script src="customization/js/quiz-loader.js"></script>
 </xsl:template>
   
 </xsl:stylesheet>
