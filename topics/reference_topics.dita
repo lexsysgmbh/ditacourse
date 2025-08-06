@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="reference_topics" xml:lang="en-US">
   <title>Reference Topics</title>
-  <shortdesc>Reference topics provide structured, factual data used to support task and concept topics.</shortdesc>
+  <shortdesc>Reference topics provide structured, factual information that complements and supports both task and concept topics.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,7 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <p>Reference content should be concise, easy to scan, and non-narrative. Examples include configuration tables, field definitions, API specs, and system requirements. Reference topics consolidate information that users need to look up for quick reference - for example, during or after a task.</p>
+      <p>Reference content should be concise, easy to scan, and non-narrative. Examples include configuration tables, field definitions, API specs, and system requirements. Reference topics consolidate information that users need to look up for quick reference.</p>
     </section>
 
     <section>
