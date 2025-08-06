@@ -23,7 +23,7 @@
       <title>Common Tags</title>
       <ul>
         <li>&lt;task&gt;: Root element.</li>
-        <li>&lt;title&gt;: Task to be performed (e.g., "Reset Your Password").</li>
+        <li>&lt;title&gt;: Task to be performed (for example, "Reset Your Password").</li>
         <li>&lt;shortdesc&gt;: Precise summary of the goal and when to perform the task.</li>
         <li>&lt;taskbody&gt;: Container for steps and results.</li>
         <li>&lt;steps&gt; and &lt;step&gt;: Ordered procedural instructions.</li>
