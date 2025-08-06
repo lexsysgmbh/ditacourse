@@ -91,7 +91,7 @@
     </xsl:if>
   </xsl:template>
 
-<!-- Inject quiz loader script -->
+  <!-- Inject quiz loader script at the end of <body> -->
 <xsl:template name="user-footer-content">
   <script src="customization/js/quiz-loader.js"></script>
 </xsl:template>
