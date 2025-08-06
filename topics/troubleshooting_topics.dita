@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="troubleshooting_topics" xml:lang="en-US">
   <title>Troubleshooting Topics</title>
-  <shortdesc>Troubleshooting topics guide users through problem identification and resolution, improving self-service and reducing support costs.</shortdesc>
+  <shortdesc>Troubleshooting topics help users identify and address issues independently, supporting self-service and reducing the need for direct support.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,8 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <title>Use</title>
-      <p>Troubleshooting topics help users diagnose and resolve problems. These topics improve self-service support and reduce support costs by guiding users through problem identification, possible causes, and solutions. They are ideal for documentation concerning software, hardware, and systems where error conditions are common.</p>
+      <p>The main purpose of troubleshooting topics is to help users diagnose and resolve problems themselves. Effective troubleshooting topics reduce support volume while improving user satisfaction. Especially in the context of software, hardware, and systems, where users often encounter technical issues or errors, clear troubleshooting content enables users to quickly identify causes and take corrective action.</p>
     </section>
 
     <section>
@@ -24,11 +23,11 @@
       <title>Common Tags</title>
       <ul>
         <li>&lt;troubleshooting&gt;: Root element.</li>
-        <li>&lt;title&gt;: Problem name (often starting with "Why..." or describing the symptom).</li>
-        <li>&lt;shortdesc&gt;: Brief problem summary.</li>
+        <li>&lt;title&gt;: Problem description (often starting with "Why..." or describing the symptom).</li>
+        <li>&lt;shortdesc&gt;: Brief summary of the problem.</li>
         <li>&lt;troublebody&gt;: Description of symptoms, causes, and solutions.</li>
-        <li>&lt;cause&gt;: Explains what went wrong.</li>
-        <li>&lt;solution&gt;: Explains how to fix it.</li>
+        <li>&lt;cause&gt;: An explanation of what went wrong.</li>
+        <li>&lt;solution&gt;: Steps explaining how to fix it.</li>
         <li>&lt;prereq&gt;: Information needed for troubleshooting.</li>
         <li>&lt;prevention&gt;: How to avoid the problem in the future.</li>
       </ul>
