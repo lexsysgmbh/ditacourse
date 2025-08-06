@@ -76,9 +76,8 @@
     <script async="async" src="https://hypothes.is/embed.js"></script>
   </xsl:template>
 
-<!-- Inject quiz-loader.js just before </body> -->
-<xsl:template match="*[contains(@class,' topic/topic ')]" mode="topic" priority="10">
-  <xsl:next-match/>
+<!-- Inject quiz-loader.js at the bottom of <body> -->
+<xsl:template name="user-footer-content">
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
   
