@@ -40,7 +40,7 @@
         <li>One action per numbered step (max. 10 steps).</li>
         <li>Use imperative voice (for example, "Save your data.").</li>
         <li>Include expected results for complex steps.</li>
-        <li>Provide specific UI element names but remember that the UI can change.</li>
+        <li>Provide specific UI element names as necessary (using generic formulations can be more efficient if the UI changes frequently).</li>
         <li>Use conditional steps for different scenarios.</li>
         <li>Test task topics with actual users to identify gaps and ensure clarity.</li>
       </ul>
