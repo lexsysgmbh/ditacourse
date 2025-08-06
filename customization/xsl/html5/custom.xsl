@@ -90,8 +90,9 @@
       </nav>
     </xsl:if>
     
- <!-- Inject quiz loader script -->
-    <script src="customization/js/quiz-loader.js"/>
+ <!-- ✅ Append quiz loader to <body> -->
+  <xsl:template name="user-footer-content">
+    <script src="customization/js/quiz-loader.js"></script>
   </xsl:template>
   
 </xsl:stylesheet>
