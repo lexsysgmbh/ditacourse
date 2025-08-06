@@ -14,7 +14,7 @@
     <p>This interactive quiz covers key concepts from the first part of the course.</p>
 
     <foreign xml:space="preserve">
-      <div id="quiz-container" data-quiz="quiz-dita-basics.html"></div>
+      <div data-quiz="introduction_to_dita"/>
     </foreign>
 
   </conbody>
