@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_topics" xml:lang="en-US">
   <title>Concept Topics</title>
-  <shortdesc>Concept topics introduce and explain subjects, providing background knowledge before procedural or reference content.</shortdesc>
+  <shortdesc>Concept topics explain ideas, principles, or processes and answer questions like “what” or “why”.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,8 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <title>Use</title>
-      <p>Concept topics are used to introduce and explain a subject, tool, feature, or process. They provide background knowledge that users need before performing a task or understanding a reference. They are ideal for overviews, product introductions, or clarifying abstract ideas. Concept topics are especially important early in the user journey, explaining "why" something matters before showing "how" to use it.</p>
+      <p>The main purpose of concept topics is to help readers understand a subject before diving into tasks or more granular information. For example, concept topics explain what something is, why it matters, or how it fits into a wider context. They provide background knowledge that users need before performing a task or understanding a reference.</p>
     </section>
 
     <section>
@@ -27,19 +26,18 @@
         <li>&lt;title&gt;: Name of the concept.</li>
         <li>&lt;shortdesc&gt;: A brief summary or abstract.</li>
         <li>&lt;conbody&gt;: Main body content.</li>
-        <li>&lt;section&gt; or &lt;p&gt;: Structured explanation.</li>
+        <li>&lt;section&gt; or &lt;p&gt;: Used to structure and present explanatory content.</li>
       </ul>
     </section>
 
     <section>
-      <title>Structural Best Practices</title>
+      <title>Best Practices for Writing</title>
       <ul>
-        <li>Start with a clear definition or overview.</li>
-        <li>Explain the "why" before the "what".</li>
-        <li>Use analogies and examples for complex concepts.</li>
-        <li>Organize from general to specific.</li>
-        <li>Link to related procedural content (tasks).</li>
-        <li>Avoid embedding task steps within concept explanations; instead, link to separate task topics.</li>
+        <li>Start with a clear definition or high-level overview.</li>
+        <li>Explain the "why" before introducing the "what."</li>
+        <li>Use analogies or examples to clarify complex concepts.</li>
+        <li>Organize content from general to specific.</li>
+        <li>Avoid embedding task steps in concept topics; instead, provide related links to separate task topics.</li>
       </ul>
     </section>
 
