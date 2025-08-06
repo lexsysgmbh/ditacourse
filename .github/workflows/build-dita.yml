@@ -58,6 +58,13 @@ jobs:
         run: |
           node .github/scripts/inject-head-snippets.js
 
+      - name: ✅ Copy quizzes and JS loader to output
+        run: |
+          mkdir -p out/customization/quizzes
+          mkdir -p out/customization/js
+          cp customization/quizzes/* out/customization/quizzes/
+          cp customization/js/* out/customization/js/
+
       - name: 💡 Inject next-lesson buttons
         run: |
           node .github/scripts/inject-next-lesson-footer.js
