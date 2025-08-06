@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="glossary_entries" xml:lang="en-US">
   <title>Glossary Entries</title>
-  <shortdesc>Glossary topics define specialized terms and ensure consistent usage across documentation and translations.</shortdesc>
+  <shortdesc>Glossary topics define specialized terms to ensure consistent use of terminology.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,8 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <title>Use</title>
-      <p>Glossary topics are used to define specialized terms, acronyms, or jargon. These entries help ensure consistency across teams, translations, and publications. They are particularly useful in complex domains (e.g., finance, healthcare, software development) where term usage can vary widely.</p>
+      <p>Creating glossary topics help to provide clear, concise definitions to support understanding of terms, acronyms, or phrases - especially across different domains (such as finance, healthcare, software development, and so on). Besides ensuring consistency, glossary topics support reuse of specialized terms and help new or non-expert users understand key concepts.</p>
     </section>
 
     <section>
@@ -33,14 +32,14 @@
     </section>
 
     <section>
-      <title>Writing Best Practices</title>
+      <title>Best Practices for Writing</title>
       <ul>
         <li>Start definitions with the part of speech and category.</li>
         <li>Avoid using the term within its own definition.</li>
         <li>Keep definitions concise but complete.</li>
         <li>Use examples to clarify abstract concepts.</li>
         <li>Cross-reference related terms.</li>
-        <li>Build glossary entries incrementally: when you find yourself explaining the same term repeatedly, create a glossary entry and link to it instead.</li>
+        <li>Add glossary entries as needed — if you’re defining the same term in multiple places, create a reusable entry and link to it.</li>
       </ul>
     </section>
 
