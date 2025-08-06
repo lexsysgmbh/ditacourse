@@ -1,6 +1,6 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
-<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Task topics provide clear, step-by-step instructions for completing specific procedures and reducing user errors."><title>Task Topics</title><link rel="stylesheet" type="text/css" href="commonltr.css"><script async src="https://hypothes.is/embed.js"></script>
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Task topics explain how to accomplish specific goals through step-by-step procedures."><title>Task Topics</title><link rel="stylesheet" type="text/css" href="commonltr.css"><script async src="https://hypothes.is/embed.js"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
@@ -10,39 +10,38 @@
   <h1 class="title topictitle1" id="ariaid-title1">Task Topics</h1>
   
   
-  <div class="body conbody"><p class="shortdesc">Task topics provide clear, step-by-step instructions for completing specific procedures and reducing user errors.</p>
-    <section class="section"><h2 class="title sectiontitle">Use</h2>
-      
-      <p class="p">Task topics provide clear, step-by-step instructions for completing a procedure. They are best used when guiding users through a specific action, such as installing software, configuring settings, or submitting forms. Tasks reduce user errors by presenting actions in a consistent, predictable way, making them ideal for call centers, onboarding flows, and support documentation.</p>
+  <div class="body conbody"><p class="shortdesc">Task topics explain how to accomplish specific goals through step-by-step procedures.</p>
+    <section class="section">
+      <p class="p">Task topics guide users through a specific procedure. The goal and reason for performing the steps must be clear. For example, tasks can describe how to configure a system or device, how to achieve a business goal, or how to complete a routine procedure.</p>
     </section>
 
     <section class="section"><h2 class="title sectiontitle">User Intent</h2>
       
-      <p class="p">"I need to get something done right now."</p>
+      <p class="p">"I need to complete a task and understand how to do this."</p>
     </section>
 
     <section class="section"><h2 class="title sectiontitle">Common Tags</h2>
       
       <ul class="ul">
         <li class="li">&lt;task&gt;: Root element.</li>
-        <li class="li">&lt;title&gt;: Action name (e.g., "Reset Your Password").</li>
-        <li class="li">&lt;shortdesc&gt;: Quick summary.</li>
+        <li class="li">&lt;title&gt;: Task to be performed (e.g., "Reset Your Password").</li>
+        <li class="li">&lt;shortdesc&gt;: Precise summary of the goal and when to perform the task.</li>
         <li class="li">&lt;taskbody&gt;: Container for steps and results.</li>
         <li class="li">&lt;steps&gt; and &lt;step&gt;: Ordered procedural instructions.</li>
         <li class="li">&lt;result&gt;: Outcome of the task.</li>
-        <li class="li">&lt;prereq&gt;: Optional requirements before starting.</li>
-        <li class="li">&lt;context&gt;: When and why to perform this task.</li>
+        <li class="li">&lt;prereq&gt;: Any prerequisites to be met before performing the task.</li>
+        <li class="li">&lt;context&gt;: Additional background information about performing the task.</li>
         <li class="li">&lt;postreq&gt;: Recommended follow-up actions.</li>
       </ul>
     </section>
 
-    <section class="section"><h2 class="title sectiontitle">Step Structure Best Practices</h2>
+    <section class="section"><h2 class="title sectiontitle">Best Practices for Writing</h2>
       
       <ul class="ul">
-        <li class="li">One action per step.</li>
-        <li class="li">Use imperative voice (e.g., "Click Save").</li>
+        <li class="li">One action per numbered step (max. 10 steps).</li>
+        <li class="li">Use imperative voice (for example, "Save your data.").</li>
         <li class="li">Include expected results for complex steps.</li>
-        <li class="li">Provide specific UI element names and locations.</li>
+        <li class="li">Provide specific UI element names but remember that the UI can change.</li>
         <li class="li">Use conditional steps for different scenarios.</li>
         <li class="li">Test task topics with actual users to identify gaps and ensure clarity.</li>
       </ul>
