@@ -37,7 +37,8 @@
     <section>
       <title>Best Practices for Writing</title>
       <ul>
-        <li>One action per numbered step (max. 10 steps).</li>
+        <li>Describe one task in the topic (consider splitting if it gets too long)</li>
+        <li>List any prerequisites.</li>
         <li>Use imperative voice (for example, "Save your data.").</li>
         <li>Include expected results for complex steps.</li>
         <li>Provide specific UI element names as necessary (using generic formulations can be more efficient if the UI changes frequently).</li>
