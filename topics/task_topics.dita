@@ -51,7 +51,7 @@
   <codeblock outputclass="language-xml">
 &lt;task id="resetpassword"&gt;
   &lt;title&gt;Reset Your Password&lt;/title&gt;
-  &lt;shortdesc&gt;This procedure resets your account password using email verification.&lt;/shortdesc&gt;
+  &lt;shortdesc&gt;Reset your account password using email verification if you've forgotten your password or suspect that your account has been hacked.&lt;/shortdesc&gt;
   &lt;taskbody&gt;
     &lt;steps&gt;
       &lt;step&gt;Go to the login page and click "Forgot Password".&lt;/step&gt;
