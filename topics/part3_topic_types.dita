@@ -10,7 +10,7 @@
     </critdates>
   </prolog>
   <conbody>
-    <p>DITA defines several structured topic types, each intended for a different documentation purpose. Using the correct topic type ensures content is focused, reusable, and well-organized across deliverables. Topic types are not arbitrary categories; they reflect how users actually consume technical information. Matching content structure to user intent makes DITA topics become more findable, scannable, and actionable.</p>
+    <p>DITA defines several structured topic types, each intended for a different documentation purpose. Using the correct topic type ensures content is focused, reusable, and well-organized across deliverables. Topic types are not arbitrary categories; they reflect how users actually consume technical information. Aligning content structure with user intent improves the findability, readability, and usability of DITA topics.</p>
 
     <section>
       <title>Learning Objectives</title>
