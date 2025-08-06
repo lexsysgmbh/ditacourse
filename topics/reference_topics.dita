@@ -11,8 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <title>Use</title>
-      <p>Reference topics are used to provide structured, factual data. They are ideal for configuration tables, field definitions, API specifications, system requirements, error codes, and feature comparison tables. They support concept or task topics by providing detailed data users might need during or after a task. Reference content should be concise, easy to scan, and non-narrative.</p>
+      <p>Reference content should be concise, easy to scan, and non-narrative. Examples include configuration tables, field definitions, API specs, and system requirements. Reference topics consolidate information that users need to look up for quick reference, for instance, during or after a task.</p>
     </section>
 
     <section>
@@ -32,12 +31,12 @@
     </section>
 
     <section>
-      <title>Design Principles</title>
+      <title>Best Practices for Writing</title>
       <ul>
-        <li>Prioritize scannability over narrative flow.</li>
+        <li>Prioritize ease of lookup over narrative flow.</li>
         <li>Use consistent formatting for similar information types.</li>
         <li>Include searchable keywords and synonyms.</li>
-        <li>Organize information logically (alphabetical, by importance, by workflow).</li>
+        <li>Organize information logically (for example, by importance, by workflow, or alphabetically).</li>
         <li>Provide cross-references to related concepts and tasks.</li>
       </ul>
     </section>
