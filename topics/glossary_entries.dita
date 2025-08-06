@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="glossary_entries" xml:lang="en-US">
   <title>Glossary Entries</title>
-  <shortdesc>Glossary topics define specialized terms to ensure consistent use of terminology.</shortdesc>
+  <shortdesc>Glossary entries provide a reusable, authoritative definition of a term to support clarity, consistency, and user understanding across documentation.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,7 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <p>Creating glossary topics help to provide clear, concise definitions to support understanding of terms, acronyms, or phrases - especially across different domains (such as finance, healthcare, software development, and so on). Besides ensuring consistency, glossary topics support reuse of specialized terms and help new or non-expert users understand key concepts.</p>
+      <p>Explaining key terms, acronyms, or phrases - especially across different domains (such as finance, healthcare, software development, and so on) - is essential for good documentation. Glossary entries provide clear, concise definitions that help new or non-expert users understand key concepts and contribute to clarity and consistency in language use.</p>
     </section>
 
     <section>
