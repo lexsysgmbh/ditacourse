@@ -76,6 +76,12 @@
     <script async="async" src="https://hypothes.is/embed.js"></script>
   </xsl:template>
 
+<!-- Inject quiz-loader.js just before </body> -->
+<xsl:template match="*[contains(@class,' topic/topic ')]" mode="topic" priority="10">
+  <xsl:next-match/>
+  <script src="customization/js/quiz-loader.js"/>
+</xsl:template>
+  
   <!-- Override the topic body template to add navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
     <!-- Process the original body content -->
@@ -89,10 +95,6 @@
         </a>
       </nav>
     </xsl:if>
-    
- <!-- ✅ Append quiz loader to <body> -->
-  <xsl:template name="user-footer-content">
-    <script src="customization/js/quiz-loader.js"></script>
-  </xsl:template>
+    </xsl:template>
   
 </xsl:stylesheet>
