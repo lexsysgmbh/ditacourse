@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_topics" xml:lang="en-US">
   <title>Concept Topics</title>
-  <shortdesc>Concept topics explain ideas, principles, or processes and answer questions like “what” or “why”.</shortdesc>
+  <shortdesc>Concept topics help users understand what something is, how it works, and why it’s relevant.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,7 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <p>The main purpose of concept topics is to help readers understand a subject before diving into tasks or more granular information. For example, concept topics explain what something is, why it matters, or how it fits into a wider context. They provide background knowledge that users need before performing a task or understanding a reference.</p>
+      <p>Concept topics are used to explain things like objects and functions, models and structures, or processes and workflows. Their main purpose is to help readers understand a subject before diving into tasks or more granular information. They provide background knowledge that users need before performing a task or understanding a reference.</p>
     </section>
 
     <section>
