@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="task_topics" xml:lang="en-US">
   <title>Task Topics</title>
-  <shortdesc>Task topics provide clear, step-by-step instructions for completing specific procedures and reducing user errors.</shortdesc>
+  <shortdesc>Task topics explain how to accomplish specific goals through step-by-step procedures.</shortdesc>
   <prolog>
     <author>Course Team</author>
     <critdates>
@@ -11,37 +11,36 @@
   </prolog>
   <conbody>
     <section>
-      <title>Use</title>
-      <p>Task topics provide clear, step-by-step instructions for completing a procedure. They are best used when guiding users through a specific action, such as installing software, configuring settings, or submitting forms. Tasks reduce user errors by presenting actions in a consistent, predictable way, making them ideal for call centers, onboarding flows, and support documentation.</p>
+      <p>Task topics guide users through a specific procedure. The goal and reason for performing the steps must be clear. For example, tasks can describe how to configure a system or device, how to achieve a business goal, or how to complete a routine procedure.</p>
     </section>
 
     <section>
       <title>User Intent</title>
-      <p>"I need to get something done right now."</p>
+      <p>"I need to complete a task and understand how to do this."</p>
     </section>
 
     <section>
       <title>Common Tags</title>
       <ul>
         <li>&lt;task&gt;: Root element.</li>
-        <li>&lt;title&gt;: Action name (e.g., "Reset Your Password").</li>
-        <li>&lt;shortdesc&gt;: Quick summary.</li>
+        <li>&lt;title&gt;: Task to be performed (e.g., "Reset Your Password").</li>
+        <li>&lt;shortdesc&gt;: Precise summary of the goal and when to perform the task.</li>
         <li>&lt;taskbody&gt;: Container for steps and results.</li>
         <li>&lt;steps&gt; and &lt;step&gt;: Ordered procedural instructions.</li>
         <li>&lt;result&gt;: Outcome of the task.</li>
-        <li>&lt;prereq&gt;: Optional requirements before starting.</li>
-        <li>&lt;context&gt;: When and why to perform this task.</li>
+        <li>&lt;prereq&gt;: Any prerequisites to be met before performing the task.</li>
+        <li>&lt;context&gt;: Additional background information about performing the task.</li>
         <li>&lt;postreq&gt;: Recommended follow-up actions.</li>
       </ul>
     </section>
 
     <section>
-      <title>Step Structure Best Practices</title>
+      <title>Best Practices for Writing</title>
       <ul>
-        <li>One action per step.</li>
-        <li>Use imperative voice (e.g., "Click Save").</li>
+        <li>One action per numbered step (max. 10 steps).</li>
+        <li>Use imperative voice (for example, "Save your data.").</li>
         <li>Include expected results for complex steps.</li>
-        <li>Provide specific UI element names and locations.</li>
+        <li>Provide specific UI element names but remember that the UI can change.</li>
         <li>Use conditional steps for different scenarios.</li>
         <li>Test task topics with actual users to identify gaps and ensure clarity.</li>
       </ul>
