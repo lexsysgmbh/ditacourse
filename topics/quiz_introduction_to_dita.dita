@@ -10,238 +10,46 @@
     </critdates>
   </prolog>
   <conbody>
-    <p>This interactive quiz covers key concepts from the first part of the course.</p>
-    <foreign class="- topic/foreign " xml:space="preserve" outputclass="quiz-container">
-      <div data-quiz="quiz_introduction_to_dita.js" id="quiz-intro-dita">
-        <p>Loading quiz...</p>
-      </div>
-      
-      <!-- Manual script loading since XSL injection isn't working -->
-      <script type="text/javascript">
-        console.log('Manual quiz loading script executed');
-        
-        // Function to load external script
-        function loadScript(src, callback, errorCallback) {
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.src = src;
-          script.onload = callback;
-          script.onerror = errorCallback;
-          document.head.appendChild(script);
-          console.log('Attempting to load script:', src);
-        }
-        
-        // Try to load quiz-loader.js from multiple possible paths
-        function tryLoadQuizLoader() {
-          var possiblePaths = [
-            './customization/js/quiz-loader.js',
-            'customization/js/quiz-loader.js',
-            '../customization/js/quiz-loader.js'
-          ];
-          
-          function tryPath(index) {
-            if (index >= possiblePaths.length) {
-              console.error('All quiz-loader.js paths failed, loading quiz directly');
-              loadQuizDirectly();
-              return;
-            }
-            
-            var currentPath = possiblePaths[index];
-            loadScript(currentPath, 
-              function() {
-                console.log('Successfully loaded quiz-loader.js from:', currentPath);
-                // Quiz loader should now handle loading the quiz data
-              },
-              function() {
-                console.warn('Failed to load quiz-loader.js from:', currentPath);
-                tryPath(index + 1);
-              }
-            );
-          }
-          
-          tryPath(0);
-        }
-        
-        // Fallback: Load quiz data directly and render inline
-        function loadQuizDirectly() {
-          console.log('Loading quiz data directly');
-          
-          var quizData = {
-            title: "Quiz: Introduction to DITA",
-            questions: [
-              {
-                question: "What is the primary goal of structured authoring?",
-                options: [
-                  "a) To create visually appealing documents",
-                  "b) Enable consistent, reusable, and scalable content creation.",
-                  "c) To convert unstructured text into XML", 
-                  "d) To primarily support single-channel publishing"
-                ],
-                answer: 1
-              },
-              {
-                question: "Which of the following is NOT a core principle of DITA?",
-                options: [
-                  "a) Topic-based authoring",
-                  "b) Specialization",
-                  "c) Content reuse",
-                  "d) Proprietary format."
-                ],
-                answer: 3
-              },
-              {
-                question: "How does DITA support multi-channel publishing?",
-                options: [
-                  "a) By embedding presentation styles directly in the XML",
-                  "b) By requiring manual formatting for each output type",
-                  "c) By separating content from presentation.",
-                  "d) By using only PDF as an output format"
-                ],
-                answer: 2
-              },
-              {
-                question: "Which business challenge does DITA's content reuse capability primarily solve?",
-                options: [
-                  "a) Difficulty in finding qualified technical writers",
-                  "b) Duplicate content maintenance across multiple documents.",
-                  "c) High costs of design software",
-                  "d) Lack of version control in documentation"
-                ],
-                answer: 1
-              },
-              {
-                question: "When should an organization typically choose DITA over simpler markup formats like Markdown?",
-                options: [
-                  "a) For simple blog posts or short articles",
-                  "b) When they need only basic text formatting",
-                  "c) When they need advanced content reuse, conditional publishing, or professional multi-format output.",
-                  "d) When they prefer a proprietary and closed system"
-                ],
-                answer: 2
-              }
-            ]
-          };
-          
-          renderQuizInline(document.getElementById('quiz-intro-dita'), quizData);
-        }
-        
-        // Inline quiz renderer
-        function renderQuizInline(container, quiz) {
-          if (!container) {
-            console.error('Quiz container not found');
-            return;
-          }
-          
-          console.log('Rendering quiz inline:', quiz.title);
-          container.innerHTML = '';
-          
-          var title = document.createElement('h3');
-          title.textContent = quiz.title;
-          title.style.cssText = 'margin-bottom: 1rem; color: #333; font-size: 1.2em;';
-          container.appendChild(title);
-          
-          var form = document.createElement('form');
-          form.style.cssText = 'max-width: 800px;';
-          
-          quiz.questions.forEach(function(q, index) {
-            var wrapper = document.createElement('div');
-            wrapper.style.cssText = 'margin-bottom: 1.5rem; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;';
-            
-            var questionText = document.createElement('p');
-            questionText.textContent = (index + 1) + '. ' + q.question;
-            questionText.style.cssText = 'font-weight: bold; margin-bottom: 0.5rem; color: #333;';
-            wrapper.appendChild(questionText);
-            
-            q.options.forEach(function(opt, i) {
-              var label = document.createElement('label');
-              label.style.cssText = 'display: block; margin-bottom: 0.25rem; cursor: pointer; padding: 0.25rem;';
-              
-              var input = document.createElement('input');
-              input.type = 'radio';
-              input.name = 'question-' + index;
-              input.value = i;
-              input.style.cssText = 'margin-right: 0.5rem;';
-              
-              label.appendChild(input);
-              label.appendChild(document.createTextNode(opt));
-              wrapper.appendChild(label);
-              
-              label.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = '#e6f3ff';
-              });
-              label.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'transparent';
-              });
-            });
-            
-            form.appendChild(wrapper);
-          });
-          
-          var submitBtn = document.createElement('button');
-          submitBtn.type = 'submit';
-          submitBtn.textContent = 'Submit Quiz';
-          submitBtn.style.cssText = 'background-color: #0066cc; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; margin-top: 1rem;';
-          
-          submitBtn.addEventListener('mouseenter', function() {
-            this.style.backgroundColor = '#0052a3';
-          });
-          submitBtn.addEventListener('mouseleave', function() {
-            this.style.backgroundColor = '#0066cc';
-          });
-          
-          form.appendChild(submitBtn);
-          
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            console.log('Quiz submitted');
-            
-            var score = 0;
-            quiz.questions.forEach(function(q, index) {
-              var selected = form.querySelector('input[name="question-' + index + '"]:checked');
-              if (selected && parseInt(selected.value) === q.answer) {
-                score++;
-              }
-            });
-            
-            var percentage = Math.round((score / quiz.questions.length) * 100);
-            
-            var resultContainer = document.createElement('div');
-            resultContainer.style.cssText = 'margin-top: 1.5rem; padding: 1rem; border-radius: 5px;';
-            
-            if (percentage >= 70) {
-              resultContainer.style.backgroundColor = '#d4edda';
-              resultContainer.style.borderColor = '#c3e6cb';
-              resultContainer.style.color = '#155724';
-            } else {
-              resultContainer.style.backgroundColor = '#f8d7da';
-              resultContainer.style.borderColor = '#f5c6cb';
-              resultContainer.style.color = '#721c24';
-            }
-            
-            resultContainer.innerHTML = '<h4 style="margin: 0 0 0.5rem 0;">Quiz Results</h4><p style="font-size: 1.1em; font-weight: bold; margin: 0;">You scored ' + score + ' out of ' + quiz.questions.length + ' (' + percentage + '%)</p>';
-            
-            container.appendChild(resultContainer);
-            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          });
-          
-          container.appendChild(form);
-        }
-        
-        // Start loading when DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-          console.log('DOM ready, starting quiz loading process');
-          tryLoadQuizLoader();
-        });
-        
-        // Fallback: If DOM is already loaded
-        if (document.readyState === 'loading') {
-          // DOM is still loading
-        } else {
-          // DOM is already loaded
-          console.log('DOM already loaded, starting quiz loading process');
-          tryLoadQuizLoader();
-        }
-      </script>
-    </foreign>
+
+    <p>1. What is the primary goal of structured authoring?</p>
+    <ul>
+      <li>a) Add more images to documents</li>
+      <li><b>b) Enable consistent, reusable, and scalable content creation</b></li>
+      <li>c) Use fewer tools</li>
+      <li>d) None of the above</li>
+    </ul>
+
+    <p>2. Which of the following is NOT a core principle of DITA?</p>
+    <ul>
+      <li>a) Topic-based authoring</li>
+      <li>b) Separation of content and format</li>
+      <li>c) Conditional publishing</li>
+      <li><b>d) Proprietary format</b></li>
+    </ul>
+
+    <p>3. How does DITA support multi-channel publishing?</p>
+    <ul>
+      <li>a) It restricts output to PDF only</li>
+      <li>b) By embedding fonts</li>
+      <li><b>c) By separating content from presentation</b></li>
+      <li>d) By using Markdown</li>
+    </ul>
+
+    <p>4. Which business challenge does DITA's content reuse capability primarily solve?</p>
+    <ul>
+      <li>a) Poor search engine optimization</li>
+      <li><b>b) Duplicate content maintenance across multiple documents</b></li>
+      <li>c) Lack of version control</li>
+      <li>d) Inadequate user interface design</li>
+    </ul>
+
+    <p>5. When should an organization typically choose DITA over simpler markup formats like Markdown?</p>
+    <ul>
+      <li>a) When they have only one publication target</li>
+      <li>b) When their content is primarily narrative rather than procedural</li>
+      <li><b>c) When they need advanced content reuse, conditional publishing, or professional multi-format output</b></li>
+      <li>d) When they want to minimize their toolchain complexity</li>
+    </ul>
+
   </conbody>
 </concept>
