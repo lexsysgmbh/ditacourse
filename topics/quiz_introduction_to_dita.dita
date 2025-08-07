@@ -12,10 +12,9 @@
 <conbody>
   <p>This interactive quiz covers key concepts from the first part of the course.</p>
 
-<foreign outputclass="quiz-container" xml:space="preserve">
-  <div data-quiz="quiz_introduction_to_dita.js">
-    <p>Loading quiz...</p>
-  </div>
-</foreign>
+  <foreign outputclass="quiz-container">
+    <div>✅ Test message from &lt;foreign&gt;</div>
+    <script>console.log("✅ Script inside <foreign> executed.");</script>
+  </foreign>
 </conbody>
 </concept>
