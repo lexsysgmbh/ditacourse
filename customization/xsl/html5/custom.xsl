@@ -70,11 +70,37 @@
   <!-- Find next lesson for current topic -->
   <xsl:variable name="next-lesson" select="$lesson-map[@current = $current-topic-filename]/@next"/>
 
-<!-- Inject Hypothes.is and quiz-loader.js in <head> -->
-<xsl:template match="*[contains(@class,' topic/topic ')]" mode="head" priority="10">
+<!-- UPDATED: Multiple approaches to inject scripts with debug -->
+<!-- Method 1: Try gen-user-head mode (highest priority) -->
+<xsl:template match="*" mode="gen-user-head" priority="25">
   <xsl:next-match/>
+  <xsl:comment>Quiz loader XSL template executed via gen-user-head</xsl:comment>
   <script async="async" src="https://hypothes.is/embed.js"></script>
   <script src="./customization/js/quiz-loader.js"></script>
+  <script>
+    console.log('Quiz loader script tag added via XSL gen-user-head');
+  </script>
+</xsl:template>
+
+<!-- Method 2: Your original head mode template (updated with debug) -->
+<xsl:template match="*[contains(@class,' topic/topic ')]" mode="head" priority="20">
+  <xsl:next-match/>
+  <xsl:comment>Quiz loader XSL template executed via topic head</xsl:comment>
+  <script async="async" src="https://hypothes.is/embed.js"></script>
+  <script src="./customization/js/quiz-loader.js"></script>
+  <script>
+    console.log('Quiz loader script tag added via XSL topic head');
+  </script>
+</xsl:template>
+
+<!-- Method 3: Try user-head-content mode -->
+<xsl:template name="gen-user-head">
+  <xsl:comment>Quiz loader XSL template executed via gen-user-head template</xsl:comment>
+  <script async="async" src="https://hypothes.is/embed.js"></script>
+  <script src="./customization/js/quiz-loader.js"></script>
+  <script>
+    console.log('Quiz loader script tag added via XSL gen-user-head template');
+  </script>
 </xsl:template>
 
   <!-- Override the topic body template to add navigation -->
@@ -92,18 +118,21 @@
     </xsl:if>
     </xsl:template>
 
-<!-- Enhanced foreign element processing for quiz support -->
-<xsl:template match="*[contains(@class, ' topic/foreign ')]">
+<!-- UPDATED: Enhanced foreign element processing for quiz support with debug -->
+<xsl:template match="*[contains(@class, ' topic/foreign ')]" priority="15">
+  <xsl:comment>Foreign element template executed - class: <xsl:value-of select="@class"/> outputclass: <xsl:value-of select="@outputclass"/></xsl:comment>
   <xsl:choose>
     <xsl:when test="@outputclass = 'quiz-container'">
       <!-- Process as quiz container, preserving inner HTML structure -->
       <div class="quiz-wrapper">
+        <xsl:comment>Quiz container processed with outputclass=quiz-container</xsl:comment>
         <xsl:apply-templates select="@*[not(local-name() = 'class')]"/>
         <xsl:copy-of select="*"/>
       </div>
     </xsl:when>
     <xsl:otherwise>
       <!-- Default foreign element processing -->
+      <xsl:comment>Foreign element processed - default path</xsl:comment>
       <xsl:copy-of select="."/>
     </xsl:otherwise>
   </xsl:choose>
