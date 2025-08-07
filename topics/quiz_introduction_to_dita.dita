@@ -4,13 +4,8 @@
   <title>Quiz: Introduction to DITA</title>
   <shortdesc>Testing passthrough of HTML inside foreign element.</shortdesc>
  <conbody>
-  <p>This interactive quiz covers key concepts from the first part of this course.</p>
-
-<foreign outputclass="quiz-container">
-  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-    <p>✅ If you see this text, passthrough works.</p>
-  </div>
-  <script src="customization/js/quiz-loader.js"></script>
-</foreign>
+  <p>This interactive quiz covers key concepts from the first part of the course.</p>
+  <p>Loading interactive quiz…</p>
+  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js"></div>
 </conbody>
 </concept>
