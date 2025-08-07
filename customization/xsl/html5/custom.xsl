@@ -92,11 +92,6 @@
     </xsl:if>
     </xsl:template>
 
-  <!-- Render <foreign> element as raw HTML -->
-  <xsl:template match="foreign">
-    <xsl:copy-of select="node()"/>
-  </xsl:template>
-
 <!-- Allow <foreign> content to pass through for quiz support -->
 <xsl:template match="*[contains(@class, ' topic/foreign ')]">
   <xsl:copy>
