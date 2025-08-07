@@ -4,7 +4,6 @@
   <title>Quiz: Introduction to DITA</title>
   <shortdesc>This interactive quiz covers key concepts from the first part of the course.</shortdesc>
   <conbody>
-  <p>Loading interactive quiz…</p>
   <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js"></div>
 </conbody>
 </concept>
