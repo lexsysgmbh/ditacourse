@@ -95,9 +95,8 @@
   <xsl:copy-of select="node()"/>
 </xsl:template>
 
-  <!-- Preserve <foreign> content in HTML5 output -->
-<xsl:template match="foreign">
-  <xsl:message>✅ custom foreign passthrough template applied</xsl:message>
+<!-- Override default processing of <foreign> in HTML5 -->
+<xsl:template match="foreign" mode="html5" priority="100">
   <xsl:copy>
     <xsl:apply-templates select="@* | node()"/>
   </xsl:copy>
