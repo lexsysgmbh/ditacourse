@@ -94,5 +94,12 @@
 <xsl:template match="*[contains(@class, ' topic/foreign ')]">
   <xsl:copy-of select="node()"/>
 </xsl:template>
+
+  <!-- Preserve <foreign> content in HTML5 output -->
+<xsl:template match="*[contains(@class, ' topic/foreign ')]">
+  <xsl:copy>
+    <xsl:apply-templates select="@* | node()"/>
+  </xsl:copy>
+</xsl:template>
   
 </xsl:stylesheet>
