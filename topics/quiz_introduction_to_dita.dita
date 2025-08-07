@@ -2,21 +2,14 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="quiz_introduction_to_dita" xml:lang="en-US">
   <title>Quiz: Introduction to DITA</title>
-  <shortdesc>This quiz assesses understanding of the fundamental concepts introduced in Part I: Introduction to DITA.</shortdesc>
-  <prolog>
-    <author>Course Team</author>
-    <critdates>
-      <created date="2025-06-12"/>
-    </critdates>
-  </prolog>
-<conbody>
-  <p>This interactive quiz covers key concepts from the first part of this DITA course.</p>
-  <p>This is a test of <code>&lt;foreign&gt;</code> passthrough.</p>
+  <shortdesc>Testing passthrough of HTML inside foreign element.</shortdesc>
+  <conbody>
+    <p>This is a test of <code>&lt;foreign&gt;</code> passthrough.</p>
 
     <foreign outputclass="test-box">
       <div style="border: 2px solid red; padding: 1em; background: #ffe;">
         ✅ <strong>This HTML is from inside &lt;foreign&gt;.</strong>
       </div>
     </foreign>
-</conbody>
+  </conbody>
 </concept>
