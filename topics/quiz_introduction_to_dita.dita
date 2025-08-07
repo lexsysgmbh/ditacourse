@@ -14,7 +14,7 @@
 
   <foreign outputclass="quiz-container">
     <div style="background-color: lightgreen; padding: 1rem; border: 1px solid #333;">
-      ✅ This is a test of the foreign passthrough.
+      ✅ This is to test the foreign passthrough.
     </div>
   </foreign>
 </conbody>
