@@ -234,3 +234,9 @@ thead tr > .entry {
   margin-bottom: 1rem;
   font-weight: bold;
 }
+
+.quiz-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em;
+}
