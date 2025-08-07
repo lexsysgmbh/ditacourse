@@ -93,8 +93,11 @@
     </xsl:template>
 
 <!-- Allow <foreign> content to pass through for quiz support -->
-<xsl:template match="*[contains(@class, ' topic/foreign ')]" priority="20">
-  <xsl:copy-of select="."/>
+<xsl:template match="*[contains(@class, ' topic/foreign ')]">
+  <xsl:copy>
+    <xsl:apply-templates select="@*"/>
+    <xsl:apply-templates/>
+  </xsl:copy>
 </xsl:template>
   
 </xsl:stylesheet>
