@@ -58,13 +58,6 @@ jobs:
         run: |
           node .github/scripts/inject-head-snippets.js
 
-      - name: ✅ Copy quizzes and JS loader to output
-        run: |
-          mkdir -p out/customization/quizzes
-          mkdir -p out/customization/js
-          cp customization/quizzes/* out/customization/quizzes/
-          cp customization/js/* out/customization/js/
-
       - name: 💡 Inject next-lesson buttons
         run: |
           node .github/scripts/inject-next-lesson-footer.js
@@ -81,43 +74,6 @@ jobs:
       - name: Overwrite default CSS (commonltr.css)
         run: |
           cp -f customization/css/mytheme.css out/commonltr.css
-
-      - name: 📤 Copy quiz loader script to output
-        run: |
-          mkdir -p out/customization/js
-          cp customization/js/quiz-loader.js out/customization/js/quiz-loader.js
-
-      - name: 🔍 Enhanced debug output structure
-        run: |
-          echo "=== Pre-copy source files ==="
-          find . -name "quiz-loader.js" -o -name "quiz_introduction_to_dita.js" | head -10
-          echo ""
-          echo "=== Post-copy output structure ==="
-          find out -type f | grep -E '\.(js|html)$' | sort
-          echo ""
-          echo "=== Quiz and JS files specifically ==="
-          ls -la out/customization/quizzes/ 2>/dev/null || echo "❌ Quizzes directory not found"
-          ls -la out/customization/js/ 2>/dev/null || echo "❌ JS directory not found"
-          echo ""
-          echo "=== Content of quiz-loader.js if found ==="
-          if [ -f "out/customization/js/quiz-loader.js" ]; then
-            head -5 out/customization/js/quiz-loader.js
-            echo "✅ quiz-loader.js exists and has content"
-          else
-            echo "❌ quiz-loader.js not found in output"
-          fi
-          echo ""
-          echo "=== Checking HTML for script references ==="
-          find out -name "*.html" -exec grep -l "script" {} \; | head -3 | while read file; do
-            echo "--- Scripts in $file ---"
-            grep "script" "$file" || echo "No script tags found"
-          done
-          echo ""
-          echo "=== Checking for quiz-related content in HTML ==="
-          find out -name "*.html" -exec grep -l "quiz\|data-quiz\|Loading quiz" {} \; | head -1 | while read file; do
-            echo "--- Quiz content in $file ---"
-            grep -A 5 -B 5 "quiz\|data-quiz\|Loading quiz" "$file" || echo "No quiz content found"
-          done
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
