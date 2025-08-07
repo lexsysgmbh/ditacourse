@@ -89,5 +89,10 @@
 <xsl:template name="customHeadScript">
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
+
+<!-- Allow raw HTML inside <foreign> to pass through -->
+<xsl:template match="*[contains(@class, ' topic/foreign ')]">
+  <xsl:copy-of select="node()"/>
+</xsl:template>
   
 </xsl:stylesheet>
