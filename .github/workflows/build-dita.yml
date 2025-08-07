@@ -87,6 +87,23 @@ jobs:
           mkdir -p out/customization/js
           cp customization/js/quiz-loader.js out/customization/js/quiz-loader.js
 
+      - name: 🔍 Debug output structure
+        run: |
+          echo "=== Output directory structure ==="
+          find out -name "*.js" -o -name "*.html" | head -20
+          echo ""
+          echo "=== Quiz files ==="
+          ls -la out/customization/quizzes/ || echo "Quizzes directory not found"
+          echo ""
+          echo "=== JS files ==="  
+          ls -la out/customization/js/ || echo "JS directory not found"
+          echo ""
+          echo "=== Checking if quiz is referenced in HTML ==="
+          grep -r "data-quiz" out/ || echo "No data-quiz found in HTML files"
+          echo ""
+          echo "=== Checking if quiz-loader is referenced in HTML ==="
+          grep -r "quiz-loader.js" out/ || echo "No quiz-loader.js found in HTML files"
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
