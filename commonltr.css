@@ -235,10 +235,43 @@ thead tr > .entry {
   font-weight: bold;
 }
 
+/* Quiz wrapper aligned to page content */
 .quiz-wrapper {
+  max-width: 100%; /* match content width */
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  margin-top: 2em;
+  box-sizing: border-box;
+}
+
+/* Match main content font and spacing */
+.quiz-wrapper label {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  margin: 0.25em 0;
+}
+
+.quiz-wrapper div {
+  margin-bottom: 1em;
+}
+
+/* Optional: style buttons to match the theme */
+.quiz-wrapper button {
+  font-size: 1rem;
+  padding: 0.4em 0.8em;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-wrapper button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.quiz-wrapper button:hover:enabled {
+  background-color: #000;
 }
