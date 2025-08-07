@@ -85,17 +85,4 @@
     </xsl:if>
     </xsl:template>
 
-<!-- Inject quiz-loader.js into the HTML <head> -->
-<xsl:template name="customHeadScript">
-  <script src="customization/js/quiz-loader.js"/>
-</xsl:template>
-
-<!-- Preserve <foreign> content and allow inline HTML and <script> -->
-<xsl:template match="*[contains(@class, ' topic/foreign ')]">
-  <xsl:copy>
-    <xsl:apply-templates select="@*"/>
-    <xsl:copy-of select="node()" copy-namespaces="no"/>
-  </xsl:copy>
-</xsl:template>
-
 </xsl:stylesheet>
