@@ -95,13 +95,14 @@
   <xsl:copy-of select="node()"/>
 </xsl:template>
 
-<!-- Preserve <foreign> content in HTML5 output, including raw HTML like <script> -->
+<!-- Preserve <foreign> content in HTML5 output, including embedded HTML like <script> -->
 <xsl:template match="*[contains(@class, ' topic/foreign ')]">
   <xsl:copy>
     <xsl:apply-templates select="@*"/>
     <xsl:for-each select="node()">
       <xsl:copy-of select="." copy-namespaces="no"/>
     </xsl:for-each>
+  </xsl:copy>
 </xsl:template>
-  
+
 </xsl:stylesheet>
