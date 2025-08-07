@@ -65,20 +65,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    buttonEl.onclick = () => {
-      const q = quizData[current];
-      if (selected === q.answerIndex) {
-        feedbackEl.textContent = "✅ Correct!";
-        feedbackEl.style.color = "green";
-        score++;
-      } else {
-        feedbackEl.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answerIndex]}`;
-        feedbackEl.style.color = "red";
-      }
+    buttonEl.onclick = handleSubmit;
 
-      buttonEl.textContent = current < quizData.length - 1 ? "Next" : "See Results";
-      buttonEl.onclick = next;
-    };
+function handleSubmit() {
+  const q = quizData[current];
+  const inputs = optionsEl.querySelectorAll("input[type=radio]");
+  inputs.forEach((input) => input.disabled = true);
+
+  if (selected === q.answerIndex) {
+    feedbackEl.textContent = "✅ Correct!";
+    feedbackEl.style.color = "green";
+    score++;
+  } else {
+    feedbackEl.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answerIndex]}`;
+    feedbackEl.style.color = "red";
+  }
+
+  // Change button label and behavior
+  buttonEl.textContent = current < quizData.length - 1 ? "Next" : "See Results";
+  buttonEl.onclick = next;
+}
 
     function next() {
       current++;
