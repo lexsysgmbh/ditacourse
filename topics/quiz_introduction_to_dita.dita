@@ -11,11 +11,12 @@
   </prolog>
 <conbody>
   <p>This interactive quiz covers key concepts from the first part of this DITA course.</p>
+  <p>This is a test of <code>&lt;foreign&gt;</code> passthrough.</p>
 
-  <foreign outputclass="quiz-container">
-    <div style="background-color: lightgreen; padding: 1rem; border: 1px solid #333;">
-      ✅ This is to test the foreign passthrough.
-    </div>
-  </foreign>
+    <foreign outputclass="test-box">
+      <div style="border: 2px solid red; padding: 1em; background: #ffe;">
+        ✅ <strong>This HTML is from inside &lt;foreign&gt;.</strong>
+      </div>
+    </foreign>
 </conbody>
 </concept>
