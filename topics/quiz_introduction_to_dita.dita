@@ -6,5 +6,10 @@
  <conbody>
   <p>This interactive quiz covers key concepts from the first part of the course.</p>
   <p>Loading interactive quiz…</p>
+  <div class="body conbody">
+    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+      <p>Loading interactive quiz...</p>
+    </div>
+  </div>
 </conbody>
 </concept>
