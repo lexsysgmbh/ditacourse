@@ -39,31 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selected = null;
 
-    function loadQuestion() {
-      const q = quizData[current];
-      questionEl.textContent = `${current + 1}. ${q.question}`;
-      optionsEl.innerHTML = "";
-      feedbackEl.textContent = "";
-      resultEl.textContent = "";
-      selected = null;
-      buttonEl.disabled = true;
+function loadQuestion() {
+  const q = quizData[current];
+  questionEl.textContent = `${current + 1}. ${q.question}`;
+  optionsEl.innerHTML = "";
+  feedbackEl.textContent = "";
+  resultEl.textContent = "";
+  selected = null;
+  buttonEl.disabled = true;
+  buttonEl.textContent = "Submit";
+  buttonEl.onclick = handleSubmit; // ✅ Reset
 
-      q.options.forEach((opt, i) => {
-        const label = document.createElement("label");
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = "quiz";
-        input.value = i;
-        input.addEventListener("change", () => {
-          selected = parseInt(input.value);
-          buttonEl.disabled = false;
-        });
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(" " + opt));
-        label.style.display = "block";
-        optionsEl.appendChild(label);
-      });
-    }
+  q.options.forEach((opt, i) => {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "quiz";
+    input.value = i;
+    input.addEventListener("change", () => {
+      selected = parseInt(input.value);
+      buttonEl.disabled = false;
+    });
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(" " + opt));
+    label.style.display = "block";
+    optionsEl.appendChild(label);
+  });
+}
 
     buttonEl.onclick = handleSubmit;
 
