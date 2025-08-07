@@ -236,7 +236,11 @@ thead tr > .entry {
 }
 
 .quiz-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 700px; /* Or match your page content width */
+  margin: 2em auto;
   padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
+
