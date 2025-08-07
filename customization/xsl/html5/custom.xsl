@@ -84,5 +84,10 @@
       </nav>
     </xsl:if>
     </xsl:template>
+
+<!-- Inject quiz-loader.js into the HTML <head> -->
+<xsl:template name="customHeadScript">
+  <script src="customization/js/quiz-loader.js"/>
+</xsl:template>
   
 </xsl:stylesheet>
