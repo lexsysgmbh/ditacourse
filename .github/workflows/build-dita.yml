@@ -82,6 +82,11 @@ jobs:
         run: |
           cp -f customization/css/mytheme.css out/commonltr.css
 
+      - name: 📤 Copy quiz loader script to output
+        run: |
+          mkdir -p out/customization/js
+          cp customization/js/quiz-loader.js out/customization/js/quiz-loader.js
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
