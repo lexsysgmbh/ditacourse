@@ -58,10 +58,6 @@ jobs:
         run: |
           node .github/scripts/inject-head-snippets.js
 
-      - name: Inject quiz HTML and script
-        run: |
-          node .github/scripts/inject-quiz.js
-
       - name: 💡 Inject next-lesson buttons
         run: |
           node .github/scripts/inject-next-lesson-footer.js
