@@ -11,10 +11,20 @@
   </prolog>
   <conbody>
     <p>This interactive quiz covers key concepts from the first part of the course.</p>
-    <div outputclass="quiz-container">
+    <foreign class="- topic/foreign " xml:space="preserve" outputclass="quiz-container">
       <div data-quiz="quiz_introduction_to_dita.js" id="quiz-intro-dita">
         <p>Loading quiz...</p>
       </div>
-    </div>
+      <!-- Manual script injection as test -->
+      <script>
+        console.log('Manual script from DITA topic executed');
+        // Try to load the quiz loader manually
+        var script = document.createElement('script');
+        script.src = './customization/js/quiz-loader.js';
+        script.onload = function() { console.log('Quiz loader loaded successfully'); };
+        script.onerror = function() { console.error('Failed to load quiz loader from ./customization/js/quiz-loader.js'); };
+        document.head.appendChild(script);
+      </script>
+    </foreign>
   </conbody>
 </concept>
