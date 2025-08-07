@@ -95,11 +95,13 @@
   <xsl:copy-of select="node()"/>
 </xsl:template>
 
-<!-- Override default processing of <foreign> in HTML5 -->
-<xsl:template match="foreign" mode="html5" priority="100">
+<!-- Preserve <foreign> content in HTML5 output, including raw HTML like <script> -->
+<xsl:template match="*[contains(@class, ' topic/foreign ')]">
   <xsl:copy>
-    <xsl:apply-templates select="@* | node()"/>
-  </xsl:copy>
+    <xsl:apply-templates select="@*"/>
+    <xsl:for-each select="node()">
+      <xsl:copy-of select="." copy-namespaces="no"/>
+    </xsl:for-each>
 </xsl:template>
   
 </xsl:stylesheet>
