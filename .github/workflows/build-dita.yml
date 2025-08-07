@@ -62,6 +62,10 @@ jobs:
         run: |
           node .github/scripts/inject-next-lesson-footer.js
 
+      - name: 💡 Inject interactive quiz
+        run: |
+          node .github/scripts/inject-quiz.js
+
       - name: 📦 Copy homepage to index.html
         run: |
           cp out/dita_structured_authoring.html out/index.html
