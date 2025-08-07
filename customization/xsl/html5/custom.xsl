@@ -74,7 +74,7 @@
 <xsl:template match="*[contains(@class,' topic/topic ')]" mode="head" priority="10">
   <xsl:next-match/>
   <script async="async" src="https://hypothes.is/embed.js"></script>
-  <script src="customization/js/quiz-loader.js"/>
+  <script src="./customization/js/quiz-loader.js"></script>
 </xsl:template>
 
   <!-- Override the topic body template to add navigation -->
@@ -92,12 +92,21 @@
     </xsl:if>
     </xsl:template>
 
-<!-- Allow <foreign> content to pass through for quiz support -->
+<!-- Enhanced foreign element processing for quiz support -->
 <xsl:template match="*[contains(@class, ' topic/foreign ')]">
-  <xsl:copy>
-    <xsl:apply-templates select="@*"/>
-    <xsl:apply-templates/>
-  </xsl:copy>
+  <xsl:choose>
+    <xsl:when test="@outputclass = 'quiz-container'">
+      <!-- Process as quiz container, preserving inner HTML structure -->
+      <div class="quiz-wrapper">
+        <xsl:apply-templates select="@*[not(local-name() = 'class')]"/>
+        <xsl:copy-of select="*"/>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <!-- Default foreign element processing -->
+      <xsl:copy-of select="."/>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
   
 </xsl:stylesheet>
