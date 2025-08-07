@@ -90,18 +90,11 @@
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
 
-<!-- Allow raw HTML inside <foreign> to pass through -->
-<xsl:template match="*[contains(@class, ' topic/foreign ')]">
-  <xsl:copy-of select="node()"/>
-</xsl:template>
-
-<!-- Preserve <foreign> content in HTML5 output, including embedded HTML like <script> -->
+<!-- Preserve <foreign> content and allow inline HTML and <script> -->
 <xsl:template match="*[contains(@class, ' topic/foreign ')]">
   <xsl:copy>
     <xsl:apply-templates select="@*"/>
-    <xsl:for-each select="node()">
-      <xsl:copy-of select="." copy-namespaces="no"/>
-    </xsl:for-each>
+    <xsl:copy-of select="node()" copy-namespaces="no"/>
   </xsl:copy>
 </xsl:template>
 
