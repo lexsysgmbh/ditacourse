@@ -4,8 +4,10 @@ const path = require('path');
 const htmlFile = path.join('out', 'quiz_introduction_to_dita.html');
 
 const injectContent = `
-<div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-  <p>Loading quiz...</p>
+<div class="quiz-container">
+  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+    <p>Loading interactive quiz…</p>
+  </div>
 </div>
 <script src="customization/js/quiz-loader.js"></script>
 `;
