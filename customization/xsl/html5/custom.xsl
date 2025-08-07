@@ -96,7 +96,8 @@
 </xsl:template>
 
   <!-- Preserve <foreign> content in HTML5 output -->
-<xsl:template match="*[contains(@class, ' topic/foreign ')]">
+<xsl:template match="foreign">
+  <xsl:message>✅ custom foreign passthrough template applied</xsl:message>
   <xsl:copy>
     <xsl:apply-templates select="@* | node()"/>
   </xsl:copy>
