@@ -2,12 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="quiz_introduction_to_dita" xml:lang="en-US">
   <title>Quiz: Introduction to DITA</title>
-  <shortdesc>Testing passthrough of HTML inside foreign element.</shortdesc>
- <conbody>
-  <p>This interactive quiz covers key concepts from the first part of the course.</p>
-  <p>Loading interactive quiz…</p>
-  <div class="conbody">
+  <shortdesc>This interactive quiz covers key concepts from the first part of the course.</shortdesc>
+  <conbody>
     <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js"></div>
-  </div>
-</conbody>
+  </conbody>
 </concept>
