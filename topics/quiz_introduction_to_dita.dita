@@ -6,11 +6,11 @@
  <conbody>
   <p>This interactive quiz covers key concepts from the first part of this course.</p>
 
- <data outputclass="quiz-container">
+<foreign outputclass="quiz-container">
   <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
     <p>✅ If you see this text, passthrough works.</p>
   </div>
   <script src="customization/js/quiz-loader.js"></script>
-</data>
+</foreign>
 </conbody>
 </concept>
