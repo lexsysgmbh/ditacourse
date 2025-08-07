@@ -1,44 +1,25 @@
 const fs = require('fs');
 const path = require('path');
 
-const outDir = path.join('out');
-const quizJsDir = path.join('customization', 'js');
+const htmlFile = path.join('out', 'quiz_introduction_to_dita.html');
 
-const quizFiles = fs.readdirSync(outDir).filter(file =>
-  file.startsWith('quiz_') && file.endsWith('.html')
-);
-
-if (quizFiles.length === 0) {
-  console.log('⚠️ No quiz HTML files found in /out.');
-  process.exit(0);
-}
-
-quizFiles.forEach(file => {
-  const htmlPath = path.join(outDir, file);
-  const quizId = file.replace('.html', ''); // e.g. quiz_dita_maps
-  const quizJsFile = `${quizId}.js`;        // e.g. quiz_dita_maps.js
-  const quizJsPath = path.join(quizJsDir, quizJsFile);
-
-  const quizHTML = fs.existsSync(quizJsPath)
-    ? `
-<div id="${quizId}" data-quiz="${quizJsFile}">
+const injectContent = `
+<div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
   <p>Loading quiz...</p>
 </div>
 <script src="customization/js/quiz-loader.js"></script>
-`
-    : `
-<div style="border: 2px dashed red; padding: 1rem;">
-  ⚠️ Quiz JavaScript file <code>${quizJsFile}</code> not found. Please add it to <code>${quizJsDir}</code>.
-</div>
 `;
 
-  let content = fs.readFileSync(htmlPath, 'utf-8');
+try {
+  let html = fs.readFileSync(htmlFile, 'utf-8');
 
-  if (!content.includes(`id="${quizId}"`) && !content.includes(quizJsFile)) {
-    content = content.replace('</main>', `${quizHTML}\n</main>`);
-    fs.writeFileSync(htmlPath, content, 'utf-8');
-    console.log(`✅ Injected quiz container into ${file}`);
+  if (!html.includes('id="quiz-intro-dita"')) {
+    html = html.replace('</body>', `${injectContent}\n</body>`);
+    fs.writeFileSync(htmlFile, html, 'utf-8');
+    console.log(`✅ Injected quiz placeholder and script into ${htmlFile}`);
   } else {
-    console.log(`ℹ️ Quiz already injected into ${file}`);
+    console.log(`ℹ️ Quiz placeholder already present in ${htmlFile}`);
   }
-});
+} catch (err) {
+  console.error(`❌ Failed to inject quiz into ${htmlFile}:`, err);
+}
