@@ -66,6 +66,11 @@ jobs:
         run: |
           node .github/scripts/inject-next-lesson-footer.js
 
+      - name: 📋 Copy quiz JavaScript
+        run: |
+          mkdir -p out/customization/js
+          cp customization/js/quiz_introduction_to_dita.js out/customization/js/
+
       - name: 💡 Inject interactive quiz
         run: |
           node .github/scripts/inject-quiz.js
