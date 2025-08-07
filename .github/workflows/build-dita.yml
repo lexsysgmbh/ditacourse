@@ -43,7 +43,7 @@ jobs:
             -Dargs.rellinks=next-prev \
             -Dargs.xhtml.classattr=yes \
             -Dnav-toc=full \
-            -Dhtml5.xsl=customization/xsl/html5/custom.xsl
+            -Dhtml5.xsl=plugins/org.dita.base/customization/xsl/html5/custom.xsl
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
