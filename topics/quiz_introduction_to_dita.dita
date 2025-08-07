@@ -9,47 +9,14 @@
       <created date="2025-06-12"/>
     </critdates>
   </prolog>
-  <conbody>
+<conbody>
+  <p>This interactive quiz covers key concepts from the first part of the course.</p>
 
-    <p>1. What is the primary goal of structured authoring?</p>
-    <ul>
-      <li>a) Add more images to documents</li>
-      <li><b>b) Enable consistent, reusable, and scalable content creation</b></li>
-      <li>c) Use fewer tools</li>
-      <li>d) None of the above</li>
-    </ul>
-
-    <p>2. Which of the following is NOT a core principle of DITA?</p>
-    <ul>
-      <li>a) Topic-based authoring</li>
-      <li>b) Separation of content and format</li>
-      <li>c) Conditional publishing</li>
-      <li><b>d) Proprietary format</b></li>
-    </ul>
-
-    <p>3. How does DITA support multi-channel publishing?</p>
-    <ul>
-      <li>a) It restricts output to PDF only</li>
-      <li>b) By embedding fonts</li>
-      <li><b>c) By separating content from presentation</b></li>
-      <li>d) By using Markdown</li>
-    </ul>
-
-    <p>4. Which business challenge does DITA's content reuse capability primarily solve?</p>
-    <ul>
-      <li>a) Poor search engine optimization</li>
-      <li><b>b) Duplicate content maintenance across multiple documents</b></li>
-      <li>c) Lack of version control</li>
-      <li>d) Inadequate user interface design</li>
-    </ul>
-
-    <p>5. When should an organization typically choose DITA over simpler markup formats like Markdown?</p>
-    <ul>
-      <li>a) When they have only one publication target</li>
-      <li>b) When their content is primarily narrative rather than procedural</li>
-      <li><b>c) When they need advanced content reuse, conditional publishing, or professional multi-format output</b></li>
-      <li>d) When they want to minimize their toolchain complexity</li>
-    </ul>
-
-  </conbody>
+  <foreign outputclass="quiz-container">
+    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+      <p>Loading quiz...</p>
+    </div>
+    <script src="customization/js/quiz-loader.js"></script>
+  </foreign>
+</conbody>
 </concept>
