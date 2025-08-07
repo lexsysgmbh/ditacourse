@@ -91,5 +91,10 @@
       </nav>
     </xsl:if>
     </xsl:template>
+
+  <!-- Preserve embedded HTML inside <foreign> elements -->
+<xsl:template match="foreign" name="topic.foreign">
+  <xsl:copy-of select="node()"/>
+</xsl:template>
   
 </xsl:stylesheet>
