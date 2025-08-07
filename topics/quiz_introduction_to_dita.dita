@@ -10,12 +10,11 @@
     </critdates>
   </prolog>
   <conbody>
-
     <p>This interactive quiz covers key concepts from the first part of the course.</p>
-
-  <foreign class="- topic/foreign " xml:space="preserve">
-    <div data-quiz="quiz_introduction_to_dita.js"></div>
-  </foreign>
-
+    <foreign class="- topic/foreign " xml:space="preserve" outputclass="quiz-container">
+      <div data-quiz="quiz_introduction_to_dita.js" id="quiz-intro-dita">
+        <p>Loading quiz...</p>
+      </div>
+    </foreign>
   </conbody>
 </concept>
