@@ -11,10 +11,5 @@
   </prolog>
 <conbody>
   <p>This interactive quiz covers key concepts from the first part of the course.</p>
-
-  <foreign outputclass="quiz-container">
-    <div>✅ Test message from &lt;foreign&gt;</div>
-    <script>console.log("✅ Script inside <foreign> executed.");</script>
-  </foreign>
 </conbody>
 </concept>
