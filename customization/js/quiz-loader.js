@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector('[data-quiz]');
   if (!container) return;
 
@@ -23,19 +23,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const restartEl = document.createElement("button");
     const resultEl = document.createElement("div");
 
-    container.innerHTML = "";
-    container.appendChild(questionEl);
-    container.appendChild(optionsEl);
-    container.appendChild(feedbackEl);
-    container.appendChild(buttonEl);
-    container.appendChild(restartEl);
-    container.appendChild(resultEl);
+// Create wrapper div for styling and alignment
+    const wrapper = document.createElement("div");
+    wrapper.className = "quiz-wrapper";
 
+// Clear previous content
+    container.innerHTML = "";
+
+// Append quiz elements into wrapper
+    wrapper.appendChild(questionEl);
+    wrapper.appendChild(optionsEl);
+    wrapper.appendChild(feedbackEl);
+    wrapper.appendChild(buttonEl);
+    wrapper.appendChild(restartEl);
+    wrapper.appendChild(resultEl);
+
+// Append wrapper into container
+    container.appendChild(wrapper);
+
+// Set initial text and styling
     buttonEl.textContent = "Submit";
     buttonEl.style.marginTop = "1em";
+
     restartEl.textContent = "Try Again";
     restartEl.style.display = "none";
     restartEl.style.marginTop = "1em";
+
 
     let selected = null;
 
