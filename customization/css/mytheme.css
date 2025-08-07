@@ -219,17 +219,15 @@ thead tr > .entry {
   font-weight: bold;
 }
 
-/* Quiz wrapper aligned to page content */
+/* Quiz wrapper aligned to main article content */
 .quiz-wrapper {
-  width: 100%;
-  max-width: 800px;         /* Match article width */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5em 2em;
-  background-color: #fff;
+  max-width: 800px;               /* Match article width */
+  margin: 2rem auto;              /* Center it horizontally */
+  padding: 1.5rem 2rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #fff;
   box-sizing: border-box;
 }
 
