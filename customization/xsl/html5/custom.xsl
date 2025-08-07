@@ -70,17 +70,13 @@
   <!-- Find next lesson for current topic -->
   <xsl:variable name="next-lesson" select="$lesson-map[@current = $current-topic-filename]/@next"/>
 
-  <!-- Inject Hypothes.is in <head> -->
-  <xsl:template match="*[contains(@class,' topic/topic ')]" mode="head" priority="10">
-    <xsl:next-match/>
-    <script async="async" src="https://hypothes.is/embed.js"></script>
-  </xsl:template>
-
-<!-- Inject quiz-loader.js at the bottom of <body> -->
-<xsl:template name="user-footer-content">
+<!-- Inject Hypothes.is and quiz-loader.js in <head> -->
+<xsl:template match="*[contains(@class,' topic/topic ')]" mode="head" priority="10">
+  <xsl:next-match/>
+  <script async="async" src="https://hypothes.is/embed.js"></script>
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
-  
+
   <!-- Override the topic body template to add navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
     <!-- Process the original body content -->
