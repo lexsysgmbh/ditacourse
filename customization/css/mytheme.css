@@ -221,16 +221,14 @@ thead tr > .entry {
 
 /* Match the main content container exactly */
 .quiz-wrapper {
-  width: 100%;
   max-width: 800px;
-  margin: 2rem auto; /* vertical and horizontal centering */
-  padding: 2rem;      /* restore inner spacing */
+  margin: 2rem auto;
+  padding: 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   background-color: #fff;
   box-sizing: border-box;
-  display: block;
 }
 
 @media screen and (max-width: 991px) {
