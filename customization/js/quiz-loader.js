@@ -53,7 +53,7 @@
     let selected = null;
 
 function loadQuestion() {
-  const q = quizData[current];
+  const q = quizData.questions[current];
   questionEl.textContent = `${current + 1}. ${q.question}`;
   optionsEl.innerHTML = "";
   feedbackEl.textContent = "";
@@ -97,7 +97,7 @@ function handleSubmit() {
   }
 
   // Change button label and behavior
-  buttonEl.textContent = current < quizData.length - 1 ? "Next" : "See Results";
+  buttonEl.textContent = current < quizData.questions.length - 1 ? "Next" : "See Results";
   buttonEl.onclick = next;
 }
 
@@ -116,7 +116,7 @@ function handleSubmit() {
       optionsEl.innerHTML = "";
       feedbackEl.textContent = "";
       buttonEl.style.display = "none";
-      resultEl.innerHTML = `<p>You scored <strong>${score}</strong> out of <strong>${quizData.length}</strong>.</p>`;
+      resultEl.innerHTML = `<p>You scored <strong>${score}</strong> out of <strong>${quizData.questions.length}</strong>.</p>`;
       restartEl.style.display = "inline-block";
     }
 
