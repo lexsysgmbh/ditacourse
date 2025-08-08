@@ -85,12 +85,18 @@
     </xsl:if>
     </xsl:template>
 
-<!-- Replace the body content entirely for the quiz topic -->
-<xsl:template match="*[contains(@class, ' topic/body ')][ancestor::*[@id = 'quiz_introduction_to_dita']]" mode="html5">
-  <div class="quiz-wrapper" data-quiz="quiz_introduction_to_dita.js">
+  <!-- Inject quiz inside topic/body for the correct topic -->
+  <xsl:template match="*[contains(@class, ' topic/body ')][ancestor::*[@id = 'quiz_introduction_to_dita']]" mode="html5">
+    <!-- Render original body content -->
+    <xsl:next-match/>
+
+  <!-- Insert quiz container with class for styling -->
+  <div id="quiz-intro-dita" class="quiz-wrapper" data-quiz="quiz_introduction_to_dita.js">
     <p>Loading interactive quiz…</p>
   </div>
+
+  <!-- Insert loader script -->
   <script src="customization/js/quiz-loader.js"/>
-</xsl:template>
+    </xsl:template>
 
 </xsl:stylesheet>
