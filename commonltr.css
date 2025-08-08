@@ -262,10 +262,3 @@ thead tr > .entry {
 .quiz-wrapper button:hover:enabled {
   background-color: #000;
 }
-
-.quiz-container {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  background-color: #fff;
-}
