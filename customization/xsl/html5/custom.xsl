@@ -74,7 +74,17 @@
   <xsl:template match="*[contains(@class,' topic/body ')]">
     <!-- Process the original body content -->
     <xsl:next-match/>
-    
+
+    <!-- Inject quiz for the Introduction to DITA quiz topic -->
+<xsl:if test="$current-topic-filename = 'quiz_introduction_to_dita'">
+  <div class="quiz-container">
+    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+      <p>Loading interactive quiz…</p>
+    </div>
+  </div>
+  <script src="customization/js/quiz-loader.js"/>
+</xsl:if>
+
     <!-- Add next lesson button if there is a next lesson -->
     <xsl:if test="$next-lesson != ''">
       <nav class="next-lesson">
