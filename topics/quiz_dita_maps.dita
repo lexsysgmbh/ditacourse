@@ -10,7 +10,6 @@
     </critdates>
   </prolog>
 <conbody>
-  <p>The following interactive quiz covers key concepts from Part II: DITA Maps.</p>
   <foreign>
     <div class="quiz-container">
       <div id="quiz-dmaps" data-quiz="quiz_dita_maps.js">
