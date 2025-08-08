@@ -1,5 +1,4 @@
-const quizData = {
-  questions: [
+const quizData = [
     {
       question: "What is a major benefit of content reuse in DITA?",
       options: [
