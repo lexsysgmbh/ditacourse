@@ -221,8 +221,8 @@ thead tr > .entry {
 
 /* Align quiz with DITA main content layout */
 .quiz-wrapper {
-  margin-left: 320px;         /* Match main content margin */
-  max-width: calc(992px - 320px);  /* Subtract sidebar */
+  max-width: 992px;
+  margin-left: 320px;         /* Align with DITA layout */
   padding: 1.5rem 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
