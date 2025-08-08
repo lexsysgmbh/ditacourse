@@ -16,7 +16,7 @@ try {
   let html = fs.readFileSync(htmlFile, 'utf-8');
 
   if (!html.includes('id="quiz-intro-dita"')) {
-    html = html.replace('</body>', `${injectContent}\n</body>`);
+    html = html.replace('</article>', `${injectContent}\n</article>`);
     fs.writeFileSync(htmlFile, html, 'utf-8');
     console.log(`✅ Injected quiz into ${htmlFile}`);
   } else {
