@@ -85,11 +85,12 @@
     </xsl:if>
     </xsl:template>
 
- <!-- Replace the quiz placeholder with a real container that includes data-quiz -->
+<!-- Inject the quiz loader only in the quiz topic -->
 <xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
-  <div id="quiz_introduction_to_dita__quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
     <p>Loading interactive quiz…</p>
   </div>
+  <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
 
 </xsl:stylesheet>
