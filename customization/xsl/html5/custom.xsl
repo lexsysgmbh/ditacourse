@@ -102,7 +102,7 @@
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
 
-  <!-- Add mytheme.css to HTML <head> -->
+<!-- Ensure mytheme.css is included in the HTML <head> -->
 <xsl:template name="gen-user-styles">
   <xsl:call-template name="add-css">
     <xsl:with-param name="href" select="'customization/css/mytheme.css'" />
