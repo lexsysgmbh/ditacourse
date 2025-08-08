@@ -3,13 +3,7 @@
 <concept id="quiz_introduction_to_dita" xml:lang="en-US">
   <title>Quiz: Introduction to DITA</title>
   <shortdesc>This interactive quiz covers key concepts from the first part of the course.</shortdesc>
- <conbody>
-  <foreign>
-    <div id="quiz-container">
-      <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-        <p>Loading interactive quiz…</p>
-      </div>
-    </div>
-  </foreign>
+  <conbody>
+  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js"></div>
 </conbody>
 </concept>
