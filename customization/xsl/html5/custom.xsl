@@ -74,27 +74,15 @@
   <xsl:template match="*[contains(@class,' topic/body ')]">
     <!-- Process the original body content -->
     <xsl:next-match/>
-
- <!-- ✅ Override topic body to inject quiz and navigation -->
-  <xsl:template match="*[contains(@class,' topic/body ')]">
-    <xsl:next-match/>
-
-    <!-- ✅ Inject quiz container if on the quiz topic -->
-    <xsl:if test="$current-topic-filename = 'quiz_introduction_to_dita'">
-      <div class="quiz-container">
-        <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-          <p>Loading interactive quiz…</p>
-        </div>
-        <script src="customization/js/quiz-loader.js"/>
-      </div>
-    </xsl:if>
-
-    <!-- ✅ Next lesson navigation -->
+    
+    <!-- Add next lesson button if there is a next lesson -->
     <xsl:if test="$next-lesson != ''">
       <nav class="next-lesson">
-        <a href="{$next-lesson}.html" class="button">Next Lesson →</a>
+        <a href="{$next-lesson}.html" class="button">
+          <xsl:text>Next Lesson →</xsl:text>
+        </a>
       </nav>
     </xsl:if>
-  </xsl:template>
+    </xsl:template>
 
 </xsl:stylesheet>
