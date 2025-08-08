@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="quiz_introduction_to_dita" xml:lang="en-US">
   <title>Quiz: Introduction to DITA</title>
-  <shortdesc>The following interactive quiz covers key concepts from the first part of this course.</shortdesc>
+  <shortdesc>The following interactive quiz covers key concepts from the first part of the course.</shortdesc>
   <conbody>
   <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js"></div>
 </conbody>
