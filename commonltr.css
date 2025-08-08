@@ -221,8 +221,9 @@ thead tr > .entry {
 
 /* Align quiz with DITA main content layout */
 .quiz-wrapper {
-  max-width: 800px; /* Match article[role="article"] */
-  margin: 2rem auto; /* Vertically spaced and centered horizontally */
+  max-width: 800px;              /* Match article[role="article"] and .lesson-nav */
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.5rem 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
