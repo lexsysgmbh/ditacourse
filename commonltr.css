@@ -221,9 +221,8 @@ thead tr > .entry {
 
 /* Quiz wrapper aligned to main article content */
 .quiz-wrapper {
-  width: 100%;
-  max-width: 992px;             /* Match .main[role="main"] */
-  margin: 2rem auto;
+  max-width: 992px;               /* Match main article width */
+  margin: 2rem auto;              /* Center horizontally */
   padding: 1.5rem 2rem;
   background-color: #fff;
   border: 1px solid #ccc;
