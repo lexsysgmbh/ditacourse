@@ -12,6 +12,11 @@ const quizzes = [
     file: 'quiz_dita_maps.html',
     id: 'quiz-dita-maps',
     script: 'quiz_dita_maps.js',
+  },
+  {
+    file: 'quiz_topic_types.html',
+    id: 'quiz-topic-types',
+    script: 'quiz_topic_types.js',
   }
 ];
 
