@@ -75,40 +75,26 @@
     <!-- Process the original body content -->
     <xsl:next-match/>
 
-    <!-- Inject data-quiz into the quiz-intro div -->
-<xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
-  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-    <p>Loading interactive quiz…</p>
-  </div>
-  <script src="customization/js/quiz-loader.js"/>
-</xsl:template>
+ <!-- ✅ Override topic body to inject quiz and navigation -->
+  <xsl:template match="*[contains(@class,' topic/body ')]">
+    <xsl:next-match/>
 
-    <!-- Inject quiz for the Introduction to DITA quiz topic -->
-<xsl:if test="$current-topic-filename = 'quiz_introduction_to_dita'">
-  <div class="quiz-container">
-    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-      <p>Loading interactive quiz…</p>
-    </div>
-  </div>
-  <script src="customization/js/quiz-loader.js"/>
-</xsl:if>
+    <!-- ✅ Inject quiz container if on the quiz topic -->
+    <xsl:if test="$current-topic-filename = 'quiz_introduction_to_dita'">
+      <div class="quiz-container">
+        <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+          <p>Loading interactive quiz…</p>
+        </div>
+        <script src="customization/js/quiz-loader.js"/>
+      </div>
+    </xsl:if>
 
-    <!-- Add next lesson button if there is a next lesson -->
+    <!-- ✅ Next lesson navigation -->
     <xsl:if test="$next-lesson != ''">
       <nav class="next-lesson">
-        <a href="{$next-lesson}.html" class="button">
-          <xsl:text>Next Lesson →</xsl:text>
-        </a>
+        <a href="{$next-lesson}.html" class="button">Next Lesson →</a>
       </nav>
     </xsl:if>
-    </xsl:template>
-
-  <!-- Replace auto-generated quiz placeholder with correct data-quiz -->
-  <xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
-    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-      <p>Loading interactive quiz…</p>
-    </div>
-    <script src="customization/js/quiz-loader.js"/>
   </xsl:template>
 
 </xsl:stylesheet>
