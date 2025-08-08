@@ -85,23 +85,6 @@
     </xsl:if>
     </xsl:template>
 
-<xsl:template match="*[contains(@class, ' topic/body ')][ancestor::*[@id = 'quiz_introduction_to_dita']]" mode="html5">
-  <!-- Render original body content -->
-  <xsl:next-match/>
-
-  <!-- Ensure wrapper is within same layout container -->
-  <div class="topic">
-    <div class="body">
-      <div class="quiz-wrapper" id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-        <p>Loading interactive quiz…</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Insert loader script -->
-  <script src="customization/js/quiz-loader.js"/>
-</xsl:template>
-
 <!-- Ensure mytheme.css is included in the HTML <head> -->
 <xsl:template name="gen-user-styles">
   <xsl:call-template name="add-css">
