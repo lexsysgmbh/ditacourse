@@ -222,8 +222,8 @@ thead tr > .entry {
 /* Align quiz with DITA main content layout */
 @media screen and (min-width: 992px) {
   .quiz-wrapper {
-    margin-left: 320px;              /* Matches sidebar offset */
-    max-width: calc(800px + 320px);  /* 800px content + 320px sidebar */
+    max-width: 800px;               /* Match main content width */
+    margin-left: 320px;             /* Push to match main content offset */
     padding: 1.5rem 2rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
