@@ -1,6 +1,6 @@
 const quizData = [
   {
-    question: "1. What is the main purpose of a DITA map?",
+    question: "What is the main purpose of a DITA map?",
     options: [
       "a) Store the full text of topics",
       "b) Control the formatting of XML files",
@@ -10,7 +10,7 @@ const quizData = [
     answerIndex: 2
   },
   {
-    question: "2. How do DITA maps support content reuse?",
+    question: "How do DITA maps support content reuse?",
     options: [
       "a) By allowing content to be duplicated",
       "b) By allowing topics to be rearranged and reused in multiple outputs",
@@ -20,7 +20,7 @@ const quizData = [
     answerIndex: 1
   },
   {
-    question: "3. Which DITA map feature automatically generates cross-references between related topics that don't follow the hierarchical structure?",
+    question: "Which DITA map feature automatically generates cross-references between related topics that don't follow the hierarchical structure?",
     options: [
       "a) Collection types",
       "b) Navigation titles",
@@ -30,7 +30,7 @@ const quizData = [
     answerIndex: 3
   },
   {
-    question: "4. What is the main advantage of using navtitle attributes in DITA maps?",
+    question: "What is the main advantage of using navtitle attributes in DITA maps?",
     options: [
       "a) They improve search engine optimization",
       "b) They allow different titles for navigation versus content without changing the actual topics",
@@ -40,7 +40,7 @@ const quizData = [
     answerIndex: 1
   },
   {
-    question: "5. Which DITA feature allows for the easiest reorganization of content?",
+    question: "Which DITA feature allows for the easiest reorganization of content?",
     options: [
       "a) Topic formatting",
       "b) DITA maps",
