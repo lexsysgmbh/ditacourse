@@ -7,7 +7,7 @@ const quizData = [
       "To display numeric data",
       "To provide troubleshooting steps"
     ],
-    answer: 1
+    answerIndex: 1
   },
   {
     question: "Which tag is typically used for the root of a task topic?",
@@ -17,7 +17,7 @@ const quizData = [
       "<task>",
       "<section>"
     ],
-    answer: 2
+    answerIndex: 2
   },
   {
     question: "Which topic type is best for tabular technical specifications?",
@@ -27,7 +27,7 @@ const quizData = [
       "Reference",
       "Glossary"
     ],
-    answer: 2
+    answerIndex: 2
   },
   {
     question: "What is the primary organizational principle for reference topics?",
@@ -37,7 +37,7 @@ const quizData = [
       "Logical grouping optimized for quick lookup (alphabetical, by importance, etc.)",
       "Random organization since users will search anyway"
     ],
-    answer: 2
+    answerIndex: 2
   },
   {
     question: "Troubleshooting topics usually include which two tags to explain the problem and its fix?",
@@ -47,6 +47,6 @@ const quizData = [
       "<steps> and <result>",
       "<glossdef> and <glossterm>"
     ],
-    answer: 1
+    answerIndex: 1
   }
 ];
