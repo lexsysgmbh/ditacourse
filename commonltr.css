@@ -220,16 +220,17 @@ thead tr > .entry {
 }
 
 /* Align quiz with DITA main content layout */
-.quiz-wrapper {
-  max-width: 800px;              /* Match article[role="article"] and .lesson-nav */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5rem 2rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
-  box-sizing: border-box;
+@media screen and (min-width: 992px) {
+  .quiz-wrapper {
+    margin-left: 320px;              /* Matches sidebar offset */
+    max-width: calc(800px + 320px);  /* 800px content + 320px sidebar */
+    padding: 1.5rem 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (max-width: 991px) {
