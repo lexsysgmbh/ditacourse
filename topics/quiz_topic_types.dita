@@ -10,46 +10,6 @@
     </critdates>
   </prolog>
   <conbody>
-
-    <p>1. When should you use a concept topic?</p>
-    <ul>
-      <li>a) To define a glossary term</li>
-      <li><b>b) To explain a feature or idea before a task</b></li>
-      <li>c) To display numeric data</li>
-      <li>d) To provide troubleshooting steps</li>
-    </ul>
-
-    <p>2. Which tag is typically used for the root of a task topic?</p>
-    <ul>
-      <li>a) &lt;reference&gt;</li>
-      <li>b) &lt;concept&gt;</li>
-      <li><b>c) &lt;task&gt;</b></li>
-      <li>d) &lt;section&gt;</li>
-    </ul>
-
-    <p>3. Which topic type is best for tabular technical specifications?</p>
-    <ul>
-      <li>a) Concept</li>
-      <li>b) Task</li>
-      <li><b>c) Reference</b></li>
-      <li>d) Glossary</li>
-    </ul>
-
-    <p>4. What is the primary organizational principle for reference topics?</p>
-    <ul>
-      <li>a) Sequential narrative flow from simple to complex</li>
-      <li>b) Chronological order of when features were developed</li>
-      <li><b>c) Logical grouping optimized for quick lookup (alphabetical, by importance, etc.)</b></li>
-      <li>d) Random organization since users will search anyway</li>
-    </ul>
-
-    <p>5. Troubleshooting topics usually include which two tags to explain the problem and its fix?</p>
-    <ul>
-      <li>a) &lt;task&gt; and &lt;conbody&gt;</li>
-      <li><b>b) &lt;cause&gt; and &lt;solution&gt;</b></li>
-      <li>c) &lt;steps&gt; and &lt;result&gt;</li>
-      <li>d) &lt;glossdef&gt; and &lt;glossterm&gt;</li>
-    </ul>
-
-  </conbody>
+  <div id="quiz-topic-types" data-quiz="quiz_topic_types.js"></div>
+</conbody>
 </concept>
