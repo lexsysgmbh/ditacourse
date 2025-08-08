@@ -220,6 +220,13 @@ thead tr > .entry {
 }
 
 /* Match the main content container exactly */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .quiz-wrapper {
   max-width: 800px;
   margin: 2rem auto;
