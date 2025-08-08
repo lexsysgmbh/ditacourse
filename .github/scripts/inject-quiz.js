@@ -17,7 +17,12 @@ const quizzes = [
     file: 'quiz_topic_types.html',
     id: 'quiz-topic-types',
     script: 'quiz_topic_types.js',
-  }
+  },
+  {
+  file: 'quiz_short_descriptions.html',
+  id: 'quiz-short-descriptions',
+  script: 'quiz_short_descriptions.js',
+}
 ];
 
 quizzes.forEach(({ file, id, script }) => {
