@@ -67,6 +67,7 @@ jobs:
           mkdir -p out/customization/js
           cp customization/js/quiz_introduction_to_dita.js out/customization/js/
           cp customization/js/quiz_dita_maps.js out/customization/js/
+          cp customization/js/quiz_topic_types.js out/customization/js/
           cp customization/js/quiz-loader.js out/customization/js/
 
       - name: 💡 Inject interactive quiz
