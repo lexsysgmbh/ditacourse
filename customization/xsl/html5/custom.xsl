@@ -85,12 +85,19 @@
     </xsl:if>
     </xsl:template>
 
-<!-- Inject the quiz loader only in the quiz topic -->
-<xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
+  <!-- Match the main body where the quiz should be injected -->
+  <xsl:template match="*[contains(@id, 'quiz_introduction_to_dita')]" mode="html5">
   <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
     <p>Loading interactive quiz…</p>
   </div>
-  <script src="customization/js/quiz-loader.js"/>
-</xsl:template>
+  </xsl:template>
+
+  <!-- Inject quiz-loader.js after body content (for quiz topics only) -->
+  <xsl:template match="*[contains(@class,' topic/body ')]">
+  <xsl:next-match/>
+  <xsl:if test="/*/@id = 'quiz_introduction_to_dita'">
+    <script src="customization/js/quiz-loader.js"/>
+  </xsl:if>
+  </xsl:template>
 
 </xsl:stylesheet>
