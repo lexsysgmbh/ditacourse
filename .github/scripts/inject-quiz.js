@@ -22,7 +22,12 @@ const quizzes = [
     file: 'quiz_short_descriptions.html',
     id: 'quiz-short-descriptions',
     script: 'quiz_short_descriptions.js',
-  } // ✅ Comma not needed here since this is the last item
+  },
+  {
+    file: 'quiz_content_reuse.html',
+    id: 'quiz-content-reuse',
+    script: 'quiz_content_reuse.js',
+  }
 ];
 
 quizzes.forEach(({ file, id, script }) => {
