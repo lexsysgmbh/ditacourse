@@ -68,10 +68,6 @@ jobs:
           cp customization/js/quiz_introduction_to_dita.js out/customization/js/
           cp customization/js/quiz-loader.js out/customization/js/
 
-      # - name: 💡 Inject interactive quiz
-      #  run: |
-          node .github/scripts/inject-quiz.js
-
       - name: 📦 Copy homepage to index.html
         run: |
           cp out/dita_structured_authoring.html out/index.html
