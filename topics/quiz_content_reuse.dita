@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="quiz_content_reuse">
   <title>Quiz: Content Reuse</title>
-  <shortdesc>This quiz assesses your understanding of content reuse concepts in DITA.</shortdesc>
+  <shortdesc>This quiz assesses your understanding of content reuse concepts explained in Part V.</shortdesc>
   <conbody>
 <div id="quiz-content-reuse" data-quiz="quiz_content_reuse.js"></div>
   </conbody>
