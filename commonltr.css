@@ -160,11 +160,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Optional: slightly increase spacing around main content */
-main[role="main"] {
-  padding-bottom: 3em;
-}
-
 /* Navigation buttons after content, aligned with text */
 .lesson-nav {
   max-width: 800px;
