@@ -4,6 +4,6 @@
   <title>Quiz: Content Reuse</title>
   <shortdesc>This quiz assesses your understanding of content reuse concepts explained in Part V.</shortdesc>
   <conbody>
-<div id="quiz-content-reuse" data-quiz="quiz_content_reuse.js"></div>
+    <div id="quiz-content-reuse" data-quiz="quiz_content_reuse.js"></div>
   </conbody>
 </concept>
