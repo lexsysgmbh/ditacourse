@@ -223,7 +223,7 @@ thead tr > .entry {
 .quiz-wrapper {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1.5rem 2rem;
+  padding: 0 2rem; /* Match body content padding */
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
