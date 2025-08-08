@@ -10,12 +10,6 @@
     </critdates>
   </prolog>
 <conbody>
-  <foreign>
-    <div class="quiz-container">
-      <div id="quiz-dmaps" data-quiz="quiz_dita_maps.js">
-        <p>Loading interactive quiz…</p>
-      </div>
-    </div>
-  </foreign>
+  <div id="quiz-dmaps" data-quiz="quiz_dita_maps.js"></div>
 </conbody>
 </concept>
