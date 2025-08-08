@@ -1,6 +1,6 @@
 const quizData = [
   {
-    question: "1. When should you use a concept topic?",
+    question: "When should you use a concept topic?",
     options: [
       "a) To define a glossary term",
       "b) To explain a feature or idea before a task",
@@ -10,7 +10,7 @@ const quizData = [
     answer: 1
   },
   {
-    question: "2. Which tag is typically used for the root of a task topic?",
+    question: "Which tag is typically used for the root of a task topic?",
     options: [
       "a) <reference>",
       "b) <concept>",
@@ -20,7 +20,7 @@ const quizData = [
     answer: 2
   },
   {
-    question: "3. Which topic type is best for tabular technical specifications?",
+    question: "Which topic type is best for tabular technical specifications?",
     options: [
       "a) Concept",
       "b) Task",
@@ -30,7 +30,7 @@ const quizData = [
     answer: 2
   },
   {
-    question: "4. What is the primary organizational principle for reference topics?",
+    question: "What is the primary organizational principle for reference topics?",
     options: [
       "a) Sequential narrative flow from simple to complex",
       "b) Chronological order of when features were developed",
@@ -40,7 +40,7 @@ const quizData = [
     answer: 2
   },
   {
-    question: "5. Troubleshooting topics usually include which two tags to explain the problem and its fix?",
+    question: "Troubleshooting topics usually include which two tags to explain the problem and its fix?",
     options: [
       "a) <task> and <conbody>",
       "b) <cause> and <solution>",
