@@ -86,10 +86,10 @@
     </xsl:template>
 
  <!-- Replace the quiz placeholder with a real container that includes data-quiz -->
-  <xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
-    <div class="quiz-container" id="quiz_introduction_to_dita__quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-      <p>Loading interactive quiz…</p>
-    </div>
-  </xsl:template>
+<xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
+  <div id="quiz_introduction_to_dita__quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+    <p>Loading interactive quiz…</p>
+  </div>
+</xsl:template>
 
 </xsl:stylesheet>
