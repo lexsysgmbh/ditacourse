@@ -93,9 +93,13 @@
   <xsl:next-match/>
 
   <!-- Quiz container and loader script go INSIDE the article body -->
-  <div class="quiz-wrapper" id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
-    <p>Loading interactive quiz…</p>
+  <div class="topic">
+  <div class="body">
+    <div class="quiz-wrapper" data-quiz="quiz_introduction_to_dita.js">
+      <p>Loading interactive quiz…</p>
+    </div>
   </div>
+</div>
   <script src="customization/js/quiz-loader.js"/>
 </xsl:template>
 
