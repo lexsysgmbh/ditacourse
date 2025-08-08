@@ -221,13 +221,14 @@ thead tr > .entry {
 
 /* Quiz wrapper aligned to main article content */
 .quiz-wrapper {
-  width: 100%;
-  max-width: 100%; /* Allow it to inherit width from its parent */
-  margin: 0;        /* Remove outer centering */
-  padding: 0;       /* Remove internal spacing */
-  border: none;
-  background: none;
-  box-shadow: none;
+  max-width: 800px;              /* Match your main content width */
+  margin: 2rem auto;             /* Center it horizontally */
+  padding: 1.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 /* Match main content font and spacing */
