@@ -49,5 +49,4 @@ const quizData = [
       ],
       answerIndex: 1
     }
-  ]
-};
+  ];
