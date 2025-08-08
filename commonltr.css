@@ -219,19 +219,18 @@ thead tr > .entry {
   font-weight: bold;
 }
 
-/* Align quiz with DITA main content layout */
-@media screen and (min-width: 992px) {
-  .quiz-wrapper {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem 2rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    background-color: #fff;
-    box-sizing: border-box;
-  }
+/* Match the main content container exactly */
+.quiz-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  box-sizing: border-box;
+  display: block; /* Ensure it behaves like a block element */
 }
 
 @media screen and (max-width: 991px) {
