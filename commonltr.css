@@ -271,8 +271,3 @@ thead tr > .entry {
 .quiz-wrapper button:hover:enabled {
   background-color: #000;
 }
-
-/* DEBUG: Show red border around quiz wrapper to confirm alignment */
-.quiz-wrapper {
-  border: 2px dashed red !important;
-}
