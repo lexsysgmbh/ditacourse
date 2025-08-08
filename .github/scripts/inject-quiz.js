@@ -19,10 +19,10 @@ const quizzes = [
     script: 'quiz_topic_types.js',
   },
   {
-  file: 'quiz_short_descriptions.html',
-  id: 'quiz-short-descriptions',
-  script: 'quiz_short_descriptions.js',
-}
+    file: 'quiz_short_descriptions.html',
+    id: 'quiz-short-descriptions',
+    script: 'quiz_short_descriptions.js',
+  } // ✅ Comma not needed here since this is the last item
 ];
 
 quizzes.forEach(({ file, id, script }) => {
