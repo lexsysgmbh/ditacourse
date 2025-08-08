@@ -27,7 +27,12 @@ const quizzes = [
     file: 'quiz_content_reuse.html',
     id: 'quiz-content-reuse',
     script: 'quiz_content_reuse.js',
-  }
+  },
+  {
+  file: 'quiz_publishing_dita_content.html',
+  id: 'quiz-publishing-dita-content',
+  script: 'quiz_publishing_dita_content.js',
+}
 ];
 
 quizzes.forEach(({ file, id, script }) => {
