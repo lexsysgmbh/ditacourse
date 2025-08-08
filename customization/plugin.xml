@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.lexsys.dita.customization"
+        xmlns="http://dita-ot.sourceforge.net"
+        version="1.0.0">
+
+  <feature extension="dita.xsl.html5">
+    <file key="topic" value="xsl/html5/custom.xsl"/>
+  </feature>
+
+</plugin>
