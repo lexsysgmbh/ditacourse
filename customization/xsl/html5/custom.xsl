@@ -75,6 +75,14 @@
     <!-- Process the original body content -->
     <xsl:next-match/>
 
+    <!-- Inject data-quiz into the quiz-intro div -->
+<xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
+  <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+    <p>Loading interactive quiz…</p>
+  </div>
+  <script src="customization/js/quiz-loader.js"/>
+</xsl:template>
+
     <!-- Inject quiz for the Introduction to DITA quiz topic -->
 <xsl:if test="$current-topic-filename = 'quiz_introduction_to_dita'">
   <div class="quiz-container">
@@ -94,5 +102,13 @@
       </nav>
     </xsl:if>
     </xsl:template>
+
+  <!-- Replace auto-generated quiz placeholder with correct data-quiz -->
+  <xsl:template match="*[contains(@id, 'quiz-intro-dita')]" mode="html5">
+    <div id="quiz-intro-dita" data-quiz="quiz_introduction_to_dita.js">
+      <p>Loading interactive quiz…</p>
+    </div>
+    <script src="customization/js/quiz-loader.js"/>
+  </xsl:template>
 
 </xsl:stylesheet>
