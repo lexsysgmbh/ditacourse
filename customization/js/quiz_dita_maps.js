@@ -1,5 +1,4 @@
 const quizData = {
-  title: "Quiz: DITA Maps",
   questions: [
     {
       question: "1. What is the main purpose of a DITA map?",
