@@ -11,7 +11,7 @@
   </prolog>
   <conbody>
     <section>
-      <p>Task topics are used to provide clear steps on how to achieve a specific business goal, including why and in which context the task is to be performed. For example, they can describe how and when to create or maintain data, configure a system or device, or complete a procedure.</p>
+      <p>Task topics aim to provide clear steps on how to achieve a specific business goal. They should also explain why and in which context the task is to be performed. Well-documented procedures are important part of any documentation set. Typical examples include steps on how to create or maintain data, configure a system or device, or complete any type a procedure.</p>
     </section>
 
     <section>
