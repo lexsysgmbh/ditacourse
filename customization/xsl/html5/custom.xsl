@@ -92,4 +92,9 @@
   </xsl:call-template>
 </xsl:template>
 
+  <!-- Add custom JS at the end of <body> -->
+<xsl:template name="gen-user-scripts">
+  <script src="customization/js/persist-toc.js"></script>
+</xsl:template>
+
 </xsl:stylesheet>
