@@ -74,7 +74,10 @@
   <xsl:template match="*[contains(@class,' topic/body ')]">
     <!-- Process the original body content -->
     <xsl:next-match/>
-    
+
+    <!-- Inject page scroll persistence script -->
+    <script src="customization/js/persist-page-scroll.js?v=20250811"></script>
+
     <!-- Add next lesson button if there is a next lesson -->
     <xsl:if test="$next-lesson != ''">
       <nav class="next-lesson">
@@ -83,13 +86,13 @@
         </a>
       </nav>
     </xsl:if>
-    </xsl:template>
+  </xsl:template>
 
-<!-- Ensure mytheme.css is included in the HTML <head> -->
-<xsl:template name="gen-user-styles">
-  <xsl:call-template name="add-css">
-    <xsl:with-param name="href" select="'customization/css/mytheme.css'" />
-  </xsl:call-template>
-</xsl:template>
+  <!-- Ensure mytheme.css is included in the HTML <head> -->
+  <xsl:template name="gen-user-styles">
+    <xsl:call-template name="add-css">
+      <xsl:with-param name="href" select="'customization/css/mytheme.css'" />
+    </xsl:call-template>
+  </xsl:template>
 
 </xsl:stylesheet>
