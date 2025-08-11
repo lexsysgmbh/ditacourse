@@ -11,7 +11,7 @@
   </prolog>
   <conbody>
     <ul>
-      <li>Each DITA topic type has a specific use case and structure tailored to different user intents:
+      <li>Each DITA topic type is structured for a specific use case and tailored to different user intents:
   <ul>
     <li>Concept: understand</li>
     <li>Task: do</li>
