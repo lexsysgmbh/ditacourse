@@ -4,14 +4,15 @@
   <title>Part VI: Publishing DITA Content</title>
   <shortdesc>This module introduces the fundamentals of publishing DITA content across multiple output formats. It also covers translation workflows and customization options for publishing.</shortdesc>
   <conbody>
-    <section>
-      <title>Learning Objectives</title>
-      <ul>
-        <li>Identify common output formats for DITA documentation.</li>
-        <li>Explain how DITA supports efficient multi-channel publishing.</li>
-        <li>Describe how DITA facilitates language translation workflows.</li>
-        <li>Understand the methods for customizing output formats in DITA.</li>
-      </ul>
-    </section>
+  <section>
+    <title>Learning Objectives</title>
+    <p>Upon completing this module, you will be able to:</p>
+    <ul>
+      <li>Identify common output formats for DITA documentation.</li>
+      <li>Explain how DITA supports efficient multi-channel publishing.</li>
+      <li>Describe how DITA facilitates language translation workflows.</li>
+      <li>Understand the methods for customizing output formats in DITA.</li>
+    </ul>
+  </section>
   </conbody>
 </concept>
