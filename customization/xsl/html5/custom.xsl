@@ -89,6 +89,8 @@
   <xsl:template name="gen-user-styles">
     <xsl:call-template name="add-css">
       <xsl:with-param name="href" select="'customization/css/mytheme.css'" />
+    </xsl:call-template>
+    <xsl:call-template name="add-css">
       <xsl:with-param name="href" select="'customization/css/styles.css'" />
     </xsl:call-template>
   </xsl:template>
