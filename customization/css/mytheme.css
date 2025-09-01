@@ -32,7 +32,7 @@ nav.toc a {
 }
 
 nav.toc a:hover {
-  background-color: #f0f0f0;
+  background-color: #4ead90;
 }
 
 nav.toc li.active > a {
@@ -73,7 +73,7 @@ nav.toc li {
 
 /* General body styles */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "Campton ExtraLight","Helvetica Neue",Helvetica,Arial,sans-serif,system-ui;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -89,14 +89,14 @@ article[role="article"] {
 /* Headings */
 h1.title.topictitle1 {
   font-size: 2.5em;
-  color: #00DAAD;
-  border-bottom: 2px solid #00DAAD;
+  color: #4ead90;
+  border-bottom: 2px solid #4ead90;
   padding-bottom: 0.5em;
   margin-bottom: 1em;
 }
 
 h2, h3, h4, h5, h6 {
-  color: #00DAAD;
+  color: #4ead90;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
