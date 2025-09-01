@@ -49,125 +49,280 @@
   }
 }
 
-/* ===== Base & type ===== */
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  font-family: var(--font-sans);
-  color: var(--lexsys-text);
-  background: var(--lexsys-surface);
-  line-height:1.6;
-  font-size: clamp(16px, 1.05vw + .6rem, 18px);
+
+
+
+
+/* Sidebar TOC for desktop screens */
+@media screen and (min-width: 992px) {
+  nav.toc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    overflow-y: auto;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  main[role="main"] {
+    margin-left: 320px;
+    padding: 2em;
+    box-sizing: border-box;
+  }
 }
 
-main, .content, article{
-  max-width: var(--maxw);
-  margin-inline:auto;
-  padding: var(--space-8) var(--space-4);
+/* TOC link styles */
+nav.toc a {
+  display: block;
+  padding: 0.3em 0.5em;
+  color: #005475;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s;
 }
 
-h1,h2,h3{ line-height:1.25; margin: var(--space-6) 0 var(--space-3); color: var(--lexsys-ink); }
-h1{ font-weight:800; letter-spacing:-.01em; font-size: clamp(1.9rem, 2.5vw + 1rem, 2.5rem); }
-h2{ font-weight:700; font-size: clamp(1.35rem, 1.5vw + .9rem, 1.7rem); }
-h3{ font-weight:700; font-size:1.15rem; color: var(--lexsys-muted); }
-
-p, ul, ol, blockquote, pre, table{ margin: 0 0 var(--space-4) 0; }
-ul, ol{ padding-inline-start: 1.25rem; }
-li + li{ margin-top:.4rem; }
-
-/* ===== Links ===== */
-a{ color: var(--link); text-underline-offset: 2px; }
-a:hover{ color: var(--link-hover); }
-
-/* ===== Sidebar / TOC (subtle Lexsys tint) ===== */
-nav, .toc, .sidebar{
-  position: sticky; top: var(--space-8); align-self:start;
-  max-height: calc(100vh - var(--space-8));
-  overflow:auto;
-  padding: var(--space-4);
-  border: 1px solid var(--lexsys-line);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--lexsys-accent-weak), transparent 120%);
-  box-shadow: var(--shadow);
-}
-nav ul, .toc ul{ list-style:none; padding-left:0; margin:0; }
-nav li > a, .toc li > a{
-  display:block; padding:.38rem .55rem; border-radius:8px;
-  color: var(--lexsys-text); text-decoration:none;
-}
-nav li > a:hover{ background: rgba(14,165,164,.10); }
-nav li[aria-current="page"] > a, .toc li.current > a{
-  background: var(--lexsys-accent-weak);
-  border-left: 3px solid var(--lexsys-accent);
-  padding-left: calc(.55rem - 3px + .55rem);
+nav.toc a:hover {
+  background-color: #4ead90;
 }
 
-/* ===== Page grid ===== */
-.page{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap: var(--space-8); align-items:start; }
-@media (max-width: 980px){
-  .page{ grid-template-columns: 1fr; }
-  nav, .toc, .sidebar{ position:relative; top:auto; max-height:none; }
+nav.toc li.active > a {
+  font-weight: bold;
+  background-color: #e6f3ff;
 }
 
-/* ===== Prev/Next buttons (Lexsys accent) ===== */
-.pager, .pagination, .footer-nav{ display:flex; gap: var(--space-4); margin-top: var(--space-8); }
-.pager a, .pagination a, .footer-nav a{
-  display:inline-flex; align-items:center; gap:.5rem;
-  padding:.6rem .95rem; border-radius:10px;
-  border:1px solid var(--lexsys-line); text-decoration:none;
-  color: var(--lexsys-text); background: #fff; box-shadow: var(--shadow);
-}
-.pager a:hover{ border-color: var(--lexsys-accent); color: var(--lexsys-ink); }
-.pager a[href*="Previous"]:before{ content:"←"; }
-.pager a[href*="Next"]:after{ content:"→"; }
-
-/* ===== Callouts (note/tip/warn with Lexsys teal base) ===== */
-.callout{
-  border:1px solid var(--lexsys-line);
-  border-left:4px solid var(--lexsys-accent);
-  padding: var(--space-4);
-  border-radius: var(--radius);
-  background: var(--lexsys-accent-weak);
-  margin: var(--space-6) 0;
-}
-.callout.note{ --lexsys-accent:#0ea5a4; --lexsys-accent-weak:#e6f7f6; }
-.callout.tip{  --lexsys-accent:#10b981; --lexsys-accent-weak: rgba(16,185,129,.10); }
-.callout.warn{ --lexsys-accent:#f59e0b; --lexsys-accent-weak: rgba(245,158,11,.12); }
-
-/* ===== Code & tables ===== */
-code{ font-family: var(--font-mono); background: rgba(2,6,23,.06); padding:.15em .35em; border-radius:6px; }
-pre{ background: rgba(2,6,23,.06); padding: var(--space-4); border-radius: var(--radius); overflow:auto; }
-table{ width:100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-th, td{ border:1px solid var(--lexsys-line); padding:.65rem .75rem; }
-thead th{ background: #f7f7f8; text-align:left; color: var(--lexsys-ink); }
-
-/* ===== Lists used for comparisons ===== */
-ul.comparison > li{ list-style:none; position:relative; padding-left:1.4rem; }
-ul.comparison > li:before{ content:"•"; position:absolute; left:0; top:.1rem; color: var(--lexsys-accent); }
-
-/* ===== Accessibility ===== */
-.skip-link{
-  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
-}
-.skip-link:focus{ left: var(--space-4); top: var(--space-4); width:auto; height:auto; padding:.4rem .6rem; background:#fff; border-radius:8px; box-shadow: var(--shadow); }
-:focus-visible{ outline: 3px solid var(--lexsys-accent); outline-offset: 2px; border-radius: 6px; }
-
-/* ===== Media & print ===== */
-img{ max-width:100%; height:auto; border-radius:10px; }
-@media print{
-  nav, .toc, .sidebar, .pager, .footer, .quiz{ display:none !important; }
-  main, .content, article{ max-width:none; padding:0; }
-  a[href^="http"]:after{ content:" (" attr(href) ")"; font-weight:normal; }
+/* TOC list structure */
+nav.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-/* ===== Quiz (optional) ===== */
-.quiz{ border:1px solid var(--lexsys-line); border-radius:var(--radius); padding:var(--space-4); box-shadow:var(--shadow); margin: var(--space-6) 0; }
-.quiz .question{ font-weight:700; margin-bottom: var(--space-3); color: var(--lexsys-ink); }
-.quiz label{ display:flex; gap:.5rem; align-items:flex-start; padding:.35rem .45rem; border-radius:8px; }
-.quiz input{ transform: scale(1.15); margin-top:.2rem; }
-.quiz label:hover{ background: rgba(14,165,164,.08); }
+nav.toc ul ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+}
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  *{ animation:none !important; transition:none !important; }
+nav.toc li {
+  margin-bottom: 0.2em;
+}
+
+/* Mobile fallback — show TOC above content */
+@media (max-width: 991px) {
+  nav.toc {
+    position: static;
+    width: auto;
+    margin-bottom: 1em;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  main[role="main"] {
+    margin-left: 0;
+  }
+}
+
+/* General body styles */
+body {
+  font-family: var(--font-sans)
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content area */
+article[role="article"] {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1.title.topictitle1 {
+  font-size: 2.5em;
+  color: var(--lexsys-accent-strong);
+  border-bottom: 2px solid var(--lexsys-accent-strong);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--lexsys-accent-strong);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Lists */
+ol, ul {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* Short description */
+p.shortdesc {
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--lexsys-surface);
+  border-left: 3px solid var(--lexsys-surface);
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
+/* DITA-OT-generated next/previous links */
+nav.related-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+nav.related-links a {
+  background: var(--lexsys-accent);
+  color: var(--lexsys-accent-weak);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav.related-links a:hover {
+  background-color: #042e7d;
+}
+
+/* Links */
+a {
+  color: #005475;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation buttons after content, aligned with text */
+.lesson-nav {
+  max-width: 800px;
+  margin: 2em auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+/* Individual nav buttons */
+.nav-button {
+  background-color:var(--lexsys-accent-strong);
+  color: var(--lexsys-accent-weak);
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+
+/* Table grid and layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+}
+
+/* Table headers */
+table thead {
+  background-color: #f2f2f2; /* light gray header */
+}
+
+table th,
+table td,
+td.entry,
+th.entry {
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead tr > .entry {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Match the main content container exactly */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quiz-wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+  .quiz-wrapper {
+    max-width: 100%;
+    margin: 1rem;
+  }
+}
+
+/* Match main content font and spacing */
+.quiz-wrapper label {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  margin: 0.25em 0;
+}
+
+.quiz-wrapper div {
+  margin-bottom: 1em;
+}
+
+/* Optional: style buttons to match the theme */
+.quiz-wrapper button {
+  font-size: 1rem;
+  padding: 0.4em 0.8em;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-wrapper button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.quiz-wrapper button:hover:enabled {
+  background-color: #000;
 }
