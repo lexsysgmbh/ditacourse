@@ -128,7 +128,7 @@ nav.toc li {
 
 /* General body styles */
 body {
-  font-family: var(--font-sans)
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -177,8 +177,8 @@ li {
 p.shortdesc {
   font-style: italic;
   font-size: 1.1em;
-  color: var(--lexsys-surface);
-  border-left: 3px solid var(--lexsys-surface);
+  color: var(--lexsys-ink);
+  border-left: 3px solid var(--lexsys-ink);
   padding-left: 1em;
   margin: 1em 0;
 }
