@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="relationship_tables_reltables" xml:lang="en-US">
-  <title>Relationship Tables (RelTables)</title>
+  <title>Relationship Tables</title>
   <shortdesc>Relationship tables in DITA maps define non-hierarchical links between topics, improving navigation in complex documentation.</shortdesc>
   <prolog>
     <author>Course Team</author>
