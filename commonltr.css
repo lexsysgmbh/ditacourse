@@ -1,3 +1,7 @@
+body {
+    background-color: aqua !important;
+}
+
 /* Sidebar TOC for desktop screens */
 @media screen and (min-width: 992px) {
   nav.toc {
