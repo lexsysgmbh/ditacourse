@@ -25,7 +25,7 @@
     if (nestedList) {
       li.classList.add('parent');
       
-      const link = li.querySelector('> a');
+      const link = li.querySelector(':scope > a');
       if (link) {
         // Create toggle button
         const toggle = document.createElement('span');
