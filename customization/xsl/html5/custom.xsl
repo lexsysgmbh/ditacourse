@@ -114,6 +114,15 @@
   </xsl:call-template>
 </xsl:template>
 
+<xsl:template name="gen-footer" priority="10">
+  <xsl:call-template name="default.footer"/>
+  <xsl:call-template name="gen-user-scripts"/>
+</xsl:template>
+
+<xsl:template name="gen-user-scripts">
+  <script src="customization/js/toc-collapsible.js"></script>
+</xsl:template>
+
 
 
 </xsl:stylesheet>
