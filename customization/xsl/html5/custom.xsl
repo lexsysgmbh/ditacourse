@@ -72,21 +72,26 @@
 
   <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
-    <!-- Insert logo -->
+    <!-- Insert logo at top -->
     <div class="header-logo">
       <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
     </div>
     <!-- Original body content -->
     <xsl:next-match/>
 
-    <!-- Add next lesson button if there is a next lesson -->
-    <xsl:if test="$next-lesson != ''">
-      <nav class="next-lesson">
-        <a href="{$next-lesson}.html" class="button">
-          <xsl:text>Next Lesson →</xsl:text>
-        </a>
-      </nav>
-    </xsl:if>
+    <!-- Add footer with navigation buttons and logo -->
+    <nav class="lesson-nav">
+      <div class="buttons">
+        <xsl:if test="$next-lesson != ''">
+          <a href="{$next-lesson}.html" class="nav-button">
+            <xsl:text>Next Lesson →</xsl:text>
+          </a>
+        </xsl:if>
+      </div>
+      <div class="logo">
+        <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
+      </div>
+    </nav>
   </xsl:template>
 
   <!-- Ensure CSS is included in the HTML <head> -->
