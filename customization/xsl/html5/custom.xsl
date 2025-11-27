@@ -72,6 +72,9 @@
 
   <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
+    <!-- Theme Toggle Button (Fixed Position with Inline Styles) -->
+    <button class="theme-toggle" aria-label="Toggle Dark Mode" style="position:fixed; top:10px; right:10px; z-index:99999; font-size:24px; background:white; border:2px solid black; cursor:pointer;">🌙</button>
+
     <!-- Insert logo at top -->
     <div class="header-logo">
       <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
@@ -92,11 +95,6 @@
         <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
       </div>
     </nav>
-  </xsl:template>
-
-  <!-- Inject button via gen-user-header -->
-  <xsl:template name="gen-user-header">
-    <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
   </xsl:template>
 
   <!-- Ensure CSS is included in the HTML <head> -->
