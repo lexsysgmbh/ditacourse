@@ -3,7 +3,7 @@
  * Makes nested TOC items collapsible/expandable
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   const tocNav = document.querySelector('nav.toc');
   
   if (!tocNav) {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-});
+})();
 
 function toggleSubmenu(list, toggle) {
   list.classList.toggle('collapsed');
