@@ -6,7 +6,7 @@ let filesProcessed = 0;
 let filesModified = 0;
 
 function injectScript(htmlContent) {
-  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js')) {
+  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js')) {
     return { modified: false, content: htmlContent };
   }
   
@@ -26,6 +26,11 @@ function injectScript(htmlContent) {
   // Inject resizable-sidebar.js if not already present
   if (!htmlContent.includes('resizable-sidebar.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/resizable-sidebar.js"></script>\n</body>`);
+  }
+  
+  // Inject toc-logo.js if not already present
+  if (!htmlContent.includes('toc-logo.js')) {
+    updated = updated.replace('</body>', `  <script src="customization/js/toc-logo.js"></script>\n</body>`);
   }
   
   return { modified: updated !== htmlContent, content: updated };
