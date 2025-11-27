@@ -74,28 +74,34 @@
 <xsl:template match="*[contains(@class,' topic/body ')]">
   <!-- Insert logo -->
   <div class="header-logo">
-    <img src="customization/img/Lexsys_Logo.svg" alt="Lexsys Logo"/>
+    <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
   </div>
-  
-  <!-- Process the original body content -->
+  <!-- Original body content -->
   <xsl:next-match/>
-
-  <!-- Add next lesson button if there is a next lesson -->
-  <xsl:if test="$next-lesson != ''">
-    <nav class="next-lesson">
-      <a href="{$next-lesson}.html" class="button">
-        <xsl:text>Next Lesson →</xsl:text>
-      </a>
-    </nav>
-  </xsl:if>
+  <!-- ...your existing navigation code... -->
 </xsl:template>
 
-<!-- Ensure CSS and JS are included in the HTML <head> -->
+  <!-- Override the topic body template to add navigation -->
+  <xsl:template match="*[contains(@class,' topic/body ')]">
+    <!-- Process the original body content -->
+    <xsl:next-match/>
+
+    <!-- Add next lesson button if there is a next lesson -->
+    <xsl:if test="$next-lesson != ''">
+      <nav class="next-lesson">
+        <a href="{$next-lesson}.html" class="button">
+          <xsl:text>Next Lesson →</xsl:text>
+        </a>
+      </nav>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- Ensure CSS is included in the HTML <head> -->
+
 <xsl:template name="gen-head" priority="10">
   <head>
     <xsl:call-template name="default.head"/>
     <xsl:call-template name="gen-user-styles"/>
-    <xsl:call-template name="gen-user-scripts"/>
   </head>
 </xsl:template>
 
@@ -103,10 +109,9 @@
   <xsl:call-template name="add-css">
     <xsl:with-param name="href" select="'customization/css/mytheme.css'" />
   </xsl:call-template>
-</xsl:template>
-
-<xsl:template name="gen-user-scripts">
-  <script src="customization/js/sidebar.js"></script>
+  <xsl:call-template name="add-css">
+    <xsl:with-param name="href" select="'customization/css/styles.css'" />
+  </xsl:call-template>
 </xsl:template>
 
 
