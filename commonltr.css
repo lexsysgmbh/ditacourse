@@ -89,9 +89,17 @@
   }
 }
 
+/* TOC list items */
+nav.toc li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2em;
+}
+
 /* TOC link styles */
 nav.toc a {
   display: block;
+  flex: 1;
   padding: 0.3em 0.5em;
   color: #005475;
   text-decoration: none;
@@ -123,31 +131,26 @@ nav.toc ul ul.collapsed {
 
 /* TOC toggle button */
 nav.toc .toc-toggle {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 1.2em;
   height: 1.2em;
   cursor: pointer;
   user-select: none;
-  margin-right: 0.3em;
+  margin-right: 0.2em;
   flex-shrink: 0;
   transition: transform 0.2s ease;
+  color: #333;
+  font-size: 0.7em;
 }
 
 nav.toc .toc-toggle::before {
   content: '▼';
-  display: block;
-  font-size: 0.7em;
-  line-height: 1.2em;
-  text-align: center;
-  color: #333;
 }
 
-nav.toc .toc-toggle.collapsed::before {
+nav.toc .toc-toggle.collapsed {
   transform: rotate(-90deg);
-}
-
-nav.toc li.parent > a {
-  display: inline;
 }
 
 
@@ -268,10 +271,6 @@ nav.toc ul {
 nav.toc ul ul {
   padding-left: 1em;
   margin-top: 0.2em;
-}
-
-nav.toc li {
-  margin-bottom: 0.2em;
 }
 
 /* General body styles */
