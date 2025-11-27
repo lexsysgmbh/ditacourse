@@ -66,6 +66,25 @@
 
 
 
+/* Resizable sidebar divider */
+.sidebar-resizer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: #ccc;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  cursor: col-resize;
+  z-index: 1001;
+  transition: background-color 0.2s;
+}
+
+.sidebar-resizer:hover,
+.sidebar-resizer.active {
+  background-color: #00DAAD;
+}
+
 /* Sidebar TOC for desktop screens */
 @media screen and (min-width: 992px) {
   nav.toc {
