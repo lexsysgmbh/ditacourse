@@ -62,10 +62,10 @@
 
 /* Theme Toggle Button */
 .theme-toggle {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
-  background: transparent;
+  background: var(--lexsys-surface);
   border: 1px solid var(--lexsys-line);
   color: var(--lexsys-text);
   cursor: pointer;
@@ -78,7 +78,9 @@
   justify-content: center;
   font-size: 1.2rem;
   transition: all 0.2s ease;
-  z-index: 1100;
+  z-index: 2000;
+  /* Ensure it's above everything */
+  box-shadow: var(--shadow);
 }
 
 .theme-toggle:hover {
@@ -91,16 +93,6 @@
 nav.toc {
   position: relative;
   /* Ensure absolute positioning of toggle works relative to TOC */
-}
-
-/* Ensure toggle is visible on mobile if appended to body */
-body>.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: var(--lexsys-surface);
-  /* Ensure visibility against content */
-  box-shadow: var(--shadow);
 }
 
 
