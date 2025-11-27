@@ -136,7 +136,7 @@ nav.toc li {
 
 /* First list item gets extra top margin for spacing after logo */
 nav.toc > ul > li:first-child {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 /* TOC link styles */
@@ -286,7 +286,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 2em;
-  padding: 2em 1em;
+  padding: 2em;
   margin-top: 2em;
   border-top: 1px solid #ccc;
 }
@@ -295,11 +295,13 @@ a:hover {
   display: flex;
   gap: 1em;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .lesson-nav .logo {
   max-width: 120px;
   height: auto;
+  margin-left: auto;
 }
 
 /* Mobile fallback — show TOC above content */
