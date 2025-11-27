@@ -20,8 +20,8 @@
   
   logoContainer.appendChild(img);
   
-  // Insert before the TOC
-  tocNav.parentNode.insertBefore(logoContainer, tocNav);
+  // Insert as first child of the TOC nav element
+  tocNav.insertBefore(logoContainer, tocNav.firstChild);
   
   console.log('✓ TOC logo added');
 })();
