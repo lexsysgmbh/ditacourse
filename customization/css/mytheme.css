@@ -303,36 +303,63 @@ a:hover {
   margin-left: auto;
 }
 
+/* Mobile burger menu button */
+.toc-burger {
+  display: none;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1002;
+  background: var(--lexsys-accent);
+  border: none;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.toc-burger:hover {
+  background: var(--lexsys-button-hover);
+}
+
 /* Mobile fallback — show TOC above content */
 @media (max-width: 991px) {
+  /* Show burger menu button on mobile */
+  .toc-burger {
+    display: block;
+  }
+
   /* Hide resizer on mobile */
   .sidebar-resizer {
-    display: none;
+    display: none !important;
   }
 
   nav.toc {
-    position: static;
-    width: auto;
-    margin-bottom: 1em;
-    border-right: none;
-    border-bottom: 2px solid #ccc;
-    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    overflow-y: auto;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
   }
 
-  /* Collapse TOC content on mobile by default */
-  nav.toc ul:not(:first-of-type) {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  /* Show TOC toggle button on mobile */
-  nav.toc .toc-toggle {
-    display: inline-block !important;
+  nav.toc.open {
+    transform: translateX(0);
   }
 
   main[role="main"] {
     margin-left: 0;
     padding: 1em;
+    padding-top: 4em;
   }
 }
 

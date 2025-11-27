@@ -1,6 +1,6 @@
 /**
- * Mobile TOC Enhancement
- * Collapse TOC by default on mobile and provide toggle
+ * Mobile TOC Burger Menu
+ * Provides a hamburger menu to toggle TOC on mobile
  */
 
 (function() {
@@ -11,22 +11,38 @@
   }
 
   const tocNav = document.querySelector('nav.toc');
-  if (!tocNav) {
+  const main = document.querySelector('main[role="main"]');
+  
+  if (!tocNav || !main) {
     return;
   }
 
-  // Collapse all nested lists by default on mobile
-  const nestedLists = tocNav.querySelectorAll('ul ul');
-  nestedLists.forEach(function(ul) {
-    ul.classList.add('collapsed');
+  // Create burger button
+  const burger = document.createElement('button');
+  burger.className = 'toc-burger';
+  burger.setAttribute('aria-label', 'Toggle navigation menu');
+  burger.innerHTML = '☰';
+  document.body.appendChild(burger);
+
+  // Toggle TOC on burger click
+  burger.addEventListener('click', function() {
+    tocNav.classList.toggle('open');
   });
 
-  // Hide all toggle buttons except when hovering
-  const toggles = tocNav.querySelectorAll('.toc-toggle');
-  toggles.forEach(function(toggle) {
-    // Make toggles visible and functional on mobile
-    toggle.style.display = 'inline-block';
+  // Close TOC when clicking a link
+  tocNav.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      tocNav.classList.remove('open');
+    }
   });
 
-  console.log('✓ Mobile TOC enhancements applied');
+  // Close TOC when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!tocNav.contains(e.target) && e.target !== burger) {
+      tocNav.classList.remove('open');
+    }
+  });
+
+  console.log('✓ Mobile burger menu initialized');
 })();
+
