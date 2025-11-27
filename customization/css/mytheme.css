@@ -352,7 +352,7 @@ a:hover {
     height: 100vh;
     background-color: #f9f9f9;
     border-right: 1px solid #ccc;
-    padding: 1em;
+    padding: 0.75em 0.5em;
     overflow-y: auto;
     z-index: 1001;
     transform: translateX(-100%);
@@ -363,10 +363,80 @@ a:hover {
     transform: translateX(0);
   }
 
+  /* Improve mobile body typography */
+  body {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
   main[role="main"] {
     margin-left: 0;
-    padding: 1em;
+    padding: 1.25em;
     padding-top: 4em;
+  }
+
+  /* Headings on mobile */
+  h1 {
+    font-size: 1.75em;
+    margin: 1em 0 0.5em 0;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin: 0.9em 0 0.4em 0;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.15em;
+    margin: 0.8em 0 0.3em 0;
+    line-height: 1.3;
+  }
+
+  h4, h5, h6 {
+    font-size: 1.05em;
+    margin: 0.7em 0 0.3em 0;
+  }
+
+  /* Paragraph and list spacing */
+  p {
+    margin-bottom: 1em;
+    line-height: 1.7;
+  }
+
+  li {
+    margin-bottom: 0.6em;
+  }
+
+  /* Table optimization for mobile */
+  table {
+    font-size: 0.95em;
+    margin-bottom: 1.5em;
+  }
+
+  table th,
+  table td,
+  td.entry,
+  th.entry {
+    padding: 0.75em 0.5em;
+  }
+
+  /* Code blocks on mobile */
+  pre {
+    padding: 1em;
+    font-size: 0.85em;
+    overflow-x: auto;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+
+  /* Buttons on mobile */
+  .nav-button {
+    padding: 0.75em 1.25em;
+    font-size: 1em;
   }
 }
 
