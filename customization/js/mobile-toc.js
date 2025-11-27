@@ -4,16 +4,10 @@
  */
 
 (function() {
-  const isMobile = window.innerWidth <= 991;
-  
-  if (!isMobile) {
-    return;
-  }
-
+  // Run on any screen size but only show on mobile
   const tocNav = document.querySelector('nav.toc');
-  const main = document.querySelector('main[role="main"]');
-  
-  if (!tocNav || !main) {
+  if (!tocNav) {
+    console.log('⚠️  TOC nav not found');
     return;
   }
 
@@ -21,11 +15,18 @@
   const burger = document.createElement('button');
   burger.className = 'toc-burger';
   burger.setAttribute('aria-label', 'Toggle navigation menu');
-  burger.innerHTML = '☰';
-  document.body.appendChild(burger);
+  burger.textContent = '☰';
+  
+  // Ensure burger is visible on mobile
+  if (window.innerWidth <= 991) {
+    burger.style.display = 'block';
+  }
+  
+  document.body.insertBefore(burger, document.body.firstChild);
 
   // Toggle TOC on burger click
-  burger.addEventListener('click', function() {
+  burger.addEventListener('click', function(e) {
+    e.stopPropagation();
     tocNav.classList.toggle('open');
   });
 
@@ -45,4 +46,5 @@
 
   console.log('✓ Mobile burger menu initialized');
 })();
+
 
