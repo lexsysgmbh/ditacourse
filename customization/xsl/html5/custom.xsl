@@ -69,6 +69,9 @@
 
   <!-- Find next lesson for current topic -->
   <xsl:variable name="next-lesson" select="$lesson-map[@current = $current-topic-filename]/@next"/>
+  
+  <!-- Find previous lesson for current topic -->
+  <xsl:variable name="prev-lesson" select="$lesson-map[@next = $current-topic-filename]/@current"/>
 
   <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
@@ -82,6 +85,11 @@
     <!-- Add footer with navigation buttons and logo -->
     <nav class="lesson-nav">
       <div class="buttons">
+        <xsl:if test="$prev-lesson != ''">
+          <a href="{$prev-lesson}.html" class="nav-button">
+            <xsl:text>← Previous Lesson</xsl:text>
+          </a>
+        </xsl:if>
         <xsl:if test="$next-lesson != ''">
           <a href="{$next-lesson}.html" class="nav-button">
             <xsl:text>Next Lesson →</xsl:text>
