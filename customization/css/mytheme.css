@@ -47,7 +47,7 @@
   --space-12: 3rem;
 }
 
-/* Dark mode (keeps Lexsys vibe, flips contrast) */
+/* Dark mode (keeps Lexsys vibe, flips contrast) 
 @media (prefers-color-scheme: dark) {
   :root {
     --lexsys-ink: #e5e7eb;
@@ -62,7 +62,7 @@
   }
 }
 
-
+*/
 
 
 
