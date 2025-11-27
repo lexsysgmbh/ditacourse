@@ -89,17 +89,9 @@
   }
 }
 
-/* TOC list items */
-nav.toc li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.2em;
-}
-
 /* TOC link styles */
 nav.toc a {
   display: block;
-  flex: 1;
   padding: 0.3em 0.5em;
   color: #005475;
   text-decoration: none;
@@ -131,26 +123,24 @@ nav.toc ul ul.collapsed {
 
 /* TOC toggle button */
 nav.toc .toc-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.2em;
-  height: 1.2em;
   cursor: pointer;
   user-select: none;
-  margin-right: 0.2em;
-  flex-shrink: 0;
+  display: inline-block;
+  width: 1em;
+  text-align: center;
   transition: transform 0.2s ease;
   color: #333;
   font-size: 0.7em;
+  line-height: 1;
 }
 
 nav.toc .toc-toggle::before {
   content: '▼';
 }
 
-nav.toc .toc-toggle.collapsed {
+nav.toc .toc-toggle.collapsed::before {
   transform: rotate(-90deg);
+  display: inline-block;
 }
 
 
