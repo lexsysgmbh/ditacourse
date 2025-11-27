@@ -305,7 +305,7 @@ a:hover {
 
 /* Mobile burger menu button */
 .toc-burger {
-  display: none;
+  display: none !important;
   position: fixed;
   top: 1em;
   left: 1em;
@@ -318,6 +318,13 @@ a:hover {
   color: white;
   font-size: 1.5em;
   line-height: 1;
+  width: auto;
+  height: auto;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toc-burger:hover {
@@ -328,7 +335,7 @@ a:hover {
 @media (max-width: 991px) {
   /* Show burger menu button on mobile */
   .toc-burger {
-    display: block;
+    display: flex !important;
   }
 
   /* Hide resizer on mobile */
