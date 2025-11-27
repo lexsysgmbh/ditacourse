@@ -72,6 +72,9 @@
 
   <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
+    <!-- Theme Toggle Button (Fixed Position) -->
+    <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
     <!-- Insert logo at top -->
     <div class="header-logo">
       <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
@@ -111,11 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement.classList.add('dark-mode');
   }
 
-  // 2. Create the toggle button
-  const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'theme-toggle';
-  toggleBtn.ariaLabel = 'Toggle Dark Mode';
-  toggleBtn.innerHTML = '🌙'; // Default icon, will update
+  // 2. Find the toggle button
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (!toggleBtn) return;
 
   // Function to update button icon
   function updateIcon() {
@@ -124,18 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updateIcon();
 
-  // 3. Inject the button
-  // Try to find the TOC container first
-  const toc = document.querySelector('nav.toc');
-  if (toc) {
-    // Insert at the top of the TOC
-    toc.insertBefore(toggleBtn, toc.firstChild);
-  } else {
-    // Fallback: append to body (e.g. mobile or no TOC)
-    document.body.appendChild(toggleBtn);
-  }
-
-  // 4. Handle click
+  // 3. Handle click
   toggleBtn.addEventListener('click', function() {
     document.documentElement.classList.toggle('dark-mode');
     const isDark = document.documentElement.classList.contains('dark-mode');
