@@ -62,10 +62,14 @@ jobs:
         run: |
           node .github/scripts/inject-next-lesson-footer.js
 
-      - name: 📋 Copy quiz JavaScript
+      - name: 📋 Copy customization assets (js, img, css)
         run: |
           mkdir -p out/customization/js
+          mkdir -p out/customization/img
+          mkdir -p out/customization/css
           cp customization/js/*.js out/customization/js/
+          cp customization/img/* out/customization/img/
+          cp customization/css/*.css out/customization/css/
 
       - name: 💡 Inject interactive quiz
         run: |
