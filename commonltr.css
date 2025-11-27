@@ -134,6 +134,11 @@ nav.toc li {
   margin-bottom: 0.2em;
 }
 
+/* First list item gets extra top margin for spacing after logo */
+nav.toc > ul > li:first-child {
+  margin-top: 0.5em;
+}
+
 /* TOC link styles */
 nav.toc a {
   display: inline;
