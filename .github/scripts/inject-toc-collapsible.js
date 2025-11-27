@@ -6,7 +6,7 @@ let filesProcessed = 0;
 let filesModified = 0;
 
 function injectScript(htmlContent) {
-  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js')) {
+  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js') && htmlContent.includes('mobile-toc.js')) {
     return { modified: false, content: htmlContent };
   }
   
@@ -31,6 +31,11 @@ function injectScript(htmlContent) {
   // Inject toc-logo.js if not already present
   if (!htmlContent.includes('toc-logo.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/toc-logo.js"></script>\n</body>`);
+  }
+  
+  // Inject mobile-toc.js if not already present
+  if (!htmlContent.includes('mobile-toc.js')) {
+    updated = updated.replace('</body>', `  <script src="customization/js/mobile-toc.js"></script>\n</body>`);
   }
   
   return { modified: updated !== htmlContent, content: updated };
