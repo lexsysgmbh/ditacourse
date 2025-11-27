@@ -282,7 +282,7 @@ a:hover {
 /* Navigation buttons after content, aligned with text */
 .lesson-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 2em;
   padding: 2em;
