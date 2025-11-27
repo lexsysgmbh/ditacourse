@@ -2,21 +2,34 @@ const fs = require('fs');
 const path = require('path');
 
 const outputDir = path.join(__dirname, '../../out');
+let filesProcessed = 0;
+let filesModified = 0;
 
 function injectScript(htmlContent) {
   if (htmlContent.includes('toc-collapsible.js')) {
-    return htmlContent; // Already injected
+    return { modified: false, content: htmlContent };
   }
   
   // Insert script before closing body tag
-  return htmlContent.replace('</body>', `  <script src="customization/js/toc-collapsible.js"></script>\n</body>`);
+  if (!htmlContent.includes('</body>')) {
+    console.warn('⚠️  No closing </body> tag found in HTML');
+    return { modified: false, content: htmlContent };
+  }
+  
+  const updated = htmlContent.replace('</body>', `  <script src="customization/js/toc-collapsible.js"></script>\n</body>`);
+  return { modified: true, content: updated };
 }
 
 function processFile(filePath) {
+  filesProcessed++;
   const html = fs.readFileSync(filePath, 'utf-8');
-  const updated = injectScript(html);
-  fs.writeFileSync(filePath, updated, 'utf-8');
-  console.log(`✓ Injected toc-collapsible.js into ${path.basename(filePath)}`);
+  const result = injectScript(html);
+  
+  if (result.modified) {
+    fs.writeFileSync(filePath, result.content, 'utf-8');
+    filesModified++;
+    console.log(`✓ Injected toc-collapsible.js into ${path.basename(filePath)}`);
+  }
 }
 
 // Recursively scan files in the output directory
@@ -33,8 +46,13 @@ function walk(dir) {
 }
 
 if (fs.existsSync(outputDir)) {
+  console.log(`📍 Processing HTML files in: ${outputDir}`);
   walk(outputDir);
-  console.log('✓ TOC collapsible script injection complete');
+  console.log(`✓ Processed ${filesProcessed} HTML files, modified ${filesModified}`);
+  if (filesModified === 0) {
+    console.warn('⚠️  No files were modified - the script tag may already be present or </body> tag not found');
+  }
 } else {
-  console.log('Output directory not found:', outputDir);
+  console.error('❌ Output directory not found:', outputDir);
+  process.exit(1);
 }

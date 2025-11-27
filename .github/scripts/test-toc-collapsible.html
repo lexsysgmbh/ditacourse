@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TOC Collapsible Test</title>
+  <style>
+    nav.toc { width: 300px; }
+    nav.toc a { display: block; padding: 0.3em 0.5em; }
+    nav.toc .toc-toggle {
+      cursor: pointer;
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      margin-right: 0.3em;
+      text-align: center;
+      line-height: 1.2em;
+      color: #333;
+      font-size: 0.65em;
+    }
+    nav.toc .toc-toggle::before {
+      content: '▼';
+      display: inline-block;
+    }
+    nav.toc .toc-toggle.collapsed::before {
+      transform: rotate(-90deg);
+      display: inline-block;
+    }
+    nav.toc ul ul {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    nav.toc ul ul.collapsed {
+      max-height: 0;
+      transition: max-height 0.3s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <nav class="toc">
+    <ul>
+      <li><a href="#">Top Level</a>
+        <ul>
+          <li><a href="#">Sub Item 1</a></li>
+          <li><a href="#">Sub Item 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Another Top</a>
+        <ul>
+          <li><a href="#">Sub Item A</a></li>
+          <li><a href="#">Sub Item B</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <p>Check the browser console for debug messages. The nav items above should have arrows that you can click to collapse/expand.</p>
+
+  <script>
+(function() {
+  console.log('🔍 Starting TOC collapsible setup');
+  const tocNav = document.querySelector('nav.toc');
+  
+  if (!tocNav) {
+    console.log('❌ TOC nav not found');
+    return;
+  }
+
+  console.log('✓ TOC nav found');
+
+  const listItems = tocNav.querySelectorAll('li');
+  console.log('📊 Total list items:', listItems.length);
+  
+  let togglesAdded = 0;
+  listItems.forEach(function(li) {
+    const nestedList = li.querySelector('ul');
+    
+    if (nestedList) {
+      li.classList.add('parent');
+      
+      const link = li.querySelector('> a');
+      if (link) {
+        const toggle = document.createElement('span');
+        toggle.className = 'toc-toggle';
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('tabindex', '0');
+        toggle.setAttribute('aria-label', 'Toggle submenu');
+        
+        li.insertBefore(toggle, link);
+        togglesAdded++;
+        
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          nestedList.classList.toggle('collapsed');
+          toggle.classList.toggle('collapsed');
+        });
+      }
+    }
+  });
+  
+  console.log('✓ Toggles added:', togglesAdded);
+})();
+  </script>
+</body>
+</html>
