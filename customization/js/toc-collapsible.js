@@ -6,11 +6,18 @@
 document.addEventListener('DOMContentLoaded', function() {
   const tocNav = document.querySelector('nav.toc');
   
-  if (!tocNav) return;
+  if (!tocNav) {
+    console.log('TOC nav not found');
+    return;
+  }
+
+  console.log('TOC nav found, setting up collapsible items');
 
   // Find all list items that have nested lists
   const listItems = tocNav.querySelectorAll('li');
+  console.log('Total list items:', listItems.length);
   
+  let togglesAdded = 0;
   listItems.forEach(function(li) {
     const nestedList = li.querySelector('ul');
     
@@ -29,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Insert toggle before the link
         li.insertBefore(toggle, link);
+        togglesAdded++;
         
         // Add click handler to toggle
         toggle.addEventListener('click', function(e) {
@@ -52,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  
+  console.log('Toggles added:', togglesAdded);
 
   // Expand items on page load if they contain the active link
   listItems.forEach(function(li) {
