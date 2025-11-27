@@ -305,16 +305,34 @@ a:hover {
 
 /* Mobile fallback — show TOC above content */
 @media (max-width: 991px) {
+  /* Hide resizer on mobile */
+  .sidebar-resizer {
+    display: none;
+  }
+
   nav.toc {
     position: static;
     width: auto;
     margin-bottom: 1em;
     border-right: none;
     border-bottom: 2px solid #ccc;
+    padding: 0;
+  }
+
+  /* Collapse TOC content on mobile by default */
+  nav.toc ul:not(:first-of-type) {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* Show TOC toggle button on mobile */
+  nav.toc .toc-toggle {
+    display: inline-block !important;
   }
 
   main[role="main"] {
     margin-left: 0;
+    padding: 1em;
   }
 }
 
