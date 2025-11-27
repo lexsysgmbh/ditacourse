@@ -121,6 +121,35 @@ nav.toc ul ul.collapsed {
   transition: max-height 0.3s ease-in;
 }
 
+/* TOC toggle button */
+nav.toc .toc-toggle {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 0.3em;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+nav.toc .toc-toggle::before {
+  content: '▼';
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  text-align: center;
+  color: #333;
+}
+
+nav.toc .toc-toggle.collapsed::before {
+  transform: rotate(-90deg);
+}
+
+nav.toc li.parent > a {
+  display: inline;
+}
+
 
 h1.title.topictitle1 {
   font-size: 2.5em;
