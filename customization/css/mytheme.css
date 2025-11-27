@@ -1,0 +1,400 @@
+/* =========================
+   Lexsys look & feel tokens
+   ========================= */
+:root {
+  /* TYPOGRAPHY */
+  --font-sans: "Campton", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* LAYOUT */
+  --maxw: 72ch;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, .06);
+
+  /* COLOR PALETTE (Lexsys-inspired) */
+  --lexsys-ink: #333333;
+  /* Main text/headings */
+  --lexsys-text: #333333;
+  /* Body text */
+  --lexsys-muted: #6b7280;
+  /* muted labels */
+  --lexsys-line: #e5e7eb;
+  /* light borders */
+  --lexsys-surface: #ffffff;
+  /* cards/backgrounds */
+  --lexsys-accent: #00DAAD;
+  /* Bright Teal (Links) */
+  --lexsys-accent-strong: #00b38e;
+  /* Darker teal for hover */
+  --lexsys-accent-weak: #e6fcf9;
+  /* subtle tint */
+  --lexsys-button: #1E73BE;
+  /* Blue Button */
+  --lexsys-button-hover: #165c9e;
+  /* Darker Blue Button */
+
+  /* LINKS */
+  --link: var(--lexsys-accent);
+  --link-hover: var(--lexsys-accent-strong);
+
+  /* SPACING SCALE */
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+}
+
+/* Dark mode (keeps Lexsys vibe, flips contrast) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lexsys-ink: #e5e7eb;
+    --lexsys-text: #cbd5e1;
+    --lexsys-muted: #94a3b8;
+    --lexsys-line: #1f2937;
+    --lexsys-surface: #0b1020;
+    --lexsys-accent: #22c3bd;
+    --lexsys-accent-strong: #11aca6;
+    --lexsys-accent-weak: rgba(34, 195, 189, .12);
+    --shadow: 0 8px 32px rgba(0, 0, 0, .45);
+  }
+}
+
+
+
+
+
+/* Sidebar TOC for desktop screens */
+@media screen and (min-width: 992px) {
+  nav.toc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    overflow-y: auto;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+
+  main[role="main"] {
+    margin-left: 320px;
+    padding: 2em;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease;
+  }
+
+  /* Collapsed State */
+  body.sidebar-collapsed nav.toc {
+    transform: translateX(-100%);
+  }
+
+  body.sidebar-collapsed main[role="main"] {
+    margin-left: 0;
+  }
+}
+
+/* Sidebar Toggle Button */
+#sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  background: var(--lexsys-button);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+}
+
+body.sidebar-collapsed #sidebar-toggle {
+  left: 1rem;
+  /* Keep button visible when collapsed */
+}
+
+@media (min-width: 992px) {
+  /* Hide toggle button when sidebar is open on desktop if preferred, 
+     but usually we want it visible to close the sidebar. 
+     Let's position it inside the sidebar or just outside. 
+     For now, fixed top-left works. */
+}
+
+/* TOC link styles */
+nav.toc a {
+  display: block;
+  padding: 0.3em 0.5em;
+  color: #005475;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+nav.toc a:hover {
+  background-color: var(--lexsys-accent-weak);
+}
+
+nav.toc li.active>a {
+  font-weight: bold;
+  background-color: var(--lexsys-accent-weak);
+  color: var(--lexsys-accent-strong);
+}
+
+/* TOC list structure */
+nav.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav.toc ul ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+}
+
+nav.toc li {
+  margin-bottom: 0.2em;
+}
+
+/* Mobile fallback — show TOC above content */
+@media (max-width: 991px) {
+  nav.toc {
+    position: static;
+    width: auto;
+    margin-bottom: 1em;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  main[role="main"] {
+    margin-left: 0;
+  }
+}
+
+/* General body styles */
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content area */
+article[role="article"] {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1.title.topictitle1 {
+  font-size: 2.5em;
+  color: var(--lexsys-accent-strong);
+  border-bottom: 2px solid var(--lexsys-accent-strong);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lexsys-accent-strong);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Lists */
+ol,
+ul {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* Short description */
+p.shortdesc {
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--lexsys-ink);
+  border-left: 3px solid var(--lexsys-ink);
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
+/* DITA-OT-generated next/previous links */
+nav.related-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+nav.related-links a {
+  background: var(--lexsys-accent);
+  color: var(--lexsys-accent-weak);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav.related-links a:hover {
+  background-color: var(--lexsys-button-hover);
+}
+
+/* Links */
+a {
+  color: #005475;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation buttons after content, aligned with text */
+.lesson-nav {
+  max-width: 800px;
+  margin: 2em auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+/* Individual nav buttons */
+.nav-button {
+  background-color: var(--lexsys-button);
+  color: var(--lexsys-accent-weak);
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: var(--lexsys-button-hover);
+}
+
+/* Table grid and layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+}
+
+/* Table headers */
+table thead {
+  background-color: #f2f2f2;
+  /* light gray header */
+}
+
+table th,
+table td,
+td.entry,
+th.entry {
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead tr>.entry {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Match the main content container exactly */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quiz-wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+  .quiz-wrapper {
+    max-width: 100%;
+    margin: 1rem;
+  }
+}
+
+/* Match main content font and spacing */
+.quiz-wrapper label {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  margin: 0.25em 0;
+}
+
+.quiz-wrapper div {
+  margin-bottom: 1em;
+}
+
+/* Optional: style buttons to match the theme */
+.quiz-wrapper button {
+  font-size: 1rem;
+  padding: 0.4em 0.8em;
+  border: none;
+  background-color: var(--lexsys-button);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-wrapper button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.quiz-wrapper button:hover:enabled {
+  background-color: var(--lexsys-button-hover);
+}
+
+/* Add a header logo */
+.header-logo {
+  display: block;
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+.header-logo img {
+  max-width: 180px;
+  height: auto;
+}
