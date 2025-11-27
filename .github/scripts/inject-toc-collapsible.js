@@ -6,18 +6,29 @@ let filesProcessed = 0;
 let filesModified = 0;
 
 function injectScript(htmlContent) {
-  if (htmlContent.includes('toc-collapsible.js')) {
+  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js')) {
     return { modified: false, content: htmlContent };
   }
   
-  // Insert script before closing body tag
+  // Insert scripts before closing body tag
   if (!htmlContent.includes('</body>')) {
     console.warn('⚠️  No closing </body> tag found in HTML');
     return { modified: false, content: htmlContent };
   }
   
-  const updated = htmlContent.replace('</body>', `  <script src="customization/js/toc-collapsible.js"></script>\n</body>`);
-  return { modified: true, content: updated };
+  let updated = htmlContent;
+  
+  // Inject toc-collapsible.js if not already present
+  if (!htmlContent.includes('toc-collapsible.js')) {
+    updated = updated.replace('</body>', `  <script src="customization/js/toc-collapsible.js"></script>\n</body>`);
+  }
+  
+  // Inject resizable-sidebar.js if not already present
+  if (!htmlContent.includes('resizable-sidebar.js')) {
+    updated = updated.replace('</body>', `  <script src="customization/js/resizable-sidebar.js"></script>\n</body>`);
+  }
+  
+  return { modified: updated !== htmlContent, content: updated };
 }
 
 function processFile(filePath) {
