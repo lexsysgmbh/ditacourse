@@ -66,7 +66,8 @@
   top: 1rem;
   right: 1rem;
   background: var(--lexsys-surface);
-  border: 1px solid var(--lexsys-line);
+  border: 5px solid red !important;
+  /* DEBUG: Make it obvious */
   color: var(--lexsys-text);
   cursor: pointer;
   padding: 0.5rem;
@@ -78,7 +79,7 @@
   justify-content: center;
   font-size: 1.2rem;
   transition: all 0.2s ease;
-  z-index: 2000;
+  z-index: 9999;
   /* Ensure it's above everything */
   box-shadow: var(--shadow);
 }
