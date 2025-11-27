@@ -89,15 +89,14 @@
   }
 }
 
-/* TOC list items - use flexbox to align toggle and link inline */
+/* TOC list items - keep vertical stacking */
 nav.toc li {
-  display: flex;
-  align-items: center;
+  margin-bottom: 0.2em;
 }
 
 /* TOC link styles */
 nav.toc a {
-  flex: 1;
+  display: inline;
   padding: 0.3em 0.5em;
   color: #005475;
   text-decoration: none;
