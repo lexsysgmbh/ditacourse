@@ -70,20 +70,13 @@
   <!-- Find next lesson for current topic -->
   <xsl:variable name="next-lesson" select="$lesson-map[@current = $current-topic-filename]/@next"/>
 
-<!-- Override the topic body and insert a logo at the top -->
-<xsl:template match="*[contains(@class,' topic/body ')]">
-  <!-- Insert logo -->
-  <div class="header-logo">
-    <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
-  </div>
-  <!-- Original body content -->
-  <xsl:next-match/>
-  <!-- ...your existing navigation code... -->
-</xsl:template>
-
-  <!-- Override the topic body template to add navigation -->
+  <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
-    <!-- Process the original body content -->
+    <!-- Insert logo -->
+    <div class="header-logo">
+      <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
+    </div>
+    <!-- Original body content -->
     <xsl:next-match/>
 
     <!-- Add next lesson button if there is a next lesson -->
@@ -114,10 +107,7 @@
   </xsl:call-template>
 </xsl:template>
 
-<xsl:template name="gen-footer" priority="10">
-  <script src="customization/js/toc-collapsible.js"></script>
-  <xsl:call-template name="default.footer"/>
-</xsl:template>
+
 
 
 
