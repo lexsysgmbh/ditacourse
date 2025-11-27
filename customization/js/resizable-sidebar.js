@@ -31,6 +31,7 @@
   if (storedWidth) {
     sidebar.style.width = storedWidth;
     main.style.marginLeft = (parseInt(storedWidth) + 20) + 'px';
+    resizer.style.left = storedWidth;
   }
   
   // Mouse down on resizer
@@ -58,6 +59,7 @@
     if (newWidth >= minWidth && newWidth <= maxWidth) {
       sidebar.style.width = newWidth + 'px';
       main.style.marginLeft = (newWidth + 20) + 'px';
+      resizer.style.left = newWidth + 'px';
       localStorage.setItem('sidebar-width', newWidth + 'px');
     }
   });

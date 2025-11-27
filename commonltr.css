@@ -71,6 +71,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 300px;
   width: 8px;
   background-color: #ccc;
   border-left: 1px solid #999;
@@ -83,6 +84,13 @@
 .sidebar-resizer:hover,
 .sidebar-resizer.active {
   background-color: #00DAAD;
+}
+
+/* Update resizer position when sidebar width changes */
+@media screen and (min-width: 992px) {
+  nav.toc + .sidebar-resizer {
+    left: 300px;
+  }
 }
 
 /* Sidebar TOC for desktop screens */
