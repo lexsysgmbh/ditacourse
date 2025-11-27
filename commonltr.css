@@ -89,9 +89,15 @@
   }
 }
 
+/* TOC list items - use flexbox to align toggle and link inline */
+nav.toc li {
+  display: flex;
+  align-items: center;
+}
+
 /* TOC link styles */
 nav.toc a {
-  display: block;
+  flex: 1;
   padding: 0.3em 0.5em;
   color: #005475;
   text-decoration: none;
