@@ -149,20 +149,97 @@ nav.toc li.active>a {
   color: var(--lexsys-accent-strong);
 }
 
-/* TOC list structure */
-nav.toc ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+/* Headings */
+h1.title.topictitle1 {
+  font-size: 2.5em;
+  color: var(--lexsys-ink);
+  border-bottom: 2px solid var(--lexsys-accent-strong);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
-nav.toc ul ul {
-  padding-left: 1em;
-  margin-top: 0.2em;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lexsys-ink);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-nav.toc li {
-  margin-bottom: 0.2em;
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Lists */
+ol,
+ul {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* Short description */
+p.shortdesc {
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--lexsys-ink);
+  background-color: var(--lexsys-accent-weak);
+  border-left: 5px solid var(--lexsys-accent);
+  padding: 1em;
+  border-radius: var(--radius);
+  margin: 1em 0;
+}
+
+/* DITA-OT-generated next/previous links */
+nav.related-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  /* Added spacing */
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+nav.related-links a {
+  background: var(--lexsys-accent);
+  color: var(--lexsys-accent-weak);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav.related-links a:hover {
+  background-color: var(--lexsys-button-hover);
+}
+
+/* Links */
+a {
+  color: #005475;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation buttons after content, aligned with text */
+.lesson-nav {
+  max-width: 800px;
+  margin: 2em auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-top: 1em;
 }
 
 /* Mobile fallback — show TOC above content */
@@ -178,6 +255,22 @@ nav.toc li {
   main[role="main"] {
     margin-left: 0;
   }
+}
+
+/* TOC list structure */
+nav.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav.toc ul ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+}
+
+nav.toc li {
+  margin-bottom: 0.2em;
 }
 
 /* General body styles */
