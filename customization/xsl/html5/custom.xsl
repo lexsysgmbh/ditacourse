@@ -100,6 +100,7 @@
   <head>
     <xsl:call-template name="default.head"/>
     <xsl:call-template name="gen-user-styles"/>
+    <script src="customization/js/theme-toggle.js"></script>
   </head>
 </xsl:template>
 
