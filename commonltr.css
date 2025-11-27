@@ -1,51 +1,64 @@
 /* =========================
    Lexsys look & feel tokens
    ========================= */
-:root{
+:root {
   /* TYPOGRAPHY */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-sans: "Campton", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
   /* LAYOUT */
   --maxw: 72ch;
   --radius: 12px;
-  --shadow: 0 4px 24px rgba(0,0,0,.06);
+  --shadow: 0 4px 24px rgba(0, 0, 0, .06);
 
-  /* COLOR PALETTE (Lexsys-inspired) 
-     👉 If you have official brand HEX codes, swap them here.
-     - Primary accent: cool teal/green
-     - Neutrals: charcoal -> slate scale
-  */
-  --lexsys-ink:    #0f172a; /* deep charcoal for headings */
-  --lexsys-text:   #1f2937; /* body text (slate-800) */
-  --lexsys-muted:  #6b7280; /* muted labels (slate-500/600) */
-  --lexsys-line:   #e5e7eb; /* light borders (slate-200) */
-  --lexsys-surface:#ffffff; /* cards/backgrounds */
-  --lexsys-accent: #0ea5a4; /* teal (≈ brand accent) */
-  --lexsys-accent-strong:#0b8e8d;
-  --lexsys-accent-weak:  #e6f7f6; /* subtle tint for callouts/nav */
+  /* COLOR PALETTE (Lexsys-inspired) */
+  --lexsys-ink: #333333;
+  /* Main text/headings */
+  --lexsys-text: #333333;
+  /* Body text */
+  --lexsys-muted: #6b7280;
+  /* muted labels */
+  --lexsys-line: #e5e7eb;
+  /* light borders */
+  --lexsys-surface: #ffffff;
+  /* cards/backgrounds */
+  --lexsys-accent: #00DAAD;
+  /* Bright Teal (Links) */
+  --lexsys-accent-strong: #00b38e;
+  /* Darker teal for hover */
+  --lexsys-accent-weak: #e6fcf9;
+  /* subtle tint */
+  --lexsys-button: #1E73BE;
+  /* Blue Button */
+  --lexsys-button-hover: #165c9e;
+  /* Darker Blue Button */
 
   /* LINKS */
-  --link:        var(--lexsys-accent);
-  --link-hover:  var(--lexsys-accent-strong);
+  --link: var(--lexsys-accent);
+  --link-hover: var(--lexsys-accent-strong);
 
   /* SPACING SCALE */
-  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem;
-  --space-4:1rem;   --space-6:1.5rem; --space-8:2rem; --space-12:3rem;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
 }
 
 /* Dark mode (keeps Lexsys vibe, flips contrast) */
-@media (prefers-color-scheme: dark){
-  :root{
-    --lexsys-ink:    #e5e7eb;
-    --lexsys-text:   #cbd5e1;
-    --lexsys-muted:  #94a3b8;
-    --lexsys-line:   #1f2937;
-    --lexsys-surface:#0b1020;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lexsys-ink: #e5e7eb;
+    --lexsys-text: #cbd5e1;
+    --lexsys-muted: #94a3b8;
+    --lexsys-line: #1f2937;
+    --lexsys-surface: #0b1020;
     --lexsys-accent: #22c3bd;
-    --lexsys-accent-strong:#11aca6;
-    --lexsys-accent-weak: rgba(34,195,189,.12);
-    --shadow: 0 8px 32px rgba(0,0,0,.45);
+    --lexsys-accent-strong: #11aca6;
+    --lexsys-accent-weak: rgba(34, 195, 189, .12);
+    --shadow: 0 8px 32px rgba(0, 0, 0, .45);
   }
 }
 
@@ -87,12 +100,13 @@ nav.toc a {
 }
 
 nav.toc a:hover {
-  background-color: #4ead90;
+  background-color: var(--lexsys-accent-weak);
 }
 
-nav.toc li.active > a {
+nav.toc li.active>a {
   font-weight: bold;
-  background-color: #e6f3ff;
+  background-color: var(--lexsys-accent-weak);
+  color: var(--lexsys-accent-strong);
 }
 
 /* TOC list structure */
@@ -150,7 +164,11 @@ h1.title.topictitle1 {
   margin-bottom: 1em;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--lexsys-accent-strong);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -163,7 +181,8 @@ p {
 }
 
 /* Lists */
-ol, ul {
+ol,
+ul {
   margin-top: 0.5em;
   margin-bottom: 1em;
   padding-left: 1.5em;
@@ -202,7 +221,7 @@ nav.related-links a {
 }
 
 nav.related-links a:hover {
-  background-color: #042e7d;
+  background-color: var(--lexsys-button-hover);
 }
 
 /* Links */
@@ -227,7 +246,7 @@ a:hover {
 
 /* Individual nav buttons */
 .nav-button {
-  background-color:var(--lexsys-accent-strong);
+  background-color: var(--lexsys-button);
   color: var(--lexsys-accent-weak);
   padding: 0.6em 1.2em;
   text-decoration: none;
@@ -238,7 +257,7 @@ a:hover {
 }
 
 .nav-button:hover {
-  background-color: #333;
+  background-color: var(--lexsys-button-hover);
 }
 
 /* Table grid and layout */
@@ -251,7 +270,8 @@ table {
 
 /* Table headers */
 table thead {
-  background-color: #f2f2f2; /* light gray header */
+  background-color: #f2f2f2;
+  /* light gray header */
 }
 
 table th,
@@ -264,7 +284,7 @@ th.entry {
   vertical-align: top;
 }
 
-thead tr > .entry {
+thead tr>.entry {
   background-color: #f2f2f2;
   font-weight: bold;
 }
@@ -284,7 +304,7 @@ thead tr > .entry {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
 
@@ -312,7 +332,7 @@ thead tr > .entry {
   font-size: 1rem;
   padding: 0.4em 0.8em;
   border: none;
-  background-color: #444;
+  background-color: var(--lexsys-button);
   color: white;
   border-radius: 4px;
   cursor: pointer;
@@ -324,7 +344,7 @@ thead tr > .entry {
 }
 
 .quiz-wrapper button:hover:enabled {
-  background-color: #000;
+  background-color: var(--lexsys-button-hover);
 }
 
 /* Add a header logo */
