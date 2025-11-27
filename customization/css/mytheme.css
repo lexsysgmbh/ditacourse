@@ -187,107 +187,19 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: var(--lexsys-surface);
+  /* Force background */
+  color: var(--lexsys-text);
+  /* Force text color */
 }
 
-/* Main content area */
-article[role="article"] {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Headings */
-h1.title.topictitle1 {
-  font-size: 2.5em;
-  color: var(--lexsys-accent-strong);
-  border-bottom: 2px solid var(--lexsys-accent-strong);
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--lexsys-accent-strong);
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-/* Paragraphs */
-p {
-  margin-bottom: 1em;
-  text-align: justify;
-}
-
-/* Lists */
-ol,
-ul {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  padding-left: 1.5em;
-}
-
-li {
-  margin-bottom: 0.3em;
-}
-
-/* Short description */
-p.shortdesc {
-  font-style: italic;
-  font-size: 1.1em;
-  color: var(--lexsys-ink);
-  border-left: 3px solid var(--lexsys-ink);
-  padding-left: 1em;
-  margin: 1em 0;
-}
-
-/* DITA-OT-generated next/previous links */
-nav.related-links {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid #ccc;
-}
-
-nav.related-links a {
-  background: var(--lexsys-accent);
-  color: var(--lexsys-accent-weak);
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-nav.related-links a:hover {
-  background-color: var(--lexsys-button-hover);
-}
-
-/* Links */
-a {
-  color: #005475;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation buttons after content, aligned with text */
-.lesson-nav {
-  max-width: 800px;
-  margin: 2em auto 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  gap: 1em;
-  padding-top: 1em;
-}
+/* ... existing code ... */
 
 /* Individual nav buttons */
 .nav-button {
   background-color: var(--lexsys-button);
-  color: var(--lexsys-accent-weak);
+  color: #ffffff !important;
+  /* Force white text */
   padding: 0.6em 1.2em;
   text-decoration: none;
   border-radius: 4px;
@@ -298,6 +210,7 @@ a:hover {
 
 .nav-button:hover {
   background-color: var(--lexsys-button-hover);
+  color: #ffffff !important;
 }
 
 /* Table grid and layout */
