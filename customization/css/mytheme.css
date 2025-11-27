@@ -47,22 +47,61 @@
   --space-12: 3rem;
 }
 
-/* Dark mode (keeps Lexsys vibe, flips contrast) 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --lexsys-ink: #e5e7eb;
-    --lexsys-text: #cbd5e1;
-    --lexsys-muted: #94a3b8;
-    --lexsys-line: #1f2937;
-    --lexsys-surface: #0b1020;
-    --lexsys-accent: #22c3bd;
-    --lexsys-accent-strong: #11aca6;
-    --lexsys-accent-weak: rgba(34, 195, 189, .12);
-    --shadow: 0 8px 32px rgba(0, 0, 0, .45);
-  }
+/* Dark mode (keeps Lexsys vibe, flips contrast) */
+:root.dark-mode {
+  --lexsys-ink: #e5e7eb;
+  --lexsys-text: #cbd5e1;
+  --lexsys-muted: #94a3b8;
+  --lexsys-line: #1f2937;
+  --lexsys-surface: #0b1020;
+  --lexsys-accent: #22c3bd;
+  --lexsys-accent-strong: #11aca6;
+  --lexsys-accent-weak: rgba(34, 195, 189, .12);
+  --shadow: 0 8px 32px rgba(0, 0, 0, .45);
 }
 
-*/
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid var(--lexsys-line);
+  color: var(--lexsys-text);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  z-index: 1100;
+}
+
+.theme-toggle:hover {
+  background-color: var(--lexsys-accent-weak);
+  color: var(--lexsys-accent-strong);
+  border-color: var(--lexsys-accent);
+}
+
+/* Adjust TOC for toggle button */
+nav.toc {
+  position: relative;
+  /* Ensure absolute positioning of toggle works relative to TOC */
+}
+
+/* Ensure toggle is visible on mobile if appended to body */
+body>.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--lexsys-surface);
+  /* Ensure visibility against content */
+  box-shadow: var(--shadow);
+}
 
 
 
@@ -86,9 +125,20 @@
   background-color: #00DAAD;
 }
 
+:root.dark-mode .sidebar-resizer {
+  background-color: #1f2937;
+  border-left-color: #374151;
+  border-right-color: #374151;
+}
+
+:root.dark-mode .sidebar-resizer:hover,
+:root.dark-mode .sidebar-resizer.active {
+  background-color: #22c3bd;
+}
+
 /* Update resizer position when sidebar width changes */
 @media screen and (min-width: 992px) {
-  nav.toc + .sidebar-resizer {
+  nav.toc+.sidebar-resizer {
     left: 300px;
   }
 }
@@ -109,6 +159,11 @@
     box-sizing: border-box;
   }
 
+  :root.dark-mode nav.toc {
+    background-color: #111827;
+    border-right-color: #374151;
+  }
+
   main[role="main"] {
     margin-left: 320px;
     padding: 2em;
@@ -123,6 +178,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+:root.dark-mode .toc-logo {
+  border-bottom-color: #374151;
+}
+
 .toc-logo img {
   max-width: 100%;
   height: auto;
@@ -135,7 +194,7 @@ nav.toc li {
 }
 
 /* First list item gets extra top margin for spacing after logo */
-nav.toc > ul > li:first-child {
+nav.toc>ul>li:first-child {
   margin-top: 1em;
 }
 
@@ -151,6 +210,10 @@ nav.toc a {
 
 nav.toc a:hover {
   background-color: var(--lexsys-accent-weak);
+}
+
+:root.dark-mode nav.toc a {
+  color: #22c3bd;
 }
 
 nav.toc li.active>a {
@@ -333,6 +396,7 @@ a:hover {
 
 /* Mobile fallback — show TOC above content */
 @media (max-width: 991px) {
+
   /* Show burger menu button on mobile */
   .toc-burger {
     display: flex !important;
@@ -394,7 +458,9 @@ a:hover {
     line-height: 1.3;
   }
 
-  h4, h5, h6 {
+  h4,
+  h5,
+  h6 {
     font-size: 1.05em;
     margin: 0.7em 0 0.3em 0;
   }
@@ -514,6 +580,20 @@ thead tr>.entry {
   font-weight: bold;
 }
 
+:root.dark-mode table thead,
+:root.dark-mode thead tr>.entry {
+  background-color: #1f2937;
+  color: var(--lexsys-text);
+}
+
+:root.dark-mode table th,
+:root.dark-mode table td,
+:root.dark-mode td.entry,
+:root.dark-mode th.entry {
+  border-color: #374151;
+  color: var(--lexsys-text);
+}
+
 /* Match the main content container exactly */
 .quiz-container {
   max-width: 800px;
@@ -531,6 +611,12 @@ thead tr>.entry {
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+}
+
+:root.dark-mode .quiz-wrapper {
+  background-color: #111827;
+  border-color: #374151;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 991px) {
