@@ -72,9 +72,6 @@
 
   <!-- Override the topic body template to add logo and navigation -->
   <xsl:template match="*[contains(@class,' topic/body ')]">
-    <!-- Theme Toggle Button (Fixed Position with Inline Styles) -->
-    <button class="theme-toggle" aria-label="Toggle Dark Mode" style="position:fixed; top:10px; right:10px; z-index:99999; font-size:24px; background:white; border:2px solid black; cursor:pointer;">🌙</button>
-
     <!-- Insert logo at top -->
     <div class="header-logo">
       <img src="customization/img/logo_transparent_background.png" alt="Lexsys Logo"/>
@@ -103,38 +100,6 @@
   <head>
     <xsl:call-template name="default.head"/>
     <xsl:call-template name="gen-user-styles"/>
-    <script>
-      <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
-document.addEventListener('DOMContentLoaded', function() {
-  // 1. Check for saved preference or system preference
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.classList.add('dark-mode');
-  }
-
-  // 2. Find the toggle button
-  const toggleBtn = document.querySelector('.theme-toggle');
-  if (!toggleBtn) return;
-
-  // Function to update button icon
-  function updateIcon() {
-    const isDark = document.documentElement.classList.contains('dark-mode');
-    toggleBtn.innerHTML = isDark ? '☀️' : '🌙';
-  }
-  updateIcon();
-
-  // 3. Handle click
-  toggleBtn.addEventListener('click', function() {
-    document.documentElement.classList.toggle('dark-mode');
-    const isDark = document.documentElement.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateIcon();
-  });
-});
-      <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
-    </script>
   </head>
 </xsl:template>
 
@@ -145,6 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
   <xsl:call-template name="add-css">
     <xsl:with-param name="href" select="'customization/css/styles.css'" />
   </xsl:call-template>
+</xsl:template>
+
+<xsl:template name="gen-footer" priority="10">
+  <xsl:call-template name="default.footer"/>
+  <xsl:call-template name="gen-user-scripts"/>
+</xsl:template>
+
+<xsl:template name="gen-user-scripts">
+  <script src="customization/js/theme-toggle.js"></script>
+  <script src="customization/js/toc-collapsible.js"></script>
 </xsl:template>
 
 
