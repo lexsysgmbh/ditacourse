@@ -64,7 +64,8 @@
 .theme-toggle {
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  /* move further left to avoid Hypothesis controls at top-right */
+  right: 3.5rem;
   background: var(--lexsys-surface);
   border: 2px solid var(--lexsys-line) !important;
   color: var(--lexsys-text);
@@ -87,6 +88,13 @@
 .theme-toggle:focus {
   outline: 2px solid var(--lexsys-accent);
   outline-offset: 2px;
+}
+
+/* If screen is narrow (mobile or small viewport), keep the toggle near the right edge */
+@media (max-width: 768px) {
+  .theme-toggle {
+    right: 1rem;
+  }
 }
 
 .theme-toggle:hover {
