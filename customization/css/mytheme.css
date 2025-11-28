@@ -37,6 +37,9 @@
   --link: var(--lexsys-accent);
   --link-hover: var(--lexsys-accent-strong);
 
+  /* Theme toggle icon color (brand) */
+  --theme-toggle-color: #22c3bd;
+
   /* SPACING SCALE */
   --space-1: .25rem;
   --space-2: .5rem;
@@ -101,6 +104,14 @@
   background-color: var(--lexsys-accent-weak);
   color: var(--lexsys-accent-strong);
   border-color: var(--lexsys-accent);
+}
+
+/* SVG icon sizing and color */
+.theme-toggle svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  fill: var(--theme-toggle-color);
 }
 
 /* Adjust TOC for toggle button */
