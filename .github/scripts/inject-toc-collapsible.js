@@ -6,43 +6,49 @@ let filesProcessed = 0;
 let filesModified = 0;
 
 function injectScript(htmlContent) {
-  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js') && htmlContent.includes('mobile-toc.js') && htmlContent.includes('theme-toggle.js')) {
+  // Quick acceptance check: if all expected scripts are present, skip
+  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js') && htmlContent.includes('mobile-toc.js') && (htmlContent.includes('theme-toggle.js') || htmlContent.includes('theme-init.js'))) {
     return { modified: false, content: htmlContent };
   }
-  
+
+  let updated = htmlContent;
+
+  // Inject theme-init.js into head (early execution) if not present
+  if (!htmlContent.includes('theme-init.js') && htmlContent.includes('</head>')) {
+    updated = updated.replace('</head>', `  <script src="customization/js/theme-init.js"></script>\n</head>`);
+  }
+
   // Insert scripts before closing body tag
-  if (!htmlContent.includes('</body>')) {
+  if (!updated.includes('</body>')) {
     console.warn('⚠️  No closing </body> tag found in HTML');
     return { modified: false, content: htmlContent };
   }
-  
-  let updated = htmlContent;
-  
+
   // Inject theme-toggle.js if not already present
-  if (!htmlContent.includes('theme-toggle.js')) {
+  if (!updated.includes('theme-toggle.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/theme-toggle.js"></script>\n</body>`);
   }
-  
+
   // Inject toc-collapsible.js if not already present
-  if (!htmlContent.includes('toc-collapsible.js')) {
+  if (!updated.includes('toc-collapsible.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/toc-collapsible.js"></script>\n</body>`);
   }
-  
+
   // Inject resizable-sidebar.js if not already present
-  if (!htmlContent.includes('resizable-sidebar.js')) {
+  if (!updated.includes('resizable-sidebar.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/resizable-sidebar.js"></script>\n</body>`);
   }
-  
+
   // Inject toc-logo.js if not already present
-  if (!htmlContent.includes('toc-logo.js')) {
+  if (!updated.includes('toc-logo.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/toc-logo.js"></script>\n</body>`);
   }
-  
+
   // Inject mobile-toc.js if not already present
-  if (!htmlContent.includes('mobile-toc.js')) {
+  if (!updated.includes('mobile-toc.js')) {
     updated = updated.replace('</body>', `  <script src="customization/js/mobile-toc.js"></script>\n</body>`);
   }
-  
+
   return { modified: updated !== htmlContent, content: updated };
 }
 
