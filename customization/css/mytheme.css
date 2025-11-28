@@ -277,6 +277,10 @@ nav.toc .toc-toggle.collapsed::before {
   transform: rotate(-90deg);
 }
 
+/* Dark mode: white arrows for TOC toggle */
+:root.dark-mode nav.toc .toc-toggle {
+  color: #ffffff;
+}
 
 h1.title.topictitle1 {
   font-size: 2.5em;
