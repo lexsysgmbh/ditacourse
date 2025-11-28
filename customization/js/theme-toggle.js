@@ -29,8 +29,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updateIcon();
 
-  // Append button to body (will be positioned fixed via CSS)
-  document.body.appendChild(toggleBtn);
+  // Try to find article first (DITA main content)
+  let parent = document.querySelector('article');
+  
+  // Fallback to main role
+  if (!parent) {
+    parent = document.querySelector('[role="main"]');
+  }
+  
+  // Final fallback to body
+  if (!parent) {
+    parent = document.body;
+  }
+
+  // Insert at the beginning of the parent
+  if (parent && parent.firstChild) {
+    parent.insertBefore(toggleBtn, parent.firstChild);
+  } else if (parent) {
+    parent.appendChild(toggleBtn);
+  }
 
   // Handle clicks
   toggleBtn.addEventListener('click', function(e) {
