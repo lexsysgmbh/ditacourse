@@ -1,6 +1,7 @@
 /**
  * Theme Toggle - Dark Mode Support
  * Creates a button to toggle between light and dark themes
+ * Also swaps logo images between light and dark versions
  */
 
 console.log('✓ theme-toggle.js loaded');
@@ -9,9 +10,29 @@ console.log('✓ theme-toggle.js loaded');
 const svgMoon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>';
 const svgSun = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79-1.59 1.59 1.79 1.79 1.6-1.59zM11 1h2v3h-2V1zm7.24 3.84l1.59-1.59-1.8-1.79-1.59 1.59 1.79 1.79zM20 11h3v2h-3v-2zM17.24 19.16l1.59 1.59 1.8-1.79-1.59-1.59-1.8 1.79zM12 6a6 6 0 100 12 6 6 0 000-12z"/></svg>';
 
+// Function to swap logo images based on dark mode state
+function updateLogos() {
+  const isDark = document.documentElement.classList.contains('dark-mode');
+  const logos = document.querySelectorAll('img[src*="logo_transparent_background.png"], img[src*="Lexsys_Logo"]');
+  logos.forEach(img => {
+    if (isDark) {
+      // Use inverse logo in dark mode
+      img.src = img.src.replace('logo_transparent_background.png', 'Lexsys_Logo_Inverse.svg')
+                      .replace('Lexsys_Logo.svg', 'Lexsys_Logo_Inverse.svg');
+    } else {
+      // Use normal logo in light mode
+      img.src = img.src.replace('Lexsys_Logo_Inverse.svg', 'Lexsys_Logo.svg')
+                      .replace('logo_transparent_background.png', 'logo_transparent_background.png');
+    }
+  });
+}
+
 // Setup button on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
   console.log('✓ DOMContentLoaded event fired');
+  
+  // Initial logo swap on page load
+  updateLogos();
   
   // Create the toggle button
   const toggleBtn = document.createElement('button');
@@ -63,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isDark = document.documentElement.classList.contains('dark-mode');
     try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (err) { /* ignore */ }
     updateIcon();
+    updateLogos();
     console.log('✓ Dark mode toggled:', isDark);
   });
 
