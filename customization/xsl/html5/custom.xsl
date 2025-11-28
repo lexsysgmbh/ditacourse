@@ -100,6 +100,18 @@
   <head>
     <xsl:call-template name="default.head"/>
     <xsl:call-template name="gen-user-styles"/>
+    <!-- Inline dark mode theme toggle script -->
+    <script type="text/javascript">
+      <xsl:text disable-output-escaping="yes">&lt;![CDATA[
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.classList.add('dark-mode');
+  }
+})();
+      ]]&gt;</xsl:text>
+    </script>
   </head>
 </xsl:template>
 

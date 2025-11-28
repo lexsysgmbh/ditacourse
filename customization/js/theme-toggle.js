@@ -3,24 +3,19 @@
  * Creates a button to toggle between light and dark themes
  */
 
-(function() {
-  // Immediate dark mode check before rendering
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.classList.add('dark-mode');
-  }
-})();
+console.log('✓ theme-toggle.js loaded');
 
 // Setup button on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('✓ DOMContentLoaded event fired');
+  
   // Create the toggle button
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'theme-toggle';
   toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
   toggleBtn.type = 'button';
   toggleBtn.innerHTML = '🌙';
+  console.log('✓ Button created');
 
   // Update icon based on current mode
   function updateIcon() {
@@ -31,22 +26,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Try to find article first (DITA main content)
   let parent = document.querySelector('article');
+  console.log('article found:', !!parent);
   
   // Fallback to main role
   if (!parent) {
     parent = document.querySelector('[role="main"]');
+    console.log('[role="main"] found:', !!parent);
   }
   
   // Final fallback to body
   if (!parent) {
     parent = document.body;
+    console.log('using document.body');
   }
 
   // Insert at the beginning of the parent
   if (parent && parent.firstChild) {
     parent.insertBefore(toggleBtn, parent.firstChild);
+    console.log('✓ Button inserted before first child');
   } else if (parent) {
     parent.appendChild(toggleBtn);
+    console.log('✓ Button appended to parent');
   }
 
   // Handle clicks
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isDark = document.documentElement.classList.contains('dark-mode');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     updateIcon();
+    console.log('✓ Dark mode toggled:', isDark);
   });
 
   // Handle keyboard navigation

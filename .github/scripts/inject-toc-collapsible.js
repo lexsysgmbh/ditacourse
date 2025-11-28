@@ -6,7 +6,7 @@ let filesProcessed = 0;
 let filesModified = 0;
 
 function injectScript(htmlContent) {
-  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js') && htmlContent.includes('mobile-toc.js')) {
+  if (htmlContent.includes('toc-collapsible.js') && htmlContent.includes('resizable-sidebar.js') && htmlContent.includes('toc-logo.js') && htmlContent.includes('mobile-toc.js') && htmlContent.includes('theme-toggle.js')) {
     return { modified: false, content: htmlContent };
   }
   
@@ -17,6 +17,11 @@ function injectScript(htmlContent) {
   }
   
   let updated = htmlContent;
+  
+  // Inject theme-toggle.js if not already present
+  if (!htmlContent.includes('theme-toggle.js')) {
+    updated = updated.replace('</body>', `  <script src="customization/js/theme-toggle.js"></script>\n</body>`);
+  }
   
   // Inject toc-collapsible.js if not already present
   if (!htmlContent.includes('toc-collapsible.js')) {
