@@ -1,41 +1,51 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // 1. Check for saved preference or system preference
+/**
+ * Theme Toggle - Dark Mode Support
+ * Creates a button to toggle between light and dark themes
+ */
+
+(function() {
+  // Immediate dark mode check before rendering
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.documentElement.classList.add('dark-mode');
   }
+})();
 
-  // 2. Create the toggle button
+// Setup button on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Create the toggle button
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'theme-toggle';
-  toggleBtn.ariaLabel = 'Toggle Dark Mode';
-  toggleBtn.innerHTML = '🌙'; // Default icon, will update
+  toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
+  toggleBtn.type = 'button';
+  toggleBtn.innerHTML = '🌙';
 
-  // Function to update button icon
+  // Update icon based on current mode
   function updateIcon() {
     const isDark = document.documentElement.classList.contains('dark-mode');
     toggleBtn.innerHTML = isDark ? '☀️' : '🌙';
   }
   updateIcon();
 
-  // 3. Inject the button
-  // Try to find the TOC container first
-  const toc = document.querySelector('nav.toc');
-  if (toc) {
-    // Insert at the top of the TOC
-    toc.insertBefore(toggleBtn, toc.firstChild);
-  } else {
-    // Fallback: append to body (e.g. mobile or no TOC)
-    document.body.appendChild(toggleBtn);
-  }
+  // Append button to body (will be positioned fixed via CSS)
+  document.body.appendChild(toggleBtn);
 
-  // 4. Handle click
-  toggleBtn.addEventListener('click', function() {
+  // Handle clicks
+  toggleBtn.addEventListener('click', function(e) {
+    e.preventDefault();
     document.documentElement.classList.toggle('dark-mode');
     const isDark = document.documentElement.classList.contains('dark-mode');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     updateIcon();
+  });
+
+  // Handle keyboard navigation
+  toggleBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleBtn.click();
+    }
   });
 });

@@ -112,14 +112,15 @@
   </xsl:call-template>
 </xsl:template>
 
-<xsl:template name="gen-footer" priority="10">
-  <xsl:call-template name="default.footer"/>
+<!-- Override body-end to include scripts -->
+<xsl:template name="gen-body-end">
+  <xsl:call-template name="default.body-end"/>
   <xsl:call-template name="gen-user-scripts"/>
 </xsl:template>
 
 <xsl:template name="gen-user-scripts">
-  <script src="customization/js/theme-toggle.js"></script>
-  <script src="customization/js/toc-collapsible.js"></script>
+  <script src="customization/js/theme-toggle.js" type="text/javascript"></script>
+  <script src="customization/js/toc-collapsible.js" type="text/javascript"></script>
 </xsl:template>
 
 
